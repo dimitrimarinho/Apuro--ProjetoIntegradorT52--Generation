@@ -3,10 +3,14 @@
 
 ## O que é um Diagrama Entidade Relacionamento ?
 
+<div style='text-align: justify;'> 
 Um Diagrama de Entidade Relacionamento (DER) é uma representação gráfica associada a um Modelo Entidade Relacionamento (MER, ou à uma parte dele), expressando graficamente a estrutura lógica de um banco de dados.
-O MER foi desenvolvido pelo cientista da computação Peter Chen e publicado em um artigo em 1976.
+O MER foi desenvolvido pelo cientista da computação Peter Chen e publicado em um artigo em 1976. 
+</div>
 
+<p style='text-align: justify;'> 
 Os objetos componentes de um diagrama entidade-relacionamento são graficamente representados por figuras geométricas simples, conectadas por linhas. São elas:
+</p>
 
     Retângulos: Representam entidades
     Elipses: Representam atributos
@@ -50,7 +54,9 @@ Atributos da tabela **tb_produtos**:
 - **sustentabilidade**
 - **região**
 
-Na tabela **tb_produtos** temos o atributo **id** que será incrementado automaticamente. Temos também o atributo **nome** para inserir o nome do produto que será vendido. No atributo **descrição** a mercadoria será descrita pelo fornecedor. Deverá ser informado o **preço** do produto, a **região** na qual está armazenado o estoque do produto, a **quantidade** do produto em estoque e também será avaliado pela equipe da Apuro o quão sustentável o produto é através do índice **sustentabilidade** que varia de 1 a 10. Além disso, todos os produtos devem apresentar **foto** de apresentação. A tabela **tb_produtos** contém duas chaves estrangeiras, **tb_categorias_id** para conseguir classificar os produtos dentro de categoria para filtragem e a chave estrangeira **tb_usuario_id** para que os pedidos dos usuários estejam associados aos produtos que serão adquiridos.
+
+<div style='text-align: justify;'> Na tabela **tb_produtos** temos o atributo **id** que será incrementado automaticamente. Temos também o atributo **nome** para inserir o nome do produto que será vendido. No atributo **descrição** a mercadoria será descrita pelo fornecedor. Deverá ser informado o **preço** do produto, a **região** na qual está armazenado o estoque do produto, a **quantidade** do produto em estoque e também será avaliado pela equipe da Apuro o quão sustentável o produto é através do índice **sustentabilidade** que varia de 1 a 10. Além disso, todos os produtos devem apresentar **foto** de apresentação. A tabela **tb_produtos** contém duas chaves estrangeiras, **tb_categorias_id** para conseguir classificar os produtos dentro de categoria para filtragem e a chave estrangeira **tb_usuario_id** para que os pedidos dos usuários estejam associados aos produtos que serão adquiridos.</div>
+
 
 Atributos da tabela tb_categorias:
 
