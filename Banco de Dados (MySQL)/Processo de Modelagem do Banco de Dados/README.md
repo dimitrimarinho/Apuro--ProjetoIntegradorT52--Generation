@@ -19,14 +19,9 @@ Referências:
 <br>(1) http://www.bosontreinamentos.com.br/modelagem-de-dados/o-modelo-entidade-relacionamento-introducao/
 <br>(2) https://github.com/rafaelq80/MySQL/tree/main/aula_04
 
-## Componentes
+## Componentes do DER (Entidades e Relacionamentos)
 
-Neste tópico vamos descrever sobre os componentes do nosso Diagrama Entidade Relacionamento, como será modelado o nosso e-commerce sustentável
+Neste tópico vamos descrever sobre os componentes do nosso Diagrama Entidade Relacionamento do nosso e-commerce sustentável. 
+Serão três entidades: Produtos, Categoria de Produtos e Usuários. Elas serão representadas pelas tabelas tb_produtos, tb_categorias e tb_usuarios
 
- ### Entidades
- 
- Serão três entidades: Produtos, Categoria de Produtos e Usuários. Elas serão representadas pelas tabelas tb_produtos, tb_categorias e tb_usuarios
 
- ### Relacionamentos
-
- ### Cardinalidade
