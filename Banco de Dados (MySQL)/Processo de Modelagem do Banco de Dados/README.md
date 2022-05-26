@@ -22,6 +22,42 @@ Referências:
 ## Componentes do DER (Entidades e Relacionamentos)
 
 Neste tópico vamos descrever sobre os componentes do nosso Diagrama Entidade Relacionamento do nosso e-commerce sustentável. 
-Serão três entidades: Produtos, Categoria de Produtos e Usuários. Elas serão representadas pelas tabelas tb_produtos, tb_categorias e tb_usuarios
+Serão três entidades: Produtos, Categoria de Produtos e Usuários. Elas serão representadas pelas tabelas **tb_produtos**, **tb_categorias** e **tb_usuarios**.
+
+Atributos da tabela **tb_usuario**:
+
+- **id**
+- **usuario**
+- **nome**
+- **senha**
+- **foto**
+- **data_nascimento**
+- **cpf**
+- **endereço**
+
+Na tabela **tb_usuario** utilizaremos como chave primária o **id**, que será atualizado por incremento automático. Teremos o atributo **usuário** que será o login que o usuário utilizará para acessar o sistema, juntamente com o atributo **senha**. O usuário ao cadastrar deverá informar o seu **nome**, seu **cpf**, seu **endereço**, sua **data de nascimento** e opcionalmente é possível inserir uma **foto**.
+
+Atributos da tabela **tb_produtos**:
+
+- **id**
+- **nome**
+- **descricao**
+- **quantidade**
+- **preco**
+- **foto**
+- **tb_categorias_id**
+- **tb_usuario_id**
+- **sustentabilidade**
+- **região**
+
+Na tabela **tb_produtos** temos o atributo **id** que será incrementado automaticamente. Temos também o atributo **nome** para inserir o nome do produto que será vendido. No atributo **descrição** a mercadoria será descrita pelo fornecedor. Deverá ser informado o **preço** do produto, a **região** na qual está armazenado o estoque do produto, a **quantidade** do produto em estoque e também será avaliado pela equipe da Apuro o quão sustentável o produto é através do índice **sustentabilidade** que varia de 1 a 10. Além disso, todos os produtos devem apresentar **foto** de apresentação. A tabela **tb_produtos** contém duas chaves estrangeiras, **tb_categorias_id** para conseguir classificar os produtos dentro de categoria para filtragem e a chave estrangeira **tb_usuario_id** para que os pedidos dos usuários estejam associados aos produtos que serão adquiridos.
+
+Atributos da tabela tb_categorias:
+
+- **tipo** 
+- **artistas** 
+- **tutorial**
+
+O atributo **tipo** serve para agrupar os produtos em tipos de categorias parecidas (por exemplo: carteira, bolsa, vaso de planta, ...). O atributo **artistas** serve para agrupar os produtos e classificá-los pelos artistas/artesãos fornecedores, enquanto o atributo **tutorial** tem o intuito de classificar os produtos que possuem tutoriais mostrando como se faz o produto, caso não tenha tutorial o atributo será nulo.
 
 
