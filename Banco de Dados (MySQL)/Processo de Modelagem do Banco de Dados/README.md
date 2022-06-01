@@ -22,6 +22,8 @@ Referências:
 
 ## Componentes do DER (Entidades e Relacionamentos)
 
+### Entidades e Atributos
+
 Neste tópico vamos descrever sobre os componentes do nosso Diagrama Entidade Relacionamento do nosso e-commerce sustentável. 
 Serão três entidades: Produtos, Categoria de Produtos e Usuários. Elas serão representadas pelas tabelas **tb_produtos**, **tb_categorias** e **tb_usuarios**.
 
@@ -62,3 +64,7 @@ Atributos da tabela tb_categorias:
 - **tutorial**
 
 O atributo **tipo** serve para agrupar os produtos em tipos de categorias parecidas (por exemplo: carteira, bolsa, vaso de planta, ...). O atributo **artistas** serve para agrupar os produtos e classificá-los pelos artistas/artesãos fornecedores, enquanto o atributo **tutorial** tem o intuito de classificar os produtos que possuem tutoriais mostrando como se faz o produto, caso não tenha tutorial o atributo será nulo.
+
+### Relacionamentos
+
+A tabela **tb_produtos** se relaciona com a tabela **tb_categorias** e também com a tabela **tb_usuario**. A cardinalidade destes relacionamentos é de **um-para-muitos (1:N)**, isto porque um usuário pode realizar um pedido com muitos produtos, mas o produto específico (id único) pode estar atrelado a apenas um usuário. Da mesma forma, um produto pode está atrelado a apenas uma categoria, mas uma categoria pode conter diversos produtos. 
