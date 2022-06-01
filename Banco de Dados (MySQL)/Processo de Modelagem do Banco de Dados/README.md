@@ -29,31 +29,11 @@ Serão três entidades: Produtos, Categoria de Produtos e Usuários. Elas serão
 
 Atributos da tabela **tb_usuario**:
 
-- **id**
-- **usuario**
-- **nome**
-- **senha**
-- **foto**
-- **data_nascimento**
-- **cpf**
-- **endereço**
-
 ![Atributos da tabela **tb_usuario**](https://raw.githubusercontent.com/dimitrimarinho/Apuro--ProjetoIntegradorT52--Generation/main/Banco%20de%20Dados%20(MySQL)/Processo%20de%20Modelagem%20do%20Banco%20de%20Dados/imgs/tb_usuario.png)
 
 Na tabela **tb_usuario** utilizaremos como chave primária o **id**, que será atualizado por incremento automático. Teremos o atributo **usuário** que será o login que o usuário utilizará para acessar o sistema, juntamente com o atributo **senha**. O usuário ao cadastrar deverá informar o seu **nome**, seu **cpf**, seu **endereço**, sua **data de nascimento** e opcionalmente é possível inserir uma **foto**.
 
 Atributos da tabela **tb_produtos**:
-
-- **id**
-- **nome**
-- **descricao**
-- **quantidade**
-- **preco**
-- **foto**
-- **tb_categorias_id**
-- **tb_usuario_id**
-- **sustentabilidade**
-- **região**
 
 ![Atributos da tabela **tb_produtos**](https://raw.githubusercontent.com/dimitrimarinho/Apuro--ProjetoIntegradorT52--Generation/main/Banco%20de%20Dados%20(MySQL)/Processo%20de%20Modelagem%20do%20Banco%20de%20Dados/imgs/tb_produtos.png)
 
@@ -61,10 +41,6 @@ Na tabela **tb_produtos** temos o atributo **id** que será incrementado automat
 
 
 Atributos da tabela tb_categorias:
-
-- **tipo** 
-- **artistas** 
-- **tutorial**
 
 ![Atributos da tabela **tb_categorias**](https://github.com/dimitrimarinho/Apuro--ProjetoIntegradorT52--Generation/blob/main/Banco%20de%20Dados%20(MySQL)/Processo%20de%20Modelagem%20do%20Banco%20de%20Dados/imgs/tb_categorias.png)
 
