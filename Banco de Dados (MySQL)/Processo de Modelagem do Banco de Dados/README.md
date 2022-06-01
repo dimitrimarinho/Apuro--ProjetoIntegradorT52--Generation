@@ -29,25 +29,41 @@ Serão três entidades: Produtos, Categoria de Produtos e Usuários. Elas serão
 
 Atributos da tabela **tb_usuario**:
 
-![Atributos da tabela **tb_usuario**](https://raw.githubusercontent.com/dimitrimarinho/Apuro--ProjetoIntegradorT52--Generation/main/Banco%20de%20Dados%20(MySQL)/Processo%20de%20Modelagem%20do%20Banco%20de%20Dados/imgs/tb_usuario.png)
+<br>
+
+<div align="center"><img src="https://raw.githubusercontent.com/dimitrimarinho/Apuro--ProjetoIntegradorT52--Generation/main/Banco%20de%20Dados%20(MySQL)/Processo%20de%20Modelagem%20do%20Banco%20de%20Dados/imgs/tb_usuario.png" title="tb_usuario" /></div>
+
+<br>
 
 Na tabela **tb_usuario** utilizaremos como chave primária o **id**, que será atualizado por incremento automático. Teremos o atributo **usuário** que será o login que o usuário utilizará para acessar o sistema, juntamente com o atributo **senha**. O usuário ao cadastrar deverá informar o seu **nome**, seu **cpf**, seu **endereço**, sua **data de nascimento** e opcionalmente é possível inserir uma **foto**.
 
 Atributos da tabela **tb_produtos**:
 
-![Atributos da tabela **tb_produtos**](https://raw.githubusercontent.com/dimitrimarinho/Apuro--ProjetoIntegradorT52--Generation/main/Banco%20de%20Dados%20(MySQL)/Processo%20de%20Modelagem%20do%20Banco%20de%20Dados/imgs/tb_produtos.png)
+<br>
+
+<div align="center"><img src="https://raw.githubusercontent.com/dimitrimarinho/Apuro--ProjetoIntegradorT52--Generation/main/Banco%20de%20Dados%20(MySQL)/Processo%20de%20Modelagem%20do%20Banco%20de%20Dados/imgs/tb_produtos.png" title="tb_produtos" /></div>
+
+<br>
 
 Na tabela **tb_produtos** temos o atributo **id** que será incrementado automaticamente. Temos também o atributo **nome** para inserir o nome do produto que será vendido. No atributo **descrição** a mercadoria será descrita pelo fornecedor. Deverá ser informado o **preço** do produto, a **região** na qual está armazenado o estoque do produto, a **quantidade** do produto em estoque e também será avaliado pela equipe da Apuro o quão sustentável o produto é através do índice **sustentabilidade** que varia de 1 a 10. Além disso, todos os produtos devem apresentar **foto** de apresentação. A tabela **tb_produtos** contém duas chaves estrangeiras, **tb_categorias_id** para conseguir classificar os produtos dentro de categoria para filtragem e a chave estrangeira **tb_usuario_id** para que os pedidos dos usuários estejam associados aos produtos que serão adquiridos.
 
 
 Atributos da tabela tb_categorias:
 
-![Atributos da tabela **tb_categorias**](https://github.com/dimitrimarinho/Apuro--ProjetoIntegradorT52--Generation/blob/main/Banco%20de%20Dados%20(MySQL)/Processo%20de%20Modelagem%20do%20Banco%20de%20Dados/imgs/tb_categorias.png)
+<br>
+
+<div align="center"><img src="https://github.com/dimitrimarinho/Apuro--ProjetoIntegradorT52--Generation/blob/main/Banco%20de%20Dados%20(MySQL)/Processo%20de%20Modelagem%20do%20Banco%20de%20Dados/imgs/tb_categorias.png" title="tb_categorias" /></div>
+
+<br>
 
 O atributo **tipo** serve para agrupar os produtos em tipos de categorias parecidas (por exemplo: carteira, bolsa, vaso de planta, ...). O atributo **artistas** serve para agrupar os produtos e classificá-los pelos artistas/artesãos fornecedores, enquanto o atributo **tutorial** tem o intuito de classificar os produtos que possuem tutoriais mostrando como se faz o produto, caso não tenha tutorial o atributo será nulo.
 
 ### Relacionamentos
 
-![**Relacionamentos**](https://github.com/dimitrimarinho/Apuro--ProjetoIntegradorT52--Generation/blob/main/Banco%20de%20Dados%20(MySQL)/Processo%20de%20Modelagem%20do%20Banco%20de%20Dados/imgs/modelagem.png)
+<br>
+
+<div align="center"><img src="https://github.com/dimitrimarinho/Apuro--ProjetoIntegradorT52--Generation/blob/main/Banco%20de%20Dados%20(MySQL)/Processo%20de%20Modelagem%20do%20Banco%20de%20Dados/imgs/modelagem.png" title="Relacionamentos" /></div>
+
+<br>
 
 A tabela **tb_produtos** se relaciona com a tabela **tb_categorias** e também com a tabela **tb_usuario**. A cardinalidade destes relacionamentos é de **um-para-muitos (1:N)**, isto porque um usuário pode realizar um pedido com muitos produtos, mas o produto específico (id único) pode estar atrelado a apenas um usuário. Da mesma forma, um produto pode está atrelado a apenas uma categoria, mas uma categoria pode conter diversos produtos. 
