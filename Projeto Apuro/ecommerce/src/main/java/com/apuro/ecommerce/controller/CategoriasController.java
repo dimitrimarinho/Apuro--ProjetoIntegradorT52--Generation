@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apuro.ecommerce.model.Categorias;
+import com.apuro.ecommerce.repository.CategoriasRepository;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
