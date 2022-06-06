@@ -24,7 +24,6 @@ public class Categorias {
 	@Size(min = 3, max = 255)
 	private String artista;
 	
-	@NotNull
 	@Size(min = 3, max = 255)
 	private String tutorial;
 
