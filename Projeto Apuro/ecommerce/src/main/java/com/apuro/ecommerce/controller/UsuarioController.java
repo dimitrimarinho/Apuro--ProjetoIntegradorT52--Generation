@@ -50,11 +50,11 @@ public class UsuarioController {
 	}
 	
 	@PutMapping
-	public ResponseEntity<Usuario> put (@Valid @PathVariable Usuario usuario){
+	public ResponseEntity<Usuario> put (@Valid @RequestBody Usuario usuario){
 		return ResponseEntity.ok(repository.save(usuario));
 	}
 	
-	@DeleteMapping
+	@DeleteMapping("/{id}")
 	public void delete (@PathVariable long id) {
 		repository.deleteById(id);;
 	}

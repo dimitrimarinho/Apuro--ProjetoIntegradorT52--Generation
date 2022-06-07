@@ -11,6 +11,5 @@ import com.apuro.ecommerce.model.Produtos;
 public interface ProdutosRepository extends JpaRepository<Produtos, Long> {
 	
 	public List<Produtos> findAllByNomeContainingIgnoreCase(String nome);
-	public List<Produtos> findAllByPrecoContainingIgnoreCase(double preco);
 
 }
