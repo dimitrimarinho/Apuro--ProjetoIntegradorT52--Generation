@@ -44,7 +44,12 @@ public class ProdutosController {
 	}
 	
 	@GetMapping("/preco/{preco}")
+<<<<<<< HEAD
 	public ResponseEntity<List<Produtos>> getByPrice(@PathVariable int preco){
+=======
+
+	public ResponseEntity<List<Produtos>> getByPrice(@PathVariable double preco){
+>>>>>>> f532c8f7755521276c4188325f19cbffa65f11c0
 		return ResponseEntity.ok(repository.findAllByPrecoContainingIgnoreCase(preco));
 	}
 	 @PostMapping
