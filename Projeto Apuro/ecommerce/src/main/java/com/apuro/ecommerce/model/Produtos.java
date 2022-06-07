@@ -4,9 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tb_produtos")
@@ -39,6 +42,10 @@ public class Produtos {
 	@NotNull
 	@Size(min = 2, max = 255)
 	private String regiao;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("produtos")
+	private Categorias categorias;
 
 	public long getId() {
 		return id;
@@ -102,6 +109,14 @@ public class Produtos {
 
 	public void setRegiao(String regiao) {
 		this.regiao = regiao;
+	}
+
+	public Categorias getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(Categorias categorias) {
+		this.categorias = categorias;
 	}
 	
 }
