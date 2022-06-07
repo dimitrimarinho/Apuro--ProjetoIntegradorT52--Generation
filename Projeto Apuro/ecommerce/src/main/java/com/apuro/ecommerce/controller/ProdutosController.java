@@ -42,7 +42,7 @@ public class ProdutosController {
 	public ResponseEntity<List<Produtos>> getByName(@PathVariable String nome){
 		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
 	}
-	
+
 	 @PostMapping
 	    public ResponseEntity <Produtos> post (@Valid @RequestBody Produtos produtos){
 	        return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produtos));
