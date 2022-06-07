@@ -1,6 +1,5 @@
 package com.apuro.ecommerce.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,8 +27,7 @@ public class Produtos {
 	private long quantidade;
 	
 	@NotNull
-	@Column(scale = 2) // Scale: Number of digits to the right of the decimal point
-	private double preco;
+	private int preco;
 	
 	@NotNull
 	@Size(max = 255)
@@ -74,11 +72,11 @@ public class Produtos {
 		this.quantidade = quantidade;
 	}
 
-	public double getPreco() {
+	public int getPreco() {
 		return preco;
 	}
 
-	public void setPreco(double preco) {
+	public void setPreco(int preco) {
 		this.preco = preco;
 	}
 
