@@ -9,5 +9,7 @@ import com.apuro.ecommerce.model.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
+	
 	public List<Usuario> findAllByUsuarioContainingIgnoreCase(String usuario);
+	
 }

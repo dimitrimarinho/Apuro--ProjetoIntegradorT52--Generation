@@ -37,9 +37,9 @@ public class CategoriasController {
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
-	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Categorias>> getByName(@PathVariable String nome){
-		return ResponseEntity.ok(repository.findAllByTipoContainingIgnoreCase(nome));
+	@GetMapping("/tipo/{tipo}")
+	public ResponseEntity<List<Categorias>> getByTipo(@PathVariable String tipo){
+		return ResponseEntity.ok(repository.findAllByTipoContainingIgnoreCase(tipo));
 	}
 	
 	@GetMapping("/artista/{artista}")

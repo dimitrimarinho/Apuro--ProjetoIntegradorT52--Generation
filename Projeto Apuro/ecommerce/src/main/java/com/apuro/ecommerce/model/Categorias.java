@@ -23,14 +23,14 @@ public class Categorias {
 	private long id;
 	
 	@NotNull
-	@Size(min = 3, max = 255)
+	@Size(min = 1, max = 255)
 	private String tipo;
 	
 	@NotNull
-	@Size(min = 3, max = 255)
+	@Size(min = 1, max = 255)
 	private String artista;
 	
-	@Size(min = 3, max = 255)
+	@Size(min = 1, max = 255)
 	private String tutorial;
 	
 	@OneToMany(mappedBy = "categorias", cascade = CascadeType.ALL)
