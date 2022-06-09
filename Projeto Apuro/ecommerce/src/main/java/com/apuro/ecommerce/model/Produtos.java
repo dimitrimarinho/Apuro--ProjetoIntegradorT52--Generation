@@ -1,5 +1,8 @@
 package com.apuro.ecommerce.model;
 
+import java.math.BigDecimal;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,7 +33,8 @@ public class Produtos {
 	private long quantidade;
 	
 	@NotNull
-	private int preco;
+	@Column(scale=2,precision=8)
+	private BigDecimal preco;
 	
 	@NotNull
 	@Size(max = 255)
@@ -83,11 +87,11 @@ public class Produtos {
 		this.quantidade = quantidade;
 	}
 
-	public int getPreco() {
+	public BigDecimal getPreco() {
 		return preco;
 	}
 
-	public void setPreco(int preco) {
+	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}
 
