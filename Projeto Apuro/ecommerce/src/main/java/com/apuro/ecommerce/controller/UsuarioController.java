@@ -58,4 +58,23 @@ public class UsuarioController {
 	public void delete (@PathVariable long id) {
 		repository.deleteById(id);;
 	}
+	
+	/* Aguardando criação de UsuarioService
+	 
+	@Autowired
+	private UsuarioService service;
+	
+	@PostMapping("/logar")
+	public ResponseEntity<UsuarioLogin> Autentication(@RequestBody Optional<UsuarioLogin> usuario){
+		return service.logarUsuario(usuario)
+				.map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+	}
+	
+	@PostMapping("/cadastrar")
+	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario){
+		return ResponseEntity.status(HttpStatus.CREATED)
+				.body(service.cadastrarUsuario(usuario));		
+	}
+	*/
 }
