@@ -1,13 +1,13 @@
 {
 	"info": {
-		"_postman_id": "09304ba2-f48e-4f4e-832a-e97ce9f5602f",
+		"_postman_id": "7088a19d-d1ee-49c9-aaff-c263aaf83a81",
 		"name": "Metodos Postman",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "20557658"
 	},
 	"item": [
 		{
-			"name": "GET",
+			"name": "GET Produtos",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -31,21 +31,58 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/postagens",
+					"raw": "http://localhost:8080/produtos",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"postagens"
+						"produtos"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "POST",
+			"name": "GET  Categorias",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Produto",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -58,7 +95,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"titulo\": \"titulo 2\",\r\n    \"texto\": \"texto 2\",\r\n    \"data\": \"03/10/1994\"\r\n}",
+					"raw": "{\r\n    \"nome\": \"\",\r\n    \"descricao\": \"\",\r\n    \"quantidade\": ,\r\n    \"preco\": ,\r\n    \"foto\": \"\",\r\n    \"sustentabilidade\": \"\",\r\n    \"regiao\": \"\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -66,21 +103,55 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/postagens",
+					"raw": "http://localhost:8080/produtos",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"postagens"
+						"produtos"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "PUT",
+			"name": "POST Categoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo\": \"\",\r\n    \"artista\": \"\",\r\n    \"tutorial\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Produtos",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -93,7 +164,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 1,\r\n    \"titulo\": \"titulo teste\",\r\n    \"texto\": \"teste\",\r\n    \"data\": \"09/06/2022\"\r\n}",
+					"raw": "{\r\n    \"id\": ,\r\n    \"nome\": \"\",\r\n    \"descricao\": \"\",\r\n    \"quantidade\": ,\r\n    \"preco\": ,\r\n    \"foto\": \"\",\r\n    \"sustentabilidade\": \"\",\r\n    \"regiao\": \"\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -101,21 +172,55 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/postagens",
+					"raw": "http://localhost:8080/produtos",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"postagens"
+						"produtos"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "DELETE",
+			"name": "PUT Categoria",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"tipo\": \"\",\r\n    \"artista\": \"\",\r\n    \"tutorial\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Produtos",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -136,14 +241,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/postagens/2",
+					"raw": "http://localhost:8080/produtos/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"postagens",
+						"produtos",
 						"2"
 					]
 				}
@@ -151,7 +256,27 @@
 			"response": []
 		},
 		{
-			"name": "POST de relacionamento de tabelas",
+			"name": "DELETE Categoria",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/categoria/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST de relacionamento de tabelas para produtos",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -164,7 +289,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"titulo\": \"Teste de relacionaento 2\",\r\n    \"texto\": \"Realizando teste 2 de realicionamento de tabelas\",\r\n    \"data\": \"09/06/2022\",\r\n    \"tema\": {\r\n        \"id\":1\r\n    }\r\n}",
+					"raw": "{\r\n    \"nome\": \"\",\r\n    \"descricao\": \"\",\r\n    \"quantidade\": ,\r\n    \"preco\": ,\r\n    \"foto\": \"\",\r\n    \"sustentabilidade\": \"\",\r\n    \"regiao\": \"\",\r\n    \"categorias\": {\r\n        \"id\":1\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -172,14 +297,48 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/postagens",
+					"raw": "http://localhost:8080/produtos",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"postagens"
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST de relacionamento de tabelas para",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo\": \"\",\r\n    \"artista\": \"\",\r\n    \"tutorial\": \"\",\r\n    \"produtos\": {\r\n        \"id\":1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias"
 					]
 				}
 			},
