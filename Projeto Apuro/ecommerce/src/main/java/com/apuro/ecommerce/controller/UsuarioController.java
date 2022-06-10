@@ -1,6 +1,7 @@
 package com.apuro.ecommerce.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -18,7 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apuro.ecommerce.model.Usuario;
+import com.apuro.ecommerce.model.UsuarioLogin;
 import com.apuro.ecommerce.repository.UsuarioRepository;
+import com.apuro.ecommerce.service.UsuarioService;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -59,8 +62,6 @@ public class UsuarioController {
 		repository.deleteById(id);;
 	}
 	
-	/* Aguardando criação de UsuarioService
-	 
 	@Autowired
 	private UsuarioService service;
 	
@@ -76,5 +77,5 @@ public class UsuarioController {
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(service.cadastrarUsuario(usuario));		
 	}
-	*/
+
 }
