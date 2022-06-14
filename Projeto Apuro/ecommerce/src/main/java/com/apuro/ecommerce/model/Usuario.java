@@ -38,7 +38,6 @@ public class Usuario {
 	@Size(min = 1, max = 255)
 	private String foto;
 	
-	
 	private Date dataDeNascimento;
 	
 	@NotNull

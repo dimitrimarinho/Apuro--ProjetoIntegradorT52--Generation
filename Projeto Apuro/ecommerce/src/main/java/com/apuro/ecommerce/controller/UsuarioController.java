@@ -24,8 +24,8 @@ import com.apuro.ecommerce.repository.UsuarioRepository;
 import com.apuro.ecommerce.service.UsuarioService;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/usuario")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioController {
 
 	@Autowired
@@ -73,7 +73,7 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/cadastrar")
-	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario){
+	public ResponseEntity<Optional<Usuario>> Post(@RequestBody Usuario usuario){
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(service.cadastrarUsuario(usuario));		
 	}
