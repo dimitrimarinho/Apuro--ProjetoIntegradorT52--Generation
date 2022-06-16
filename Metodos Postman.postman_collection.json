@@ -82,6 +82,43 @@
 			"response": []
 		},
 		{
+			"name": "GET  Usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UFY6MTIzNDU2Nzg=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "POST Produto",
 			"request": {
 				"method": "POST",
@@ -145,6 +182,78 @@
 					"port": "8080",
 					"path": [
 						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Cadastrar Usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UGF1bGluaG86MTIzNDU2Nzg=",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"PV\",\r\n    \"nome\": \"Paulo\",\r\n    \"senha\": \"12345678\",\r\n    \"foto\": \"x\",\r\n    \"data\": \"03/10/1994\",\r\n    \"cpf\": \"12345678910\",\r\n    \"endereco\": \"x\",\r\n    \"descricao\": \"x\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Logar Usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UGF1bGluaG86MTIzNDU2Nzg=",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"PV\",\r\n    \"senha\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario/logar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"logar"
 					]
 				}
 			},
@@ -220,6 +329,40 @@
 			"response": []
 		},
 		{
+			"name": "PUT Usuarios",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UFY6MTIzNDU2Nzg=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"usuario\": \"PV\",\r\n    \"nome\": \"Paulo\",\r\n    \"senha\": \"12345678\",\r\n    \"foto\": \"x\",\r\n    \"data\": \"03/10/1994\",\r\n    \"cpf\": \"12345678910\",\r\n    \"endereco\": \"x1\",\r\n    \"descricao\": \"x1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "DELETE Produtos",
 			"request": {
 				"method": "DELETE",
@@ -270,6 +413,41 @@
 					"path": [
 						"categoria",
 						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Usuarios",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UFY6MTIzNDU2Nzg=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"1"
 					]
 				}
 			},
