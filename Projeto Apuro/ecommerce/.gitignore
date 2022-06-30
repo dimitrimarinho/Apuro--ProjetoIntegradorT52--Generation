@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+/.metadata/
+.classpath
+.project
+.setting
+Projeto Apuro/ecommerce/bin
+target
