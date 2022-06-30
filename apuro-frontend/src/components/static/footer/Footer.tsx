@@ -6,7 +6,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import "./Footer.css";
 
-function footer(){
+function Footer(){
 return(
     <>
     <Grid container direction="row" justifyContent="center" alignItems="center">
@@ -42,4 +42,4 @@ return(
  </>
 );
 }
-export default footer;
+export default Footer;
