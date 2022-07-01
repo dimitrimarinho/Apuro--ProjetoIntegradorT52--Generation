@@ -1,3 +1,5 @@
 img {
-    height: 811px;
+    width: 90vh;
+    height: 200px;
+    object-fit: cover;
 }
