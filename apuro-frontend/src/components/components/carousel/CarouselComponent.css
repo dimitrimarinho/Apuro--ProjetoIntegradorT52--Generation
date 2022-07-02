@@ -1,5 +1,10 @@
 img {
-    width: 90vh;
+    width: 90vw;
     height: 200px;
     object-fit: cover;
+}
+
+.caixa {
+    background-color: rgb(19, 19, 168);
+    padding-top: 10px;
 }

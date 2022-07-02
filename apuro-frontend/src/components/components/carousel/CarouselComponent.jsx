@@ -11,7 +11,8 @@ function CarouselComponent() {
     ]
 
     return (
-        <Carousel isRTL={false}>
+        <div className='caixa'>
+            <Carousel isRTL={false}>
             {
                 items.map(item => (
                     <>
@@ -19,7 +20,8 @@ function CarouselComponent() {
                     </>
                 ))
             }
-        </Carousel>
+            </Carousel>
+        </div>
     )
 }
 
