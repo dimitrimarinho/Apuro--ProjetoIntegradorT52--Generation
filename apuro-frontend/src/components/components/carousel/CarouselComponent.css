@@ -4,7 +4,7 @@ img {
     object-fit: cover;
 }
 
-.caixa {
-    background-color: rgb(19, 19, 168);
-    padding-top: 10px;
+.caixac {
+    padding: 10px;
+    margin: 10px;
 }

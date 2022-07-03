@@ -11,7 +11,7 @@ function CarouselComponent() {
     ]
 
     return (
-        <div className='caixa'>
+        <div className='caixac'>
             <Carousel isRTL={false}>
             {
                 items.map(item => (
