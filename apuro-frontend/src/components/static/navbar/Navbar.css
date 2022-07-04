@@ -2,6 +2,16 @@
     background-color: #565902 !important;
 }
 
+.MuiListItem-button:hover {
+	text-decoration: none !important;
+	background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+.text-decoration-none{
+    text-decoration: none;
+    color: inherit;
+}
+
 .MuiTypography-Apuro-root {
     margin-right: 40px !important;
 }
