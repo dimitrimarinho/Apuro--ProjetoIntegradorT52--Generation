@@ -1,10 +1,43 @@
 img {
-    width: 90vw;
-    height: 200px;
-    object-fit: cover;
+	width: 100vw;
+	height: 300px;
+	object-fit: cover;
 }
 
 .caixa {
-    background-color: rgb(19, 19, 168);
-    padding-top: 10px;
+	background-color: #D9A404;
+	padding: 20px;
+}
+
+.eWjCzc {
+	color: white !important;
+	box-shadow: 0 0 2px 0px white !important;
+}
+
+.eWjCzc:hover:enabled,
+.eWjCzc:focus:enabled {
+	color: #fff !important;
+	background-color: #A60303 !important;
+	box-shadow: 0 0 2px 0 white !important;
+}
+
+.eAyARa {
+	color: white !important;
+	box-shadow: 0 0 2px 0px white !important;
+}
+
+.krmNah:hover,
+.krmNah:focus {
+	cursor: pointer !important;
+	box-shadow: 0 0 1px 3px #A60303 !important;
+}
+
+.krmNah {
+	background-color: #A60303 !important;
+	box-shadow: 0 0 1px 3px #A60303 !important;
+}
+
+.jhmYzC:hover,
+.jhmYzC:focus {
+	box-shadow: 0 0 1px 3px #A60303 !important;
 }

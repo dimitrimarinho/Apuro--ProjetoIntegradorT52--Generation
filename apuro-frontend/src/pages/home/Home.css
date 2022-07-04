@@ -1,18 +1,17 @@
 .caixa1 {
-    background-color: rgb(19, 19, 168);
+    background-color: #f5f9fc !important;
     height: 200%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .texto {
-    color: white !important;
+    color: black;
 }
 
 .botao {
-    border-color: rgb(0, 195, 255) !important;
-    background-color: black !important;
-    color: rgb(0, 195, 255) !important;
+    border-color: #F2D399 !important;
+    background-color: #A60303 !important;
+    color: white !important;
     margin-left: 10px !important;
     margin-bottom: 10px !important;
     margin-right: 10px !important;
@@ -45,8 +44,8 @@
 
 .cards {
     display: flex;
-    background-color: rgb(194, 197, 199);
-    color: blue;
+    background-color: #BFA584;
+    color: white;
     border: 50px !important;
     border-color: black !important;
     width: 20%;

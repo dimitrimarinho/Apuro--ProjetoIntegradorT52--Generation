@@ -10,12 +10,13 @@ function App() {
   return (
     <Router>
       <Navbar />
-        <div style={{ minHeight: '100vh' }}>
-          <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route path="/sobre-nos" element={<SobreNos />} />
-          </Routes>
-        </div>
+      <div style={{ minHeight: '100vh' }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/sobre-nos" element={<SobreNos />} />
+        </Routes>
+      </div>
       <Footer />
     </Router>
   );

@@ -1,14 +1,15 @@
-import { Button, Grid, Typography } from '@material-ui/core';
-import { Box } from '@mui/material';
 import React from 'react';
-import './Home.css';
+import { Grid, Typography } from '@material-ui/core';
+import Button from '@mui/material/Button';
+import { Box } from '@mui/material';
 import CarouselComponent from '../../components/components/carousel/CarouselComponent';
+import './Home.css';
 
 
 function Home() {
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
+            <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa1'>
                 <Grid item xs={12}>
                     <CarouselComponent />
                 </Grid>
@@ -35,11 +36,8 @@ function Home() {
                         <Box className='cards'>Produtores mais bem avaliados</Box>
                         <Box className='cards'>Produtores mais bem avaliados</Box>
                         <Box className='cards'>Produtores com melhores notas de sustentabilidade</Box>
-                        
+
                     </Box>
-                </Grid>
-                <Grid xs={12} className="produtos">
-                    <Typography variant="h3" color="primary" className="titulos">Seus produtos</Typography>
                 </Grid>
             </Grid>
         </>

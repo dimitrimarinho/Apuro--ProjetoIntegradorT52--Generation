@@ -1,5 +1,5 @@
 import React from 'react'
-import Carousel from 'react-elastic-carousel'           // Não esqueça de instalar a Dependencia
+import Carousel from 'react-elastic-carousel'
 import './CarouselComponent.css'
 
 function CarouselComponent() {
@@ -13,13 +13,13 @@ function CarouselComponent() {
     return (
         <div className='caixa'>
             <Carousel isRTL={false}>
-            {
-                items.map(item => (
-                    <>
-                        <img src={item.img} alt="Item" />
-                    </>
-                ))
-            }
+                {
+                    items.map(item => (
+                        <>
+                            <img src={item.img} alt="Item" />
+                        </>
+                    ))
+                }
             </Carousel>
         </div>
     )
