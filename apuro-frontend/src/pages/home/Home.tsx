@@ -18,8 +18,7 @@ function Home() {
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='texto'>Seja bem vindo(a)!</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='texto'>Aproveite a nossa plataforma!</Typography>
                     </Box>
-                    <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}></Box>
+                    <Box sx={{ display: "flex", justifyContent: "center", marginTop: 5 }}>
                         <Button variant="outlined" className='botao'>Produtos</Button>
                         <Button variant="outlined" className='botao'>Vendas</Button>
                         <Button variant="outlined" className='botao'>Cadastrar produto</Button>
