@@ -1,9 +1,9 @@
-import React, { ChangeEvent, ChangeEventHandler, useState, useEffect} from "react";
+import React, { ChangeEvent, useState, useEffect} from "react";
 import { Grid, Typography, TextField, Button } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { Link, useNavigate } from 'react-router-dom';
 import "./Login.css";
-import UserLogin from "../../model/User.Login";
+import UserLogin from "../../models/User.Login";
 import { login } from "../../services/Service";
 import useLocalStorage from "react-use-localstorage";
 
@@ -47,9 +47,10 @@ function Login() {
     }
 
     useEffect(() => {
-        if (token != "") {
+        if (token !== "") {
             navigate('/home')
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [token])
 
 
