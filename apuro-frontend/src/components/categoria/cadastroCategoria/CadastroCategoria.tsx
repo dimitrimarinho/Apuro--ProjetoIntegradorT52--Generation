@@ -19,7 +19,7 @@ function CadastroCategoria() {
     id: 0,
     tipo: "",
     artista: "",
-    tutorial: ""
+    tutorial: null
   })
 
   useEffect(() => {
@@ -57,22 +57,26 @@ function CadastroCategoria() {
     e.preventDefault()
     console.log("categoria " + JSON.stringify(categoria))
 
-    if (id !== undefined) {
-      put(`/categorias`, categoria, setCategoria, {
-        headers: {
-          'Authorization': token
-        }
-      })
-      alert('Categoria atualizada com sucesso');
+    if (categoria.tipo !== "" && categoria.artista !== "") {
+      if (id !== undefined) {
+        put(`/categorias`, categoria, setCategoria, {
+          headers: {
+            'Authorization': token
+          }
+        })
+        alert('Categoria atualizada com sucesso');
+      } else {
+        post(`/categorias`, categoria, setCategoria, {
+          headers: {
+            'Authorization': token
+          }
+        })
+        alert('Categoria cadastrada com sucesso')
+      }
+      back()
     } else {
-      post(`/categorias`, categoria, setCategoria, {
-        headers: {
-          'Authorization': token
-        }
-      })
-      alert('Categoria cadastrada com sucesso')
+      alert('Erro ao cadastrar.\nInsira as informações do tipo da categoria e artista !')
     }
-    back()
   }
 
   function back() {
