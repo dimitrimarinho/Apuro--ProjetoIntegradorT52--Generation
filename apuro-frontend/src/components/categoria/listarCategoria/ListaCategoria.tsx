@@ -21,8 +21,8 @@ function ListaCategoria() {
             alert("Você precisa estar logado")
             navigate("/login")
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [token])
-
 
     async function getCategoria() {
         await busca("/categorias", setCategoria, {
@@ -32,9 +32,9 @@ function ListaCategoria() {
         })
     }
 
-
     useEffect(() => {
         getCategoria()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [categorias.length])
 
     return (

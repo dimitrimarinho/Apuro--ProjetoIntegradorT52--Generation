@@ -19,21 +19,22 @@ function DeletarCategoria() {
     const [categoria, setCategoria] = useState<Categorias>()
 
     useEffect(() => {
-        if (token == "") {
+        if (token === "") {
             alert("Você não está logado")
             navigate("/login")
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [token]);
-
 
     useEffect(() => {
         if (id !== undefined) {
             findById(id)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
     async function findById(id: string) {
-        buscaId('/categorias/${id}', setCategoria, {
+        buscaId(`/categorias/${id}`, setCategoria, {
             headers: {
                 'Authorization': token
             }
@@ -42,7 +43,7 @@ function DeletarCategoria() {
 
     function sim() {
         navigate('/categorias')
-        deleteId('/categorias/${id}', {
+        deleteId(`/categorias/${id}`, {
             headers: {
                 'Authorization': token
             }
@@ -53,7 +54,6 @@ function DeletarCategoria() {
     function nao() {
         navigate('/categorias')
     }
-
 
     return (
         <>
@@ -87,7 +87,6 @@ function DeletarCategoria() {
             </Box>
         </>
     );
-
 }
 
 export default DeletarCategoria;

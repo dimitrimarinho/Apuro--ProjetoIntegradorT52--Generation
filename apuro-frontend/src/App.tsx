@@ -6,7 +6,7 @@ import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import CadastroUsuario from './pages/cadastroUsuario/cadastroUsuario';
 import SobreNos from './pages/sobrenos/SobreNos';
-import CadastroCategoria from './components/categorias/cadastroCategoria/CadastroCategoria';
+import CadastroCategoria from './components/categoria/cadastroCategoria/CadastroCategoria';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import './App.css';
