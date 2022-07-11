@@ -19,7 +19,7 @@ function Home() {
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='texto'>Aproveite a nossa plataforma!</Typography>
                     </Box>
                     <Box sx={{ display: "flex", justifyContent: "center", marginTop: 5 }}>
-                        <Link to="/cadastrar-categoria">
+                        <Link to="/cadastrar-categoria" className='text-decorator-none'>
                             <Button variant="outlined" className='botao'>Cadastrar Categoria</Button>
                         </Link>
                         <Button variant="outlined" className='botao'>Produtos</Button>

@@ -3,11 +3,11 @@
 }
 
 .MuiListItem-button:hover {
-	text-decoration: none !important;
-	background-color: rgba(0, 0, 0, 0.04) !important;
+    text-decoration: none !important;
+    background-color: rgba(0, 0, 0, 0.04) !important;
 }
 
-.text-decoration-none{
+.text-decoration-none {
     text-decoration: none;
     color: inherit;
 }
@@ -26,6 +26,6 @@
     font-size: 2.2rem !important;
 }
 
-.margin-left{
-    margin-left: 40px !important;
+.makeStyles-sectionDesktop-8 {
+    margin-right: 30px !important;
 }

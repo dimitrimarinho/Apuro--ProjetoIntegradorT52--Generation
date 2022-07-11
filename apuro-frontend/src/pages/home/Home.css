@@ -46,10 +46,15 @@
     background-color: #BFA584;
     color: white;
     border: 50px !important;
-    border-color: black !important;   
+    border-color: black !important;
     height: 300px;
     margin: 10px;
     align-items: center;
     justify-content: center;
     border-radius: 16px
+}
+
+.text-decoration-none {
+    text-decoration: none;
+    color: inherit;
 }
