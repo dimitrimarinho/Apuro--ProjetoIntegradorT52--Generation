@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/material';
-import CarouselComponent from '../../components/components/carousel/CarouselComponent';
+import CarouselComponent from '../../components/carousel/CarouselComponent';
 import './Home.css';
 
 
