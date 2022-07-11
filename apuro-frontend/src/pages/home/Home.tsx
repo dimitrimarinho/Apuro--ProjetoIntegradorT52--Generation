@@ -3,8 +3,8 @@ import { Grid, Typography } from '@material-ui/core';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/material';
 import CarouselComponent from '../../components/carousel/CarouselComponent';
+import { Link } from 'react-router-dom';
 import './Home.css';
-
 
 function Home() {
     return (
@@ -19,8 +19,10 @@ function Home() {
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='texto'>Aproveite a nossa plataforma!</Typography>
                     </Box>
                     <Box sx={{ display: "flex", justifyContent: "center", marginTop: 5 }}>
+                        <Link to="/cadastrar-categoria">
+                            <Button variant="outlined" className='botao'>Cadastrar Categoria</Button>
+                        </Link>
                         <Button variant="outlined" className='botao'>Produtos</Button>
-                        <Button variant="outlined" className='botao'>Vendas</Button>
                         <Button variant="outlined" className='botao'>Cadastrar produto</Button>
                         <Button variant="outlined" className='botao'>Remover produto</Button>
                     </Box>

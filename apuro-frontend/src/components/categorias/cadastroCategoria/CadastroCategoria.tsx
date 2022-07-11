@@ -11,14 +11,15 @@ function CadastroCategoria() {
 
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
-  const token = useSelector<TokenState, TokenState["token"]>(  
+  const token = useSelector<TokenState, TokenState["token"]>(
     (state) => state.token
   );
+
   const [categoria, setCategoria] = useState<Categorias>({
     id: 0,
     tipo: "",
     artista: "",
-    tutorial: null
+    tutorial: ""
   })
 
   useEffect(() => {
@@ -57,7 +58,6 @@ function CadastroCategoria() {
     console.log("categoria " + JSON.stringify(categoria))
 
     if (id !== undefined) {
-      console.log(categoria)
       put(`/categorias`, categoria, setCategoria, {
         headers: {
           'Authorization': token

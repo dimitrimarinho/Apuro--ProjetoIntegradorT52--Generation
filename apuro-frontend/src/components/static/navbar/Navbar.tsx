@@ -172,12 +172,12 @@ export default function PrimarySearchAppBar() {
             <Typography className={classes.sectionDesktop } variant="button" noWrap>
               Apuro: artesanato com amor
             </Typography>
-          </Link>            
+          </Link> 
           <Link to='/cadastrar-categoria' className='text-decoration-none'>
-            <Typography className={classes.sectionDesktop } variant="button" noWrap>
-              Cadastrar Categoria
+            <Typography className='margin-left' variant="button" noWrap>
+               Cadastrar Categoria
             </Typography>
-          </Link>          
+          </Link>                              
           <Link to='/' className='text-decoration-none'>
             <Typography className={classes.sectionMobile} variant="button" noWrap>
               Apuro: artesanato com amor
