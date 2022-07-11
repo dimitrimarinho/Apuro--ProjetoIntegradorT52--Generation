@@ -22,6 +22,11 @@ function Home() {
                         <Link to="/cadastrar-categoria" className='text-decorator-none'>
                             <Button variant="outlined" className='botao'>Cadastrar Categoria</Button>
                         </Link>
+
+                        <Link className='text-decorator-none' to='/categorias'>
+                            <Button variant="outlined" className='botao'>Categorias</Button>
+                        </Link>
+
                         <Button variant="outlined" className='botao'>Produtos</Button>
                         <Button variant="outlined" className='botao'>Cadastrar produto</Button>
                         <Button variant="outlined" className='botao'>Remover produto</Button>

@@ -10,6 +10,8 @@ import CadastroCategoria from './components/categorias/cadastroCategoria/Cadastr
 import { Provider } from 'react-redux';
 import store from './store/store';
 import './App.css';
+import ListaCategoria from './components/categoria/listarCategoria/ListaCategoria';
+import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
             <Route path="/cadastro" element={<CadastroUsuario />} />
             <Route path="/sobre-nos" element={<SobreNos />} />
             <Route path="/cadastrar-categoria" element={<CadastroCategoria />} />
+            <Route path="/categorias" element={<ListaCategoria/>}/>
+            <Route path="/deletarCategoria/:id" element={<DeletarCategoria/>}/>
           </Routes>
         </div>
         <Footer />
