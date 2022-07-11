@@ -2,7 +2,7 @@ interface Categorias {
     id: number;
     tipo: string;
     artista: string;
-    tutorial?: string | null   
+    tutorial?: string | undefined
 }
 
 export default Categorias;

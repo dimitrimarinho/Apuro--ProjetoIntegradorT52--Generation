@@ -19,7 +19,7 @@ function CadastroCategoria() {
     id: 0,
     tipo: "",
     artista: "",
-    tutorial: null
+    tutorial: undefined
   })
 
   useEffect(() => {
@@ -55,28 +55,30 @@ function CadastroCategoria() {
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
-    console.log("categoria " + JSON.stringify(categoria))
 
-    if (categoria.tipo !== "" && categoria.artista !== "") {
-      if (id !== undefined) {
-        put(`/categorias`, categoria, setCategoria, {
-          headers: {
-            'Authorization': token
-          }
-        })
-        alert('Categoria atualizada com sucesso');
-      } else {
-        post(`/categorias`, categoria, setCategoria, {
-          headers: {
-            'Authorization': token
-          }
-        })
-        alert('Categoria cadastrada com sucesso')
+    if (id !== undefined) {
+      if (categoria.tutorial === "") {
+        categoria.tutorial = undefined
       }
-      back()
+      put(`/categorias`, categoria, setCategoria, {
+        headers: {
+          'Authorization': token
+        }
+      })
+      alert('Categoria atualizada com sucesso');
+
     } else {
-      alert('Erro ao cadastrar.\nInsira as informações do tipo da categoria e artista !')
+      if (categoria.tutorial === "") {
+        categoria.tutorial = undefined
+      }
+      post(`/categorias`, categoria, setCategoria, {
+        headers: {
+          'Authorization': token
+        }
+      })
+      alert('Categoria cadastrada com sucesso')
     }
+    back()
   }
 
   function back() {
@@ -87,8 +89,8 @@ function CadastroCategoria() {
     <Container maxWidth="sm" className="topo">
       <form onSubmit={onSubmit}>
         <Typography variant="h3" color="textSecondary" component="h1" align="center">Formulário de cadastro Categoria</Typography>
-        <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
-        <TextField value={categoria.artista} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="artista" label="artista" variant="outlined" name="artista" margin="normal" fullWidth />
+        <TextField required value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
+        <TextField required value={categoria.artista} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="artista" label="artista" variant="outlined" name="artista" margin="normal" fullWidth />
         <TextField value={categoria.tutorial} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tutorial" label="tutorial" variant="outlined" name="tutorial" margin="normal" fullWidth />
         <Button type="submit" variant="contained" color="primary">
           Finalizar
