@@ -3,34 +3,40 @@ import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import Produto from '../../../models/Produto';
 import { busca } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
 import "./ListaProduto.css";
 
 function ListaProduto() {
+
     const[produtos, setProdutos] = useState<Produto[]>([])
+  
     let navigate = useNavigate();
+  
     const token = useSelector<TokenState, TokenState["token"]>(
         (state) => state.token
     );
     
    useEffect(()=>{
-    if(token == "") {
+    if(token === "") {
         alert("Você precisa estar logado")
         navigate("/login")
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [token])
    
 async function getProdutos(){
-    await busca("/produtos", setProdutos, {
+    await busca(`/produtos`, setProdutos, {
         headers: {
             'Authorization': token
         }
     })
 }
  useEffect(()=>{
-    getProduto()
+    getProdutos()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
  }, [produtos.length])  
 
 
@@ -67,19 +73,19 @@ async function getProdutos(){
                   {produto.regiao}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {produto.categoria?.tipo}
+                  {produto.categorias?.tipo}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {produto.categoria?.artista}
+                  {produto.categorias?.artista}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {produto.categoria?.tutorial}
+                  {produto.categorias?.tutorial}
                 </Typography>
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
 
-                  <Link to={`/formularioProduto/$produto.id}`} className="text-decorator-none" >
+                  <Link to={`/cadastrarProduto/${produto.id}`} className="text-decorator-none" >
                     <Box mx={1}>
                       <Button variant="contained" className="marginLeft" size='small' color="primary" >
                         atualizar

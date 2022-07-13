@@ -2,10 +2,10 @@ import { Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, S
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import Categorias from '../../models/Categorias';
-import Produto from '../../models/Produtos';
-import { busca, buscaId, post, put } from '../../services/Service';
-import { TokenState } from '../../store/tokens/tokensReducer';
+import Categorias from '../../../models/Categorias';
+import Produto from '../../../models/Produto';
+import { busca, buscaId, post, put } from '../../../services/Service';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 
 function CadastrarProdutos() {
@@ -113,7 +113,7 @@ function CadastrarProdutos() {
     }
 
     function back() {
-        navigate('/produtos')
+        navigate('/listaProduto')
     }
 
 

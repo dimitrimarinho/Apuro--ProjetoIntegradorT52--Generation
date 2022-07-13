@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
+import Produto from '../../../models/Produto';
 import { buscaId, deleteId } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
@@ -18,16 +19,18 @@ function DeletarProduto() {
  const [produto, setProdutos] = useState<Produto>()
 
  useEffect(()=>{
-    if(token == ""){
+    if(token === ""){
         alert("Você precisa estar logado")
         navigate("/login")
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
  }, [token])
  
  useEffect(()=>{
     if(id !== undefined){
         findById(id)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
  }, [id])
  
  async function findById(id: string){
@@ -39,17 +42,17 @@ function DeletarProduto() {
  }
  
  function sim() {
-    navigate ("/produtos")
-    deleteId(`/postagens/${id}`, {
+    navigate ("/listaProduto")
+    deleteId(`/produtos/${id}`, {
         headers: {
             'Authorization': token
         }
     });
-    alert("Postagem deletada com sucesso")
+    alert("Produto deletado com sucesso")
  }
  
  function nao(){
-    navigate("/produtos")
+    navigate("/listaProduto")
  }
  
     return (
