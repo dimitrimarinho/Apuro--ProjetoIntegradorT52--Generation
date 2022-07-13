@@ -19,28 +19,26 @@ function Home() {
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='texto'>Aproveite a nossa plataforma!</Typography>
                     </Box>
                     <Box sx={{ display: "flex", justifyContent: "center", marginTop: 5 }}>
-                        <Link to="/cadastrar-categoria" className='text-decorator-none'>
-                            <Button variant="outlined" className='botao'>Cadastrar Categoria</Button>
-                        </Link>
-
                         <Link className='text-decorator-none' to='/categorias'>
                             <Button variant="outlined" className='botao'>Categorias</Button>
+                        </Link>
+                        
+                        <Link to="/cadastrar-categoria" className='text-decorator-none'>
+                            <Button variant="outlined" className='botao'>Cadastrar Categoria</Button>
                         </Link>
 
                         <Link className='text-decorator-none' to='/listaProduto'>
                             <Button variant="outlined" className='botao'>Produtos</Button>
                         </Link>
                         
-                        
                         <Link to="/cadastrarProduto" className='text-decorator-none'>
                             <Button variant="outlined" className='botao'>Cadastrar produto</Button>
                         </Link>
-                        
-                        <Button variant="outlined" className='botao'>Remover produto</Button>
                     </Box>
                 </Grid>
                 <Grid xs>
                     <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                       
                         <Box className='cards'>Novos Produtos</Box>
                         <Box className='cards'>Novos produtores</Box>
                         <Box className='cards'>Produtos mais vendidos</Box>
