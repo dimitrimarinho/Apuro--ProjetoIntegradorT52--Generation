@@ -8,6 +8,7 @@ import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import Categorias from '../../../models/Categorias';
+import { toast } from 'react-toastify';
 
 function ListaCategoria() {
     const [categorias, setCategoria] = useState<Categorias[]>([])
@@ -18,7 +19,19 @@ function ListaCategoria() {
 
     useEffect(() => {
         if (token === '') {
-            alert("Você precisa estar logado")
+            
+            toast.error("Você precisa estar logado", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+                
+        
+            })
             navigate("/login")
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps

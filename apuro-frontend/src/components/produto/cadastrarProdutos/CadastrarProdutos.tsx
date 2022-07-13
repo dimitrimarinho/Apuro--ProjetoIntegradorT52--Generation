@@ -2,6 +2,7 @@ import { Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, S
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Categorias from '../../../models/Categorias';
 import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
@@ -22,7 +23,19 @@ function CadastrarProdutos() {
 
     useEffect(() => {
         if (token === "") {
-            alert("Você precisa estar logado")
+           
+            toast.error("Você precisa estar logado", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+                
+        
+            })
             navigate("/login")
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -99,14 +112,39 @@ function CadastrarProdutos() {
                     'Authorization': token
                 }
             })
-            alert('Produto atualizada com sucesso');
+           
+            toast.success("Produto atualizada com sucesso", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+                
+        
+            })
         } else {
             post(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Produto cadastrada com sucesso');
+            
+            toast.success("Produto cadastrado com sucesso", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+                
+        
+            })
+
         }
         back()
 

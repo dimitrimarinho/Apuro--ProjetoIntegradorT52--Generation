@@ -15,10 +15,14 @@ import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCat
 import ListaProduto from './components/produto/listaProduto/ListaProduto';
 import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
 import CadastrarProdutos from './components/produto/cadastrarProdutos/CadastrarProdutos';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
     <Provider store={store}>
+       <ToastContainer />
       <Router>
         <Navbar />
         <div style={{ minHeight: '100vh' }}>

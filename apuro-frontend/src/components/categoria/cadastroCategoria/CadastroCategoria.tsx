@@ -2,6 +2,7 @@ import { Button, Container, TextField, Typography } from '@material-ui/core';
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom'
+import { toast } from 'react-toastify';
 import Categorias from '../../../models/Categorias';
 import { buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -25,7 +26,18 @@ function CadastroCategoria() {
   useEffect(() => {
     console.log(token)
     if (token === "") {
-      alert("Você precisa estar logado")
+      toast.error("Você precisa estar logado", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined
+        
+
+    })
       navigate("/login")
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -65,7 +77,19 @@ function CadastroCategoria() {
           'Authorization': token
         }
       })
-      alert('Categoria atualizada com sucesso');
+      
+      toast.success("Categoria atualizada com sucesso", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined
+        
+
+    })
 
     } else {
       if (categoria.tutorial === "") {
@@ -76,7 +100,19 @@ function CadastroCategoria() {
           'Authorization': token
         }
       })
-      alert('Categoria cadastrada com sucesso')
+      
+      toast.success("Categoria cadastrada com sucesso", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined
+        
+
+    })
     }
     back()
   }
