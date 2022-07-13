@@ -28,7 +28,11 @@ function Home() {
                         </Link>
 
                         <Button variant="outlined" className='botao'>Produtos</Button>
-                        <Button variant="outlined" className='botao'>Cadastrar produto</Button>
+                        
+                        <Link to="/cadastrarProduto" className='text-decorator-none'>
+                            <Button variant="outlined" className='botao'>Cadastrar produto</Button>
+                        </Link>
+                        
                         <Button variant="outlined" className='botao'>Remover produto</Button>
                     </Box>
                 </Grid>
