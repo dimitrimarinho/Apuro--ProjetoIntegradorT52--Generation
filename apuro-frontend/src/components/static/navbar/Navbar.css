@@ -1,5 +1,5 @@
 .background {
-    background-color: #565902 !important;
+    background-color: #192610 !important;
 }
 
 .MuiListItem-button:hover {
@@ -28,4 +28,10 @@
 
 .makeStyles-sectionDesktop-8 {
     margin-right: 30px !important;
+}
+
+.logoApuro {
+    width: 200px;
+    height: 70px;
+    object-fit: contain;
 }
