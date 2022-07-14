@@ -198,8 +198,6 @@ export default function PrimarySearchAppBar() {
                 </Badge>
               </IconButton>
             </Link>
-          </div>
-          <div className={classes.sectionDesktop}>
             <Link to='/sobre-nos' className='text-decoration-none'>
               <IconButton color="inherit">
                 <Badge color="secondary">
