@@ -22,6 +22,7 @@ h1 {
     font-weight: bold;
     font-size: 46px;
     margin: 0;
+    color:#192610
 }
 
 h2 {
@@ -255,4 +256,12 @@ footer i {
 footer a {
     color: #3c97bf;
     text-decoration: none;
+}
+.logoApuro{
+    height: 15%;
+    width: 62%;
+}
+
+.text-decoration-none{
+    color:#627327;
 }

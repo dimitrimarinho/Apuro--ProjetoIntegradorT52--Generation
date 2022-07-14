@@ -5,7 +5,7 @@ import { login } from "../../services/Service";
 import { useDispatch } from "react-redux";
 import { addToken } from "../../store/tokens/actions";
 import { toast } from "react-toastify";
-import logoApuro from '../../assets/logo/logo-apuro-verdeclaro.gif'
+import logoApuro from '../../assets/logo/logoApuro.gif'
 import "./Login.css";
 
 function Login() {
@@ -77,7 +77,7 @@ function Login() {
                             <h1>Login</h1>
                             <div className="social-container">
                             </div>
-                            <span>Use seu login</span>
+                            <span className='text-decoration-none'>Use seu login</span>
                             <input value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' name='usuario' type="email" placeholder="Email" />
                             <input value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' name='senha' type="password" placeholder="Senha" />
                             <Link to='/cadastro' className='text-decoration-none'>
