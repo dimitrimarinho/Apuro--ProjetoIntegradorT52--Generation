@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 function CadastroUsuario() {
 
     let navigate = useNavigate();
-    const [confirmarSenha,setConfirmarSenha] = useState<String>("")
+    const [confirmarSenha, setConfirmarSenha] = useState<String>("")
     const [user, setUser] = useState<User>(
         {
             id: 0,
@@ -23,8 +23,8 @@ function CadastroUsuario() {
             endereco: null,
             descricao: null,
             produtos: null
-        })
-
+        }
+    )
     const [userResult, setUserResult] = useState<User>(
         {
             id: 0,
@@ -37,64 +37,54 @@ function CadastroUsuario() {
             endereco: null,
             descricao: null,
             produtos: null
-        })
+        }
+    )
 
     useEffect(() => {
-
         if (userResult.id !== 0) {
             navigate("/login")
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [userResult])
 
-
-    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
+    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
         setConfirmarSenha(e.target.value)
     }
 
-
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
-
         setUser({
             ...user,
             [e.target.name]: e.target.value
         })
-
     }
+
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        if(confirmarSenha === user.senha){
-        cadastroUsuario("/usuario/cadastrar", user, setUserResult)
-       
-        toast.success("Usuario cadastrado com sucesso", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "colored",
-            progress: undefined
-            
-    
-        })
-        }else{
-           
-            toast.error("Dados inconsistentes. Favor verificar as informações de cadastro.", {
+        if (confirmarSenha === user.senha) {
+            cadastroUsuario("/usuario/cadastrar", user, setUserResult)
+            toast.success("Usuario cadastrado com sucesso", {
                 position: "top-right",
                 autoClose: 2000,
-                hideProgressBar: false,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
                 progress: undefined
-                
-        
+            })
+        } else {
+            toast.error("Dados inconsistentes. Favor verificar as informações de cadastro.", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
             })
         }
     }
-
 
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
@@ -107,7 +97,7 @@ function CadastroUsuario() {
                         <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
 
                         <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome' variant='outlined' name='nome' margin='normal' fullWidth />
-                        
+
                         <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
 
                         <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />

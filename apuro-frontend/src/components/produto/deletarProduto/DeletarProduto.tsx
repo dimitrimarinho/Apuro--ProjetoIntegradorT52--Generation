@@ -7,112 +7,104 @@ import { toast } from 'react-toastify';
 import Produto from '../../../models/Produto';
 import { buscaId, deleteId } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
-
 import "./DeletarProduto.css";
 
 function DeletarProduto() {
- let navigate = useNavigate();
- const{id} = useParams<{id: string}>();
- const token = useSelector<TokenState, TokenState["token"]>(
+
+  let navigate = useNavigate();
+  const { id } = useParams<{ id: string }>();
+  const token = useSelector<TokenState, TokenState["token"]>(
     (state) => state.token
- );
+  );
+  const [produto, setProdutos] = useState<Produto>()
 
- const [produto, setProdutos] = useState<Produto>()
-
- useEffect(()=>{
-    if(token === ""){
-       
-        toast.error("Você precisa estar logado", {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: false,
-          theme: "colored",
-          progress: undefined
-          
-  
+  useEffect(() => {
+    if (token === "") {
+      toast.error("Você precisa estar logado", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined
       })
-        navigate("/login")
+      navigate("/login")
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
- }, [token])
- 
- useEffect(()=>{
-    if(id !== undefined){
-        findById(id)
+  }, [token])
+
+  useEffect(() => {
+    if (id !== undefined) {
+      findById(id)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
- }, [id])
- 
- async function findById(id: string){
+  }, [id])
+
+  async function findById(id: string) {
     buscaId(`/produtos/${id}`, setProdutos, {
-        headers: {
-            'Athorization': token
-        }
+      headers: {
+        'Athorization': token
+      }
     })
- }
- 
- function sim() {
-    navigate ("/listaProduto")
+  }
+
+  function sim() {
+    navigate("/listaProduto")
     deleteId(`/produtos/${id}`, {
-        headers: {
-            'Authorization': token
-        }
+      headers: {
+        'Authorization': token
+      }
     });
-    
     toast.success("Produto deletado com sucesso", {
       position: "top-right",
       autoClose: 2000,
-      hideProgressBar: false,
+      hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: false,
       draggable: false,
       theme: "colored",
       progress: undefined
-      
+    })
+  }
 
-  })
- }
- 
- function nao(){
+  function nao() {
     navigate("/listaProduto")
- }
- 
-    return (
-        <>
-        <Box m={2}>
-          <Card variant="outlined" >
-            <CardContent>
-              <Box justifyContent="center">
-                <Typography color="textSecondary" gutterBottom>
-                  Deseja deletar o produto:
-                </Typography>
-                <Typography color="textSecondary" >
+  }
+
+  return (
+    <>
+      <Box m={2}>
+        <Card variant="outlined" >
+          <CardContent>
+            <Box justifyContent="center">
+              <Typography color="textSecondary" gutterBottom>
+                Deseja deletar o produto:
+              </Typography>
+              <Typography color="textSecondary" >
                 {produto?.nome}
-                </Typography>
-              </Box>
-  
-            </CardContent>
-            <CardActions>
-              <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
-                <Box mx={2}>
-                <Button  onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+              </Typography>
+            </Box>
+
+          </CardContent>
+          <CardActions>
+            <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
+              <Box mx={2}>
+                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
                   Sim
                 </Button>
-                </Box>
-                <Box>
-                <Button  onClick={nao}  variant="contained" size='large' color="secondary">
+              </Box>
+              <Box>
+                <Button onClick={nao} variant="contained" size='large' color="secondary">
                   Não
                 </Button>
-                </Box>
               </Box>
-            </CardActions>
-          </Card>
-        </Box>
-      </>
-
+            </Box>
+          </CardActions>
+        </Card>
+      </Box>
+    </>
   );
 }
 

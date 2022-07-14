@@ -29,15 +29,13 @@ function CadastroCategoria() {
       toast.error("Você precisa estar logado", {
         position: "top-right",
         autoClose: 2000,
-        hideProgressBar: false,
+        hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: false,
         draggable: false,
         theme: "colored",
         progress: undefined
-        
-
-    })
+      })
       navigate("/login")
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -77,20 +75,16 @@ function CadastroCategoria() {
           'Authorization': token
         }
       })
-      
       toast.success("Categoria atualizada com sucesso", {
         position: "top-right",
         autoClose: 2000,
-        hideProgressBar: false,
+        hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: false,
         draggable: false,
         theme: "colored",
         progress: undefined
-        
-
-    })
-
+      })
     } else {
       if (categoria.tutorial === "") {
         categoria.tutorial = undefined
@@ -100,19 +94,16 @@ function CadastroCategoria() {
           'Authorization': token
         }
       })
-      
       toast.success("Categoria cadastrada com sucesso", {
         position: "top-right",
         autoClose: 2000,
-        hideProgressBar: false,
+        hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: false,
         draggable: false,
         theme: "colored",
         progress: undefined
-        
-
-    })
+      })
     }
     back()
   }

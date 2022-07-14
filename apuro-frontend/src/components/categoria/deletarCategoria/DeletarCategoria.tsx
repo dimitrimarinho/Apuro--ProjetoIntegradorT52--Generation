@@ -10,29 +10,26 @@ import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 
 function DeletarCategoria() {
+
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
-
     const token = useSelector<TokenState, TokenState["token"]>(
         (state) => state.token
     );
-
     const [categoria, setCategoria] = useState<Categorias>()
 
     useEffect(() => {
         if (token === "") {
-            
+
             toast.error("Você não está logado", {
                 position: "top-right",
                 autoClose: 2000,
-                hideProgressBar: false,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
                 progress: undefined
-                
-        
             })
             navigate("/login")
         }
@@ -61,18 +58,16 @@ function DeletarCategoria() {
                 'Authorization': token
             }
         });
-       
+
         toast.success("Categoria deletada com sucesso", {
             position: "top-right",
             autoClose: 2000,
-            hideProgressBar: false,
+            hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: false,
             draggable: false,
             theme: "colored",
             progress: undefined
-            
-    
         })
     }
 

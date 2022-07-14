@@ -16,13 +16,13 @@ function Login() {
     const [token, setToken] = useState('');
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
-
             id: 0,
             usuario: '',
             senha: '',
             foto: '',
             token: ''
-        })
+        }
+    )
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
         setUserLogin(
@@ -35,38 +35,28 @@ function Login() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-
             await login("/usuario/logar", userLogin, setToken)
-
-            
             toast.success("Usuário logado com sucesso!", {
                 position: "top-right",
                 autoClose: 2000,
-                hideProgressBar: false,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
                 progress: undefined
-                
-        
             })
-
         }
         catch (error) {
-
-           
-            toast.error("Dados inconsistentes. Erro ao logar!", {
+            toast.error(<div>Dados inconsistentes.<br /> Erro ao logar!</div>, {
                 position: "top-right",
                 autoClose: 2000,
-                hideProgressBar: false,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
                 progress: undefined
-                
-        
             })
         }
     }
@@ -78,7 +68,6 @@ function Login() {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [token])
-
 
     return (
         <Grid container direction='row' justifyContent="center" alignItems="center">

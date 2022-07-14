@@ -11,6 +11,7 @@ import Categorias from '../../../models/Categorias';
 import { toast } from 'react-toastify';
 
 function ListaCategoria() {
+
     const [categorias, setCategoria] = useState<Categorias[]>([])
     let navigate = useNavigate();
     const token = useSelector<TokenState, TokenState["token"]>(
@@ -19,18 +20,15 @@ function ListaCategoria() {
 
     useEffect(() => {
         if (token === '') {
-            
             toast.error("Você precisa estar logado", {
                 position: "top-right",
                 autoClose: 2000,
-                hideProgressBar: false,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
                 progress: undefined
-                
-        
             })
             navigate("/login")
         }
@@ -90,6 +88,5 @@ function ListaCategoria() {
         </>
     );
 }
-
 
 export default ListaCategoria;

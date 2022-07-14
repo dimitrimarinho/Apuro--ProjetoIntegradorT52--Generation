@@ -8,7 +8,6 @@ import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
-
 function CadastrarProdutos() {
 
     let navigate = useNavigate();
@@ -23,18 +22,15 @@ function CadastrarProdutos() {
 
     useEffect(() => {
         if (token === "") {
-           
             toast.error("Você precisa estar logado", {
                 position: "top-right",
                 autoClose: 2000,
-                hideProgressBar: false,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
                 progress: undefined
-                
-        
             })
             navigate("/login")
         }
@@ -94,13 +90,11 @@ function CadastrarProdutos() {
     }
 
     function updatedProduto(e: ChangeEvent<HTMLInputElement>) {
-
         setProduto({
             ...produto,
             [e.target.name]: e.target.value,
             categorias: categoria
         })
-
     }
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
@@ -112,18 +106,15 @@ function CadastrarProdutos() {
                     'Authorization': token
                 }
             })
-           
             toast.success("Produto atualizada com sucesso", {
                 position: "top-right",
                 autoClose: 2000,
-                hideProgressBar: false,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
                 progress: undefined
-                
-        
             })
         } else {
             post(`/produtos`, produto, setProduto, {
@@ -131,29 +122,23 @@ function CadastrarProdutos() {
                     'Authorization': token
                 }
             })
-            
             toast.success("Produto cadastrado com sucesso", {
                 position: "top-right",
                 autoClose: 2000,
-                hideProgressBar: false,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
                 progress: undefined
-                
-        
             })
-
         }
         back()
-
     }
 
     function back() {
         navigate('/listaProduto')
     }
-
 
     return (
         <Container maxWidth="sm" className="topo">
@@ -171,7 +156,6 @@ function CadastrarProdutos() {
                 <TextField value={produto.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="foto" label="Imagem do Produto" name="foto" variant="outlined" margin="normal" fullWidth />
 
                 <TextField required value={produto.regiao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="regiao" label="Região" name="regiao" variant="outlined" margin="normal" fullWidth />
-
 
                 <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-helper-label">Categoria</InputLabel>

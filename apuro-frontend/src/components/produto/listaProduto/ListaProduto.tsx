@@ -7,56 +7,51 @@ import { toast } from 'react-toastify';
 import Produto from '../../../models/Produto';
 import { busca } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
-
 import "./ListaProduto.css";
 
 function ListaProduto() {
 
-    const[produtos, setProdutos] = useState<Produto[]>([])
-  
-    let navigate = useNavigate();
-  
-    const token = useSelector<TokenState, TokenState["token"]>(
-        (state) => state.token
-    );
-    
-   useEffect(()=>{
-    if(token === "") {
-       
-        toast.error("Você precisa estar logado", {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: false,
-          theme: "colored",
-          progress: undefined
-          
-  
+  const [produtos, setProdutos] = useState<Produto[]>([])
+
+  let navigate = useNavigate();
+
+  const token = useSelector<TokenState, TokenState["token"]>(
+    (state) => state.token
+  );
+
+  useEffect(() => {
+    if (token === "") {
+
+      toast.error("Você precisa estar logado", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined
       })
-        navigate("/login")
+      navigate("/login")
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-   }, [token])
-   
-async function getProdutos(){
+  }, [token])
+
+  async function getProdutos() {
     await busca(`/produtos`, setProdutos, {
-        headers: {
-            'Authorization': token
-        }
+      headers: {
+        'Authorization': token
+      }
     })
-}
- useEffect(()=>{
+  }
+  useEffect(() => {
     getProdutos()
     // eslint-disable-next-line react-hooks/exhaustive-deps
- }, [produtos.length])  
+  }, [produtos.length])
 
-
-  
-    return (
-   <>
-   {
+  return (
+    <>
+      {
         produtos.map(produto => (
           <Box m={2} >
             <Card variant="outlined">
@@ -97,7 +92,6 @@ async function getProdutos(){
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
-
                   <Link to={`/cadastrarProduto/${produto.id}`} className="text-decorator-none" >
                     <Box mx={1}>
                       <Button variant="contained" className="marginLeft" size='small' color="primary" >
@@ -118,10 +112,8 @@ async function getProdutos(){
           </Box>
         ))
       }
-   </>
-
+    </>
   );
 }
 
 export default ListaProduto;
-
