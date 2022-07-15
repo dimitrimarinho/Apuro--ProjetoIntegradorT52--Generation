@@ -1,10 +1,11 @@
 .box1 {
     background-color: #192610;
-    height: 120px;
+    height: 300px;
+    padding-left: 10px;
 }
 
 .icones {
-    font-size: 60px !important;
+    font-size: 30px !important;
     color: white;
 }
 
@@ -20,8 +21,28 @@
 
 .textos {
     color: white;
+
+}
+
+.textos-footer{
+    color: #CFD4BC;
+    margin-top: 20px;
 }
 
 .textos-rodape {
     color: white;
+}
+.text-decorator-none {
+    text-decoration: none;
+}
+.boxFooter::before{
+    content: "";
+    left: 0;
+    bottom: 200px;
+    background-color: #BF573F;
+    padding-right: 100px;
+    height: 2px;
+    box-sizing: border-box;
+    width: 150px;
+    margin-bottom: 6px;
 }
