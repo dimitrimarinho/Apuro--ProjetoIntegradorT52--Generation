@@ -17,10 +17,10 @@ function Footer() {
 
                     <Box className="box1">
 
-                        <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
+                        <Box paddingTop={1} display="flex" alignItems="center" justifyContent="left">
                             <Typography variant="h5" align="center" gutterBottom className="textos">Apuro </Typography>
                         </Box>
-                        <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" className="boxFooter">
+                        <Box display="flex" flexDirection="column" alignItems="left" justifyContent="left" className="boxFooter">
                             <Link to='/home' className='text-decoration-none'>
                                 <Typography variant="inherit" align="center" gutterBottom className="textos" >Home </Typography>
                             </Link>
@@ -38,11 +38,11 @@ function Footer() {
 
                     <Box className="box1">
 
-                        <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center" >
-                           
+                        <Box paddingTop={1} display="flex" alignItems="center" justifyContent="left" >
+
                             <Typography variant="h5" align="center" gutterBottom className="textos">Linkedin</Typography>
                         </Box>
-                        <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" className="boxFooter">
+                        <Box display="flex" flexDirection="column" alignItems="left" justifyContent="center" className="boxFooter">
                             <a href="https://www.linkedin.com/in/stefani-machado-oliveira/" target="_blank" rel="noreferrer" className="text-decorator-none">
                                 <Typography variant="inherit" align="left" gutterBottom className="textos-footer" >Stefani Oliveira</Typography>
                             </a>
@@ -67,7 +67,7 @@ function Footer() {
                             <Typography variant="h5" align="center" gutterBottom className="textos">Redes sociais </Typography>
                         </Box>
                         <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" className="boxFooter">
-                            <Box display="flex" flexDirection="row" alignItems="center" justifyContent="center" >
+                            <Box display="flex" flexDirection="row" alignItems="center" justifyContent="left" >
 
                                 <FacebookIcon className="icones" />
                                 <InstagramIcon className="icones" />
