@@ -20,14 +20,14 @@ function Footer() {
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                             <Typography variant="h5" align="center" gutterBottom className="textos">Apuro </Typography>
                         </Box>
-                        <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+                        <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" className="boxFooter">
                             <Link to='/home' className='text-decoration-none'>
-                                <Typography variant="inherit" align="center" gutterBottom className="textos">Home </Typography>
+                                <Typography variant="inherit" align="center" gutterBottom className="textos" >Home </Typography>
                             </Link>
                             <Link to="/sobre-nos" className='text-decoration-none'>
                                 <Typography variant="inherit" align="center" gutterBottom className="textos">Sobre </Typography>
                             </Link>
-                            <Link to="/Listaproduto" className='text-decoration-none'>
+                            <Link to="/Listaproduto" className='text-decoration-none' >
                                 <Typography variant="inherit" align="center" gutterBottom className="textos">Produtos</Typography>
                             </Link>
                         </Box>
@@ -39,7 +39,7 @@ function Footer() {
                     <Box className="box1">
 
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center" >
-                            <LinkedInIcon className="icones" />
+                           
                             <Typography variant="h5" align="center" gutterBottom className="textos">Linkedin</Typography>
                         </Box>
                         <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" className="boxFooter">
