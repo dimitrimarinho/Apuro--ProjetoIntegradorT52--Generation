@@ -27,7 +27,7 @@ function Footer() {
                             <Link to="/sobre-nos" className='text-decoration-none'>
                                 <Typography variant="inherit" align="center" gutterBottom className="textos">Sobre </Typography>
                             </Link>
-                            <Link to="/produtos" className='text-decoration-none'>
+                            <Link to="/Listaproduto" className='text-decoration-none'>
                                 <Typography variant="inherit" align="center" gutterBottom className="textos">Produtos</Typography>
                             </Link>
                         </Box>
