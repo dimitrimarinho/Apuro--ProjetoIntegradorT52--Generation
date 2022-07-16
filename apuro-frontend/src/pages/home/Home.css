@@ -1,6 +1,7 @@
 .caixa1 {
     background-color: #F2F2F2  !important;
-    height: 200%;
+    height: 100%;
+    padding-top: 10px;
     padding-bottom: 0px;
 }
 
@@ -16,6 +17,7 @@
     margin-bottom: 10px !important;
     margin-right: 10px !important;
     border-radius: 25px !important;
+    min-width: 200px !important;
 }
 
 .produtos {

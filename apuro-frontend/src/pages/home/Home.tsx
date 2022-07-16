@@ -9,12 +9,13 @@ import './Home.css';
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+        maxWidth: 250,
+        margin: "20px",
     },
     media: {
-      height: 140,
+        height: 150,
     },
-  });
+});
 
 
 function Home() {
@@ -33,32 +34,39 @@ function Home() {
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='texto'>Aproveite a nossa plataforma!</Typography>
                     </Box>
                     <Box sx={{ display: "flex", justifyContent: "center", marginTop: 5 }}>
-                        <Link className='text-decorator-none' to='/categorias'>
-                            <Button variant="outlined" className='botao'>Categorias</Button>
-                        </Link>
-                        
-                        <Link to="/cadastrar-categoria" className='text-decorator-none'>
-                            <Button variant="outlined" className='botao'>Cadastrar Categoria</Button>
-                        </Link>
 
                         <Link className='text-decorator-none' to='/listaProduto'>
                             <Button variant="outlined" className='botao'>Produtos</Button>
                         </Link>
-                        
+
+                        <Link className='text-decorator-none' to='/categorias'>
+                            <Button variant="outlined" className='botao'>Categorias</Button>
+                        </Link>
+
+                        <Link className='text-decorator-none' to='/categorias'>
+                            <Button variant="outlined" className='botao'>Artistas</Button>
+                        </Link>
+
                         <Link to="/cadastrarProduto" className='text-decorator-none'>
                             <Button variant="outlined" className='botao'>Cadastrar produto</Button>
                         </Link>
+
+                        <Link to="/cadastrar-categoria" className='text-decorator-none'>
+                            <Button variant="outlined" className='botao'>Cadastrar Categoria</Button>
+                        </Link>
+
+                        
                     </Box>
                 </Grid>
+
                 <Grid xs={12}>
                     <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
-                       <Card className={classes.root}>
+                        <Card className={classes.root}>
                             <CardActionArea>
-                                
                                 <CardMedia
                                     className={classes.media}
                                     image="/img_card.jpg"
-                                    title="Contemplative Reptile" 
+                                    title="Novos produtos"
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
@@ -66,20 +74,72 @@ function Home() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                <Button size="small" color="primary">
-                                    Confira mais ...
-                                </Button>
+                                    <Button size="small" color="primary">
+                                        Confira mais ...
+                                    </Button>
                                 </CardActions>
                             </CardActionArea>
-                       </Card>
-                        <Box className='cards'>Novos Produtos</Box>
-                        <Box className='cards'>Novos produtores</Box>
-                        <Box className='cards'>Produtos mais vendidos</Box>
-                        <Box className='cards'>Categorias mais buscadas</Box>
-                        <Box className='cards'>Produtores em alta</Box>
-                        <Box className='cards'>Produtores mais bem avaliados</Box>
-                        <Box className='cards'>Produtores mais bem avaliados</Box>
-                        <Box className='cards'>Produtores com melhores notas de sustentabilidade</Box>
+                        </Card>
+
+                        <Card className={classes.root}>
+                            <CardActionArea>
+                                <CardMedia
+                                    className={classes.media}
+                                    image="/img_card.jpg"
+                                    title="Novos produtos"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Produtos mais vendidos
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small" color="primary">
+                                        Confira mais ...
+                                    </Button>
+                                </CardActions>
+                            </CardActionArea>
+                        </Card>
+
+                        <Card className={classes.root}>
+                            <CardActionArea>
+                                <CardMedia
+                                    className={classes.media}
+                                    image="/img_card.jpg"
+                                    title="Novos produtos"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Categorias mais buscadas
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small" color="primary">
+                                        Confira mais ...
+                                    </Button>
+                                </CardActions>
+                            </CardActionArea>
+                        </Card>
+
+                        <Card className={classes.root}>
+                            <CardActionArea>
+                                <CardMedia
+                                    className={classes.media}
+                                    image="/img_card.jpg"
+                                    title="Novos produtos"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Produtos em alta
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small" color="primary">
+                                        Confira mais ...
+                                    </Button>
+                                </CardActions>
+                            </CardActionArea>
+                        </Card>
 
                     </Box>
                 </Grid>
