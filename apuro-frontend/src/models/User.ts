@@ -3,12 +3,12 @@ interface User {
     nome: string;
     usuario: string;
     senha: string;
-    foto?: string | null
-    dataDeNascimento?: Date | null;
+    foto?: string | undefined;
+    dataDeNascimento?: string | undefined;
     cpf: string;
-    endereco?: string | null;
-    descricao?: string | null;
-    produtos?: null
+    endereco?: string | undefined;
+    descricao?: string | undefined;
+    produtos?: undefined
 }
 
 export default User;
