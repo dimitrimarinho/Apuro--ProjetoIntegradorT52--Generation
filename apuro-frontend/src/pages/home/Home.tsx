@@ -1,12 +1,26 @@
 import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import { Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, makeStyles, Typography } from '@material-ui/core';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/material';
 import CarouselComponent from '../../components/carousel/CarouselComponent';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
+
+const useStyles = makeStyles({
+    root: {
+      maxWidth: 345,
+    },
+    media: {
+      height: 140,
+    },
+  });
+
+
 function Home() {
+
+    const classes = useStyles();
+
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa1'>
@@ -15,7 +29,7 @@ function Home() {
                 </Grid>
                 <Grid alignItems="center" item xs={12}>
                     <Box paddingX={20} className="caixa1">
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='texto'>Seja bem vindo(a)!</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='texto'>É bom te ver ...</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='texto'>Aproveite a nossa plataforma!</Typography>
                     </Box>
                     <Box sx={{ display: "flex", justifyContent: "center", marginTop: 5 }}>
@@ -36,9 +50,28 @@ function Home() {
                         </Link>
                     </Box>
                 </Grid>
-                <Grid xs>
+                <Grid xs={12}>
                     <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
-                       
+                       <Card className={classes.root}>
+                            <CardActionArea>
+                                
+                                <CardMedia
+                                    className={classes.media}
+                                    image="/img_card.jpg"
+                                    title="Contemplative Reptile" 
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Novos Produtos
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                <Button size="small" color="primary">
+                                    Confira mais ...
+                                </Button>
+                                </CardActions>
+                            </CardActionArea>
+                       </Card>
                         <Box className='cards'>Novos Produtos</Box>
                         <Box className='cards'>Novos produtores</Box>
                         <Box className='cards'>Produtos mais vendidos</Box>
