@@ -11,12 +11,8 @@ function Footer() {
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center">
-
                 <Grid alignItems="center" item xs={4}>
-
-
                     <Box className="box1">
-
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="left">
                             <Typography variant="h5" align="center" gutterBottom className="textos">Apuro </Typography>
                         </Box>
@@ -34,12 +30,8 @@ function Footer() {
                     </Box>
                 </Grid>
                 <Grid alignItems="center" item xs={4}>
-
-
                     <Box className="box1">
-
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="left" >
-
                             <Typography variant="h5" align="center" gutterBottom className="textos">Linkedin</Typography>
                         </Box>
                         <Box display="flex" flexDirection="column" alignItems="left" justifyContent="center" className="boxFooter">
@@ -59,26 +51,20 @@ function Footer() {
                     </Box>
                 </Grid>
                 <Grid alignItems="center" item xs={4}>
-
-
                     <Box className="box1">
-
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center" >
                             <Typography variant="h5" align="center" gutterBottom className="textos">Redes sociais </Typography>
                         </Box>
                         <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" className="boxFooter">
                             <Box display="flex" flexDirection="row" alignItems="center" justifyContent="left" >
-
                                 <FacebookIcon className="icones" />
                                 <InstagramIcon className="icones" />
                                 <LinkedInIcon className="icones" />
-
                             </Box>
                         </Box>
                     </Box>
                 </Grid>
             </Grid>
-
             <Grid alignItems="center" item xs={12}>
                 <Box className="box2">
                     <Box paddingTop={1}>
@@ -86,8 +72,8 @@ function Footer() {
                     </Box>
                 </Box>
             </Grid>
-
         </>
     );
 }
+
 export default Footer;

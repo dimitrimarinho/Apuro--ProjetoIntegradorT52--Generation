@@ -21,10 +21,9 @@
 
 .textos {
     color: white;
-
 }
 
-.textos-footer{
+.textos-footer {
     color: #CFD4BC;
     margin-top: 5px;
 }
@@ -32,10 +31,12 @@
 .textos-rodape {
     color: white;
 }
+
 .text-decorator-none {
     text-decoration: none;
 }
-.boxFooter::before{
+
+.boxFooter::before {
     content: "";
     left: 0;
     bottom: 200px;
