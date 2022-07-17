@@ -1,43 +1,42 @@
 img {
 	width: 100vw;
-	height: 300px;
 	object-fit: cover;
 }
 
 .caixa {
-	background-color: #D9A404;
+	background-color: #F2F2F2;
 	padding: 20px;
 }
 
 .eWjCzc {
-	color: white !important;
-	box-shadow: 0 0 2px 0px white !important;
+	color: #F2F2F2 !important;
+	box-shadow: 0 0 2px 0px #F2F2F2 !important;
 }
 
 .eWjCzc:hover:enabled,
 .eWjCzc:focus:enabled {
-	color: #fff !important;
-	background-color: #A60303 !important;
-	box-shadow: 0 0 2px 0 white !important;
+	color: #F2F2F2 !important;
+	background-color: #9DA67C !important;
+	box-shadow: 0 0 2px 0 #F2F2F2 !important;
 }
 
 .eAyARa {
-	color: white !important;
-	box-shadow: 0 0 2px 0px white !important;
+	color: #F2F2F2 !important;
+	box-shadow: 0 0 2px 0px #F2F2F2 !important;
 }
 
 .krmNah:hover,
 .krmNah:focus {
 	cursor: pointer !important;
-	box-shadow: 0 0 1px 3px #A60303 !important;
+	box-shadow: 0 0 1px 3px #9DA67C !important;
 }
 
 .krmNah {
-	background-color: #A60303 !important;
-	box-shadow: 0 0 1px 3px #A60303 !important;
+	background-color: #9DA67C !important;
+	box-shadow: 0 0 1px 3px #9DA67C !important;
 }
 
 .jhmYzC:hover,
 .jhmYzC:focus {
-	box-shadow: 0 0 1px 3px #A60303 !important;
+	box-shadow: 0 0 1px 3px #9DA67C !important;
 }
