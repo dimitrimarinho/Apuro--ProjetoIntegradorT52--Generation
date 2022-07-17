@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, makeStyles, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -9,9 +9,24 @@ import { busca } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import "./ListaProduto.css";
 
+
+const useStyles = makeStyles({
+  root: {
+    width: 250,
+    margin: "20px",
+  },
+  media: {
+    height: 300,
+    width: 300
+
+  },
+});
+
 function ListaProduto() {
 
   const [produtos, setProdutos] = useState<Produto[]>([])
+
+  const classes = useStyles();
 
   let navigate = useNavigate();
 
@@ -44,6 +59,7 @@ function ListaProduto() {
       }
     })
   }
+
   useEffect(() => {
     getProdutos()
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -55,41 +71,49 @@ function ListaProduto() {
         produtos.map(produto => (
           <Box m={2} >
             <Card variant="outlined">
-              <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Produto
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  {produto.nome}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.descricao}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.quantidade}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.preco}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.foto}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.sustentabilidade}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.regiao}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.categorias?.tipo}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.categorias?.artista}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.categorias?.tutorial}
-                </Typography>
-              </CardContent>
+              <CardActionArea>
+                <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                  <CardMedia title="Imagem do produto" image={produto.foto} className={classes.media} />
+                  <CardContent>
+                    <Typography color="textSecondary" gutterBottom>
+                      Produto
+                    </Typography>
+                    <Typography variant="h5" component="h2">
+                      {produto.nome}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {produto.descricao}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {produto.quantidade}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {produto.preco}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {produto.foto}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {produto.sustentabilidade}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {produto.regiao}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {produto.categorias?.tipo}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {produto.categorias?.artista}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {produto.categorias?.tutorial}
+                    </Typography>
+                  </CardContent>
+                </Box>
+
+
+              </CardActionArea>
+
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
                   <Link to={`/cadastrarProduto/${produto.id}`} className="text-decorator-none" >
@@ -108,6 +132,7 @@ function ListaProduto() {
                   </Link>
                 </Box>
               </CardActions>
+
             </Card>
           </Box>
         ))
