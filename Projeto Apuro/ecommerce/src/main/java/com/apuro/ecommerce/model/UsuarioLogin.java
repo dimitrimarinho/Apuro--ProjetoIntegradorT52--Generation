@@ -1,12 +1,14 @@
 package com.apuro.ecommerce.model;
 
 public class UsuarioLogin {
+	
 	private long id;
 	private String nome;
 	private String usuario;
 	private String senha;
 	private String foto;
 	private String token;
+	
 	public long getId() {
 		return id;
 	}

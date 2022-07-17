@@ -11,6 +11,5 @@ import com.apuro.ecommerce.model.Categorias;
 public interface CategoriasRepository extends JpaRepository<Categorias, Long > {
 
 	public List<Categorias> findAllByTipoContainingIgnoreCase(String tipo);
-	public List<Categorias> findAllByArtistaContainingIgnoreCase(String artista);
 	
 }
