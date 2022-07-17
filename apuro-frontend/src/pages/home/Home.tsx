@@ -9,7 +9,7 @@ import './Home.css';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 250,
+        width: 250,
         margin: "20px",
     },
     media: {
@@ -68,8 +68,8 @@ function Home() {
                                     image="/img_card.jpg"
                                     title="Novos produtos"
                                 />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2">
+                                <CardContent className='caixaDetextoCards'>
+                                    <Typography className='textoCard' gutterBottom variant="h5" component="h2">
                                         Novos Produtos
                                     </Typography>
                                 </CardContent>
@@ -88,8 +88,8 @@ function Home() {
                                     image="/img_card.jpg"
                                     title="Novos produtos"
                                 />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2">
+                                <CardContent className='caixaDetextoCards'>
+                                    <Typography className='textoCard' gutterBottom variant="h5" component="h2">
                                         Produtos mais vendidos
                                     </Typography>
                                 </CardContent>
@@ -108,8 +108,8 @@ function Home() {
                                     image="/img_card.jpg"
                                     title="Novos produtos"
                                 />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2">
+                                <CardContent className='caixaDetextoCards'>
+                                    <Typography className='textoCard' gutterBottom variant="h5" component="h2">
                                         Categorias mais buscadas
                                     </Typography>
                                 </CardContent>
@@ -128,8 +128,8 @@ function Home() {
                                     image="/img_card.jpg"
                                     title="Novos produtos"
                                 />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2">
+                                <CardContent className='caixaDetextoCards'>
+                                    <Typography className='textoCard' gutterBottom variant="h5" component="h2">
                                         Produtos em alta
                                     </Typography>
                                 </CardContent>

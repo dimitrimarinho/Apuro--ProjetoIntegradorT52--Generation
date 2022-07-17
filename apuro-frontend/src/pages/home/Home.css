@@ -61,3 +61,12 @@
     text-decoration: none;
     color: inherit;
 }
+
+.textoCard {
+    text-decoration: #192610 !important;
+}
+
+.caixaDetextoCards {
+    height: 75px;
+    text-align: center;
+}
