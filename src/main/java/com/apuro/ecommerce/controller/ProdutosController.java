@@ -45,18 +45,18 @@ public class ProdutosController {
 	}
 
 	 @PostMapping
-	    public ResponseEntity <Produtos> post (@Valid @RequestBody Produtos produtos){
-	        return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produtos));
-	    }
+	 public ResponseEntity <Produtos> post (@Valid @RequestBody Produtos produtos){
+		 return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produtos));
+	 }
 
 	 @PutMapping 
-	    public ResponseEntity <Produtos> put (@Valid @RequestBody Produtos produtos){
-	        return ResponseEntity.ok(repository.save(produtos));
-	    }
+	 public ResponseEntity <Produtos> put (@Valid @RequestBody Produtos produtos){
+		 return ResponseEntity.ok(repository.save(produtos));
+	 }
 
 	 @DeleteMapping("/{id}")
-	    public void delete (@PathVariable long id) {
-	        repository.deleteById(id);
-	    }
+	 public void delete (@PathVariable long id) {
+		 repository.deleteById(id);
+	 }
 
 }

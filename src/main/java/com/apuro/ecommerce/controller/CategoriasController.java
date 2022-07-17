@@ -37,27 +37,25 @@ public class CategoriasController {
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
+	
 	@GetMapping("/tipo/{tipo}")
 	public ResponseEntity<List<Categorias>> getByTipo(@PathVariable String tipo){
 		return ResponseEntity.ok(repository.findAllByTipoContainingIgnoreCase(tipo));
 	}
-	
-	@GetMapping("/artista/{artista}")
-	public ResponseEntity<List<Categorias>> getByArtista(@PathVariable String artista){
-		return ResponseEntity.ok(repository.findAllByArtistaContainingIgnoreCase(artista));
+
+	@PostMapping
+	public ResponseEntity <Categorias> post (@Valid @RequestBody Categorias categorias){
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categorias));
 	}
-	 @PostMapping
-	    public ResponseEntity <Categorias> post (@Valid @RequestBody Categorias categorias){
-	        return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categorias));
-	    }
 
 	 @PutMapping 
-	    public ResponseEntity <Categorias> put (@Valid @RequestBody Categorias categorias){
-	        return ResponseEntity.ok(repository.save(categorias));
-	    }
+	 public ResponseEntity <Categorias> put (@Valid @RequestBody Categorias categorias){
+		 return ResponseEntity.ok(repository.save(categorias));
+	 }
 
 	 @DeleteMapping("/{id}")
-	    public void delete (@PathVariable long id) {
-	        repository.deleteById(id);
-	    }
+	 public void delete (@PathVariable long id) {
+		 repository.deleteById(id);
+	 }
+	 
 }

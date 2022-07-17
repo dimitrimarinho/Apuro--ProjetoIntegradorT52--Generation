@@ -16,8 +16,11 @@ import org.springframework.web.server.ResponseStatusException;
 @Service
 public class UsuarioService {
 	
-	@Autowired
 	private UsuarioRepository usuarioRepository;
+	
+	public UsuarioService(UsuarioRepository usuarioRepository) {
+		this.usuarioRepository = usuarioRepository;
+	}
 	
 	public Optional<Usuario> cadastrarUsuario(Usuario usuario){
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
