@@ -1,20 +1,23 @@
 .caixa1 {
-    background-color: #f5f9fc !important;
-    height: 200%;
-    padding-bottom: 30px;
+    background-color: #F2F2F2  !important;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 0px;
 }
 
 .texto {
-    color: black;
+    color: #192610 !important;
 }
 
 .botao {
-    border-color: #F2D399 !important;
-    background-color: #A60303 !important;
-    color: white !important;
+    border-color: #CFD4BC !important;
+    background-color: #627327 !important;
+    color: #CFD4BC  !important;
     margin-left: 10px !important;
     margin-bottom: 10px !important;
     margin-right: 10px !important;
+    border-radius: 25px !important;
+    min-width: 200px !important;
 }
 
 .produtos {
@@ -46,10 +49,24 @@
     background-color: #BFA584;
     color: white;
     border: 50px !important;
-    border-color: black !important;   
+    border-color: black !important;
     height: 300px;
     margin: 10px;
     align-items: center;
     justify-content: center;
     border-radius: 16px
+}
+
+.text-decoration-none {
+    text-decoration: none;
+    color: inherit;
+}
+
+.textoCard {
+    text-decoration: #192610 !important;
+}
+
+.caixaDetextoCards {
+    height: 75px;
+    text-align: center;
 }

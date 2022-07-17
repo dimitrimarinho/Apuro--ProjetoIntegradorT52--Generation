@@ -1,10 +1,11 @@
 .box1 {
-    background-color: #565902;
-    height: 120px;
+    background-color: #192610;
+    height: 300px;
+    padding-left: 10px;
 }
 
 .icones {
-    font-size: 60px !important;
+    font-size: 30px !important;
     color: white;
 }
 
@@ -14,7 +15,7 @@
 }
 
 .box2 {
-    background-image: linear-gradient(#565902, #BFA584);
+    background-image: linear-gradient(#192610, #BF573F);
     height: 40px;
 }
 
@@ -22,6 +23,27 @@
     color: white;
 }
 
+.textos-footer {
+    color: #CFD4BC;
+    margin-top: 5px;
+}
+
 .textos-rodape {
     color: white;
+}
+
+.text-decorator-none {
+    text-decoration: none;
+}
+
+.boxFooter::before {
+    content: "";
+    left: 0;
+    bottom: 200px;
+    background-color: #BF573F;
+    padding-right: 100px;
+    height: 2px;
+    box-sizing: border-box;
+    width: 150px;
+    margin-bottom: 6px;
 }

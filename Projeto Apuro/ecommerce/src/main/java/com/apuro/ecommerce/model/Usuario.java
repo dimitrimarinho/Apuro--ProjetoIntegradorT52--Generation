@@ -137,4 +137,5 @@ public class Usuario {
 	public void setProdutos(List<Produtos> produtos) {
 		this.produtos = produtos;
 	}
+	
 }

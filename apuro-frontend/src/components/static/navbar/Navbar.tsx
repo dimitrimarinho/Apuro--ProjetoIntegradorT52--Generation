@@ -3,15 +3,16 @@ import { alpha, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import InfoIcon from '@mui/icons-material/Info';
 import { Link } from "react-router-dom";
+import logoApuro from '../../../assets/logo/logo-apuro.gif'
 import './Navbar.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -144,13 +145,23 @@ export default function PrimarySearchAppBar() {
         <p>Perfil</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show new notifications" color="inherit">
-          <Badge badgeContent={0} color="secondary">
+        <IconButton color="inherit">
+          <Badge color="secondary">
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
         <p>Carrinho</p>
       </MenuItem>
+      <Link to='/listaProduto' className='text-decoration-none'>
+        <MenuItem>
+          <IconButton color="inherit">
+            <Badge color="secondary">
+              <ShoppingBagIcon />
+            </Badge>
+          </IconButton>
+          <p>Produtos</p>
+        </MenuItem>
+      </Link>
       <Link to='/sobre-nos' className='text-decoration-none'>
         <MenuItem>
           <IconButton color="inherit">
@@ -169,17 +180,24 @@ export default function PrimarySearchAppBar() {
       <AppBar position="static" className='background'>
         <Toolbar>
           <Link to='/' className='text-decoration-none'>
-            <Typography className={classes.sectionDesktop} variant="button" noWrap>
-              Apuro: artesanato com amor
-            </Typography>
+            <div className={classes.sectionDesktop}>
+              <img className="logoApuro" src={logoApuro} alt="Logo da Apuro" />
+            </div>
           </Link>
           <Link to='/' className='text-decoration-none'>
-            <Typography className={classes.sectionMobile} variant="button" noWrap>
-              Apuro: artesanato com amor
-            </Typography>
+            <div className={classes.sectionMobile}>
+              <img className="logoApuro" src={logoApuro} alt="Logo da Apuro" />
+            </div>
           </Link>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
+            <Link to='/listaProduto' className='text-decoration-none'>
+              <IconButton color="inherit">
+                <Badge color="secondary">
+                  <ShoppingBagIcon />
+                </Badge>
+              </IconButton>
+            </Link>
             <Link to='/sobre-nos' className='text-decoration-none'>
               <IconButton color="inherit">
                 <Badge color="secondary">
@@ -187,8 +205,8 @@ export default function PrimarySearchAppBar() {
                 </Badge>
               </IconButton>
             </Link>
-            <IconButton aria-label="show new notifications" color="inherit">
-              <Badge badgeContent={0} color="secondary">
+            <IconButton color="inherit">
+              <Badge color="secondary">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
