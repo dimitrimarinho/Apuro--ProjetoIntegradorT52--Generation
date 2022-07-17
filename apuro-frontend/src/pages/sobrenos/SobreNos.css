@@ -1,7 +1,13 @@
 
 .caixa {
     margin: 10px;
-    background-color: rgb(194, 197, 199);
+    background-color:white;
+    padding: 10px;
+    border-radius: 16px;
+}
+.caixa2 {
+    margin: 10px;
+    background-color: #9DA67C ;
     padding: 10px;
     border-radius: 16px;
 }
@@ -9,4 +15,13 @@
 .imgcaixas {
     width: 20vw;
     height: 20vh;
+}
+
+.textoSobre {
+    color: #192610!important;
+}
+.foto{
+    border-radius: 50% !important;
+    margin: 10px;
+    padding-right: 10px !important;
 }
