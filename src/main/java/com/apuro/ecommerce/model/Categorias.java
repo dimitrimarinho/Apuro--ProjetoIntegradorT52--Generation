@@ -28,10 +28,10 @@ public class Categorias {
 	
 	@NotNull
 	@Size(min = 1, max = 255)
-	private String artista;
+	private String descricao;
 	
 	@Size(min = 1, max = 255)
-	private String tutorial;
+	private String imagemCategoria;
 	
 	@OneToMany(mappedBy = "categorias", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("categorias")
@@ -53,20 +53,28 @@ public class Categorias {
 		this.tipo = tipo;
 	}
 
-	public String getArtista() {
-		return artista;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setArtista(String artista) {
-		this.artista = artista;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
-	public String getTutorial() {
-		return tutorial;
+	public String getImagemCategoria() {
+		return imagemCategoria;
 	}
 
-	public void setTutorial(String tutorial) {
-		this.tutorial = tutorial;
+	public void setImagemCategoria(String imagemCategoria) {
+		this.imagemCategoria = imagemCategoria;
 	}
+
+	public List<Produtos> getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(List<Produtos> produtos) {
+		this.produtos = produtos;
+	}	
 
 }

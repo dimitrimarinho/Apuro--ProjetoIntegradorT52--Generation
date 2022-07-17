@@ -1,0 +1,72 @@
+.caixa1 {
+    background-color: #F2F2F2  !important;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.texto {
+    color: #192610 !important;
+}
+
+.botao {
+    border-color: #CFD4BC !important;
+    background-color: #627327 !important;
+    color: #CFD4BC  !important;
+    margin-left: 10px !important;
+    margin-bottom: 10px !important;
+    margin-right: 10px !important;
+    border-radius: 25px !important;
+    min-width: 200px !important;
+}
+
+.produtos {
+    background-image: url(https://img.olhardigital.com.br/wp-content/uploads/2021/11/One-Piece-Sem-Borda.jpg);
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 20vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.titulos {
+    color: black !important;
+    font-weight: bold !important;
+    font-size: 100px !important;
+    text-align: center;
+}
+
+.caixabotao {
+    background-color: black !important;
+    color: white !important;
+    margin-left: 10px !important;
+    margin-bottom: 10px !important;
+    margin-right: 10px !important;
+}
+
+.cards {
+    display: flex;
+    background-color: #BFA584;
+    color: white;
+    border: 50px !important;
+    border-color: black !important;
+    height: 300px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px
+}
+
+.text-decoration-none {
+    text-decoration: none;
+    color: inherit;
+}
+
+.textoCard {
+    text-decoration: #192610 !important;
+}
+
+.caixaDetextoCards {
+    height: 75px;
+    text-align: center;
+}

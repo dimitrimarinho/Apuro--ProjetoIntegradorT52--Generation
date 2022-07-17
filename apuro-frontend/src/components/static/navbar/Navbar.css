@@ -1,0 +1,37 @@
+.background {
+    background-color: #192610 !important;
+}
+
+.MuiListItem-button:hover {
+    text-decoration: none !important;
+    background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+    color: inherit;
+}
+
+.MuiTypography-Apuro-root {
+    margin-right: 40px !important;
+}
+
+.css-av538e-MuiButtonBase-root-MuiIconButton-root {
+    color: white !important;
+
+}
+
+.MuiSvgIcon-root-accountSetting {
+    justify-content: end !important;
+    font-size: 2.2rem !important;
+}
+
+.makeStyles-sectionDesktop-8 {
+    margin-right: 30px !important;
+}
+
+.logoApuro {
+    width: 200px;
+    height: 70px;
+    object-fit: contain;
+}
