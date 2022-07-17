@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { Box, Card, CardActions, CardContent, CardActionArea, CardMedia, Button, Typography } from '@mui/material';
 import './ListaCategoria.css';
 import { useNavigate } from 'react-router-dom';
 import { busca } from '../../../services/Service';
@@ -47,44 +46,48 @@ function ListaCategoria() {
         getCategoria()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [categorias.length])
-
+    
     return (
         <>
-            {
-                categorias.map((categorias) => (
-                    <Box m={2} >
-                        <Card variant="outlined">
-                            <CardContent>
-                                <Typography color="textSecondary" gutterBottom>
-                                    Categorias {categorias.id}
-                                </Typography>
-                                <Typography variant="h5" component="h2">
-                                    {categorias.tipo}
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Box display="flex" justifyContent="center" mb={1.5} >
-
-                                    <Link to={`/cadastrar-categoria/${categorias.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                                                Atualizar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                    <Link to={`/deletarCategoria/${categorias.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" size='small' color="secondary">
-                                                Deletar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                </Box>
+            <Box className='flexbox-categorias'>
+                {
+                    categorias.map((categorias) => (
+                        <Card sx={{ m: 2, maxWidth: 300 }}>
+                            <CardActionArea>
+                                <CardMedia
+                                    component="img"
+                                    style={{height:180}}
+                                    image="https://static8.depositphotos.com/1011590/911/i/450/depositphotos_9116833-stock-photo-iguana.jpg"
+                                    alt="green iguana"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        {categorias.tipo}
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        Artesanatos produzidos tendo a madeira como um dos elementos da confecção
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions className='center-buttons'>
+                                <Button size="small" className='button-green'>
+                                    Ver produtos
+                                </Button>
+                                <Link to={`/cadastrar-categoria/${categorias.id}`} className="text-decorator-none">
+                                    <Button size="small" className='button-green'>
+                                        Atualizar
+                                    </Button>
+                                </Link>
+                                <Link to={`/deletarCategoria/${categorias.id}`} className="text-decorator-none">
+                                    <Button size="small" className='button-green'>
+                                        Deletar
+                                    </Button>
+                                </Link>
                             </CardActions>
                         </Card>
-                    </Box>
-                ))
-            }
+                    ))
+                }
+            </Box>
         </>
     );
 }
