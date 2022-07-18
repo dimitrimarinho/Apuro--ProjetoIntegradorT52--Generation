@@ -102,7 +102,7 @@ function Home() {
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image="/img_card.jpg"
+                                    image="https://i.imgur.com/jfZZ8h2.png"
                                     title="Novos produtos"
                                 />
                                 <CardContent className='caixaDetextoCards'>
@@ -122,7 +122,7 @@ function Home() {
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image="/img_card.jpg"
+                                    image="https://i.imgur.com/ufx4gNy.png"
                                     title="Novos produtos"
                                 />
                                 <CardContent className='caixaDetextoCards'>
@@ -142,7 +142,7 @@ function Home() {
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image="/img_card.jpg"
+                                    image="https://i.imgur.com/FiQ18eb.png"
                                     title="Novos produtos"
                                 />
                                 <CardContent className='caixaDetextoCards'>
@@ -162,7 +162,7 @@ function Home() {
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
-                                    image="/img_card.jpg"
+                                    image="https://i.imgur.com/poowZna.png"
                                     title="Novos produtos"
                                 />
                                 <CardContent className='caixaDetextoCards'>
