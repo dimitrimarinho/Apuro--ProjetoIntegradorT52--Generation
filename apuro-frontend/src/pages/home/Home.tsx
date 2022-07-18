@@ -6,7 +6,6 @@ import CarouselComponent from '../../components/carousel/CarouselComponent';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
-
 const useStyles = makeStyles({
     root: {
         width: 250,
@@ -16,7 +15,6 @@ const useStyles = makeStyles({
         height: 150,
     },
 });
-
 
 function Home() {
 
@@ -44,10 +42,6 @@ function Home() {
                             <Button variant="outlined" className='botao'>Categorias</Button>
                         </Link>
 
-                        <Link className='text-decorator-none' to='/categorias'>
-                            <Button variant="outlined" className='botao'>Artistas</Button>
-                        </Link>
-
                         <Link to="/cadastrarProduto" className='text-decorator-none'>
                             <Button variant="outlined" className='botao'>Cadastrar produto</Button>
                         </Link>
@@ -55,7 +49,6 @@ function Home() {
                         <Link to="/cadastrar-categoria" className='text-decorator-none'>
                             <Button variant="outlined" className='botao'>Cadastrar Categoria</Button>
                         </Link>
-
 
                     </Box>
                 </Grid>
@@ -145,9 +138,6 @@ function Home() {
                     </Box>
                 </Grid>
 
-
-
-
                 <Grid xs={12}>
                     <Box paddingX={40}>
                         <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto'>Veja seus produtos</Typography>
@@ -182,9 +172,6 @@ function Home() {
                         </Card>
                     </Box>
                 </Grid>
-
-
-
 
             </Grid>
         </>
