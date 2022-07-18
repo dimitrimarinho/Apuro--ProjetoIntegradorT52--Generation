@@ -65,7 +65,7 @@ function SobreNos() {
                         </Box>
                     </Grid>
                     <Grid xs={3} alignContent="center" >
-                        <img src="https://i.imgur.com/aCFplnO.jpg" alt="Foto Paulo" className="equipe" />
+                        <img src="https://i.imgur.com/SjRjrBn.jpg" alt="Foto Paulo" className="equipe" />
                         <Typography variant="inherit" gutterBottom  textAlign="center">Paulo Vitor</Typography>
                         <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
                         <a href="https://www.linkedin.com/in/paulo-victor-damasceno-e-silva-0184ba183/" target="_blank" rel="noreferrer" className="text-decorator-none1">
@@ -78,7 +78,7 @@ function SobreNos() {
                         </Box>
                     </Grid>
                     <Grid xs={3}>
-                        <img src="https://i.imgur.com/Ms8MutM.jpg" alt="Foto Stefani" className="equipe" />
+                        <img src="https://i.imgur.com/7NTYzD7.jpg" alt="Foto Stefani" className="equipe" />
                         <Typography variant="inherit" textAlign="center"gutterBottom >Stefany oliveira</Typography>
                         <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
                         <a href="https://www.linkedin.com/in/stefani-machado-oliveira/" target="_blank" rel="noreferrer" className="text-decorator-none1">
