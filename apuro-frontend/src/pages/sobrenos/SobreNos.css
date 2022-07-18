@@ -28,9 +28,11 @@
     margin: 10px;
     padding-right: 20px !important;
     padding-left: 10px!important;
+    align-content: center;
 }
 .titulo{
     color:"#192610";
+    
     
 }
 .textoSobre2{
@@ -51,4 +53,13 @@
 .icone {
     font-size: 30px !important;
     color: black;
+    margin-top: 5px;
+    margin-right: 4px;
+}
+.icone2 {
+    font-size: 30px !important;
+    color: black;
+    margin-top: 5px;
+    margin-right: 4px;
+
 }

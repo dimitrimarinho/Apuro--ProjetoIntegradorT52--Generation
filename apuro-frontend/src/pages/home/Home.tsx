@@ -69,8 +69,8 @@ function Home() {
 
                 <Grid alignItems="center" item xs={12}>
                     <Box paddingX={20} className="caixa1">
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='texto'>É bom te ver ...</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='texto'>Aproveite a nossa plataforma!</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='texto'>Que bom te ver!</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='texto'>Aproveite  nossa plataforma!</Typography>
                     </Box>
                     <Box sx={{ display: "flex", justifyContent: "center", marginTop: 5 }}>
 
@@ -111,7 +111,7 @@ function Home() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary">
+                                    <Button className='most' size="small" color="primary">
                                         Confira mais ...
                                     </Button>
                                 </CardActions>
@@ -131,7 +131,7 @@ function Home() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary">
+                                    <Button className='most' size="small" color="primary">
                                         Confira mais ...
                                     </Button>
                                 </CardActions>
@@ -151,7 +151,7 @@ function Home() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary">
+                                    <Button className='most' size="small" color="primary">
                                         Confira mais ...
                                     </Button>
                                 </CardActions>
@@ -171,7 +171,7 @@ function Home() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary">
+                                    <Button className='most' size="small" color="primary">
                                         Confira mais ...
                                     </Button>
                                 </CardActions>
