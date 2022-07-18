@@ -12,12 +12,12 @@ import "./ListaProduto.css";
 
 const useStyles = makeStyles({
   root: {
-    width: 250,
+    width: "60vw",
     margin: "20px",
   },
   media: {
-    height: 300,
-    width: 300
+    height: 345,
+    width: 400
 
   },
 });
@@ -67,60 +67,98 @@ function ListaProduto() {
 
   return (
     <>
+      <Box className='caixaLP'>
       {
         produtos.map(produto => (
-          <Box m={2} >
-            <Card variant="outlined">
+          <Box m={2}>
+            <Card variant="outlined" className={classes.root}>
               <CardActionArea>
-                <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "left", justifyContent: "left" }}>
+                <Box marginTop="15px" sx={{ display: "flex", flexWrap: 'wrap', alignItems: "left", justifyContent: "left" }}>
                   <CardMedia title="Imagem do produto" image={produto.foto} className={classes.media} />
                   <Box sx={{ display: "flex", flexDirection: 'column', alignItems: "left", justifyContent: "left" }}>
-                    <CardContent className='cardProduto'>
+                    <CardContent className='tamanhoCard'>
                       <Typography variant="h4" component="h2">
                         {produto.nome}
                       </Typography>
 
-                      <Box display="flex" flexDirection="column" alignItems="left" justifyContent="left" className='precoProduto' />
+                      <Box display="flex" flexDirection="column" alignItems="left" justifyContent="left" className='linhaCard' />
 
-                      <Box display="flex" flexDirection="row" alignItems="left" justifyContent="left" marginTop="5px" marginBottom="5px">
+                      <Box display="flex" flexDirection="row" alignItems="left" justifyContent="left" marginTop="5px" marginBottom="10px">
                         <Typography variant="h5" color="initial" className='cifrao'>R$</Typography>
-                        <Typography variant="h5" component="p">
+                        <Typography variant="h5" component="p" className='precoProduto'>
                           {produto.preco}
                         </Typography>
                       </Box>
 
+                      <Box display="flex" flexDirection="row" alignItems="center" justifyContent="left" marginTop="5px" marginBottom="10px">
+                        <Box className='infoCard'>
+                          <Typography variant="inherit" color="initial" className='atributosProdutos'>
+                            Sustentabilidade
+                          </Typography>
+                        </Box>
+                        <Typography variant="inherit" component="p">
+                          {produto.sustentabilidade}
+                        </Typography>
+                      </Box>
 
+                      <Box display="flex" flexDirection="row" alignItems="center" justifyContent="left" marginTop="5px" marginBottom="10px">
+                        <Box className='infoCard'>
+                          <Typography variant="inherit" color="initial" className='atributosProdutos'>
+                            Região
+                          </Typography>
+                        </Box>
+                        <Typography variant="inherit" component="p">
+                          {produto.regiao}
+                        </Typography>
+                      </Box>
 
-
-                      <Typography variant="body2" component="p">
-                        {produto.sustentabilidade}
-                      </Typography>
-                      <Typography variant="body2" component="p">
-                        {produto.regiao}
-                      </Typography>
-                      <Typography variant="body2" component="p">
-                        {produto.categorias?.tipo}
-                      </Typography>
-                      <Typography variant="body2" component="p">
+                      <Box display="flex" flexDirection="row" alignItems="center" justifyContent="left" marginTop="5px" marginBottom="10px">
+                        <Box className='infoCard'>
+                          <Typography variant="inherit" color="initial" className='atributosProdutos'>
+                            Quantidade em estoque
+                          </Typography>
+                        </Box>
+                        <Typography variant="inherit" component="p">
                         {produto.quantidade}
-                      </Typography>
-                      <Typography variant="body2" component="p">
+                        </Typography>
+                      </Box>
+
+                      <Box display="flex" flexDirection="row" alignItems="center" justifyContent="left" marginTop="5px" marginBottom="10px">
+                        <Box className='infoCard'>
+                          <Typography variant="inherit" color="initial" className='atributosProdutos'>
+                            Categoria
+                          </Typography>
+                        </Box>
+                        <Typography variant="inherit" component="p">
+                        {produto.categorias?.tipo}
+                        </Typography>
+                      </Box>
+
+                      <Box display="flex" flexDirection="row" alignItems="center" justifyContent="left" marginTop="5px" marginBottom="10px">
+                        <Box className='infoCard'>
+                          <Typography variant="inherit" color="initial" className='atributosProdutos'>
+                            Descrição
+                          </Typography>
+                        </Box>
+                        <Typography variant="inherit" component="p">
                         {produto.descricao}
-                      </Typography>
+                        </Typography>
+                      </Box>
+
                     </CardContent>
 
                     <CardActions>
                       <Box display="flex" justifyContent="center" mb={1.5}>
                         <Link to={`/cadastrarProduto/${produto.id}`} className="text-decorator-none" >
                           <Box mx={1}>
-                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                            <Button className='button-cdto-produto'>
                               atualizar
                             </Button>
                           </Box>
                         </Link>
                         <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
                           <Box mx={1}>
-                            <Button variant="contained" size='small' color="secondary">
+                            <Button  className='button-cdto-produto' id="button-deletar" variant="contained" size='small'>
                               deletar
                             </Button>
                           </Box>
@@ -135,6 +173,7 @@ function ListaProduto() {
           </Box>
         ))
       }
+      </Box>
     </>
   );
 }

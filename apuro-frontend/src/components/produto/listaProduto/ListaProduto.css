@@ -1,4 +1,4 @@
-.precoProduto::before {
+.linhaCard::before {
     content: "";
     left: 0;
     bottom: 200px;
@@ -12,4 +12,41 @@
 
 .cifrao {
     padding-right: 5px;
+}
+
+.atributosProdutos {
+    padding-right: 8px;
+    font-weight: bold;
+}
+
+.infoCard {
+    width: 150px;
+}
+
+.tamanhoCard {
+    height: 300px;
+}
+
+.button-cdto-produto {
+    cursor: pointer;
+    border-radius: 25px !important;
+    border: 1px solid #192610 !important;
+    color: #F2F2F2 !important;
+    background-color: #627327 !important;
+    min-width: 150px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    padding: 5px !important;
+    letter-spacing: 1px !important;
+}
+
+#button-deletar {
+    background-color: #BF573F !important;
+}
+
+.caixaLP {
+    background-color: #F2F2F2  !important;
+    height: 200%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
