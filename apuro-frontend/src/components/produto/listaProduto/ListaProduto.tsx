@@ -9,7 +9,6 @@ import { busca } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import "./ListaProduto.css";
 
-
 const useStyles = makeStyles({
   root: {
     width: "70vw",
