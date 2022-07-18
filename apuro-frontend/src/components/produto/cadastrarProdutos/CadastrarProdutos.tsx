@@ -41,8 +41,8 @@ function CadastrarProdutos() {
         {
             id: 0,
             tipo: '',
-            artista: '',
-            tutorial: undefined
+            descricao: '',
+            imagemCategoria: undefined
         })
 
     const [produto, setProduto] = useState<Produto>({

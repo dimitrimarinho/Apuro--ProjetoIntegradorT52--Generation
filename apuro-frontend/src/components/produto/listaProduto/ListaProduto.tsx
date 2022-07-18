@@ -103,10 +103,10 @@ function ListaProduto() {
                       {produto.categorias?.tipo}
                     </Typography>
                     <Typography variant="body2" component="p">
-                      {produto.categorias?.artista}
+                      {produto.categorias?.descricao}
                     </Typography>
                     <Typography variant="body2" component="p">
-                      {produto.categorias?.tutorial}
+                      {produto.categorias?.imagemCategoria}
                     </Typography>
                   </CardContent>
                 </Box>
