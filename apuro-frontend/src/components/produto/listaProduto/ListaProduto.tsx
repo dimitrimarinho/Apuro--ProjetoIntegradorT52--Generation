@@ -72,67 +72,58 @@ function ListaProduto() {
           <Box m={2} >
             <Card variant="outlined">
               <CardActionArea>
-                <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "left", justifyContent: "left" }}>
                   <CardMedia title="Imagem do produto" image={produto.foto} className={classes.media} />
-                  <CardContent>
-                    <Typography color="textSecondary" gutterBottom>
-                      Produto
-                    </Typography>
-                    <Typography variant="h5" component="h2">
-                      {produto.nome}
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                      {produto.descricao}
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                      {produto.quantidade}
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                      {produto.preco}
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                      {produto.foto}
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                      {produto.sustentabilidade}
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                      {produto.regiao}
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                      {produto.categorias?.tipo}
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                      {produto.categorias?.descricao}
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                      {produto.categorias?.imagemCategoria}
-                    </Typography>
-                  </CardContent>
+                  <Box sx={{ display: "flex", flexDirection: 'column', alignItems: "left", justifyContent: "left" }}>
+                    <CardContent className='cardProduto'>
+                      <Typography className='nomeProduto' variant="h4" component="h2">
+                        {produto.nome}
+                      </Typography>
+                      <Typography variant="body2" component="p">
+                        {produto.preco}
+                      </Typography>
+                      <Typography variant="body2" component="p">
+                        {produto.foto}
+                      </Typography>
+                      <Typography variant="body2" component="p">
+                        {produto.sustentabilidade}
+                      </Typography>
+                      <Typography variant="body2" component="p">
+                        {produto.regiao}
+                      </Typography>
+                      <Typography variant="body2" component="p">
+                        {produto.categorias?.tipo}
+                      </Typography>
+                      <Typography variant="body2" component="p">
+                        {produto.quantidade}
+                      </Typography>
+                      <Typography variant="body2" component="p">
+                        {produto.descricao}
+                      </Typography>
+                    </CardContent>
+
+                    <CardActions>
+                      <Box display="flex" justifyContent="center" mb={1.5}>
+                        <Link to={`/cadastrarProduto/${produto.id}`} className="text-decorator-none" >
+                          <Box mx={1}>
+                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                              atualizar
+                            </Button>
+                          </Box>
+                        </Link>
+                        <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
+                          <Box mx={1}>
+                            <Button variant="contained" size='small' color="secondary">
+                              deletar
+                            </Button>
+                          </Box>
+                        </Link>
+                      </Box>
+                    </CardActions>
+                    
+                  </Box>
                 </Box>
-
-
               </CardActionArea>
-
-              <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5}>
-                  <Link to={`/cadastrarProduto/${produto.id}`} className="text-decorator-none" >
-                    <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                        atualizar
-                      </Button>
-                    </Box>
-                  </Link>
-                  <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
-                    <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
-                        deletar
-                      </Button>
-                    </Box>
-                  </Link>
-                </Box>
-              </CardActions>
-
             </Card>
           </Box>
         ))
