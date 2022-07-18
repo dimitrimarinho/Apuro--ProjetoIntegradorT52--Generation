@@ -1,65 +1,81 @@
-
 .caixa {
-    margin: 10px;
-    background-color:white;
+    background-color: white;
     padding: 10px;
     border-radius: 16px;
-}
-.caixa2 {
-   
-    background-color: #9DA67C ;
-   margin: 10px;
-    border-radius: 16px;
-    padding: 10px;
-   
 }
 
+.caixa2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #9DA67C;
+    max-width: 100vw;
+    margin:5vh;
+    border-radius: 16px;
+    padding: 20px;
+}
 
 .textoSobre {
-    color: #192610!important;
+    color: #192610 !important;
 }
 
-.equipe{
-    
+.all-page-about-us{    
+    max-width: 99vw;
+}
+
+.equipe {
+    display: flex;
     margin-top: 20px;
     height: 330px;
     width: 330px;
     border-radius: 50% !important;
     margin: 10px;
     padding-right: 20px !important;
-    padding-left: 10px!important;
-    align-content: center;
-}
-.titulo{
-    color:"#192610";
-    
-    
-}
-.textoSobre2{
-    color:"#CFD4BC";
-    padding-bottom: 20px;
-}
-.titulo2{
-    color:"#192610";
-     text-align:"center"!important;
+    padding-left: 10px !important;
 }
 
-.legenda{
+.titulo {
+    color: #192610;
+}
+
+.textoSobre2 {
+    color: #192610;
+}
+
+.titulo2 {
+    color: #192610;
+}
+
+.legenda {
     justify-content: center;
 }
-.text-decorator-none1{
+
+.text-decorator-none1 {
     text-decoration: none;
 }
+
 .icone {
     font-size: 30px !important;
     color: black;
     margin-top: 5px;
     margin-right: 4px;
 }
+
 .icone2 {
     font-size: 30px !important;
     color: black;
     margin-top: 5px;
     margin-right: 4px;
+}
 
+.MuiGrid-root {
+    justify-content: center !important;
+    align-items: center;
+}
+
+.justify-items-sobrenos {
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
 }
