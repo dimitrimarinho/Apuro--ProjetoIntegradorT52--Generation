@@ -8,15 +8,23 @@ import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import "./CadastrarProdutos.css";
+import User from '../../../models/User';
 
 function CadastrarProdutos() {
 
     let navigate = useNavigate();
+
     const { id } = useParams<{ id: string }>();
+
     const [categorias, setCategorias] = useState<Categorias[]>([])
+
     const token = useSelector<TokenState, TokenState["token"]>(
         (state) => state.token
     );
+
+    const userId = useSelector<TokenState, TokenState['id']>(
+        (state) => state.id
+      )
 
     useEffect(() => {
         if (token === "") {
@@ -53,6 +61,18 @@ function CadastrarProdutos() {
         sustentabilidade: 5,
         regiao: '',
         categorias: undefined
+    })
+
+    const [usuario, setUsuario] = useState<User>({
+        id: +userId,    // Faz uma conversão de String para Number
+        nome: '',
+        usuario: '',
+        senha: '',
+        foto: '',
+        dataDeNascimento: '',
+        cpf: '',
+        endereco: '',
+        descricao: ''
     })
 
     useEffect(() => {

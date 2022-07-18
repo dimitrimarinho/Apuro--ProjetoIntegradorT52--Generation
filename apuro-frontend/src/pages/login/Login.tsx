@@ -88,6 +88,7 @@ function Login() {
           dispatch(addId(respUserLogin.id.toString())); // Faz uma conversão de Number para String
           navigate('/home');
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [respUserLogin.token]);
 
     return (
