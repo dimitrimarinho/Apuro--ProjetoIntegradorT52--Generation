@@ -1,3 +1,24 @@
-.topo {
-    margin-top: 20px;
+.box-form {
+    background: url("https://i.imgur.com/CccuLJi.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.sticky-container {
+    padding-top: 27vh;
+}
+
+.button-cadcategoria {
+    margin-top: 20px !important;
+    background-color: #192610 !important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+    color: #192610 !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #192610 !important;
 }

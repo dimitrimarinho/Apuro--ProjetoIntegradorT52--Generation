@@ -1,5 +1,5 @@
-import { Button, Container, TextField, Typography } from '@material-ui/core';
 import React, { ChangeEvent, useEffect, useState } from 'react'
+import { Button, Container, TextField, Typography } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify';
@@ -113,17 +113,21 @@ function CadastroCategoria() {
   }
 
   return (
-    <Container maxWidth="sm" className="topo">
-      <form onSubmit={onSubmit}>
-        <Typography variant="h3" color="textSecondary" component="h1" align="center">Formulário de cadastro Categoria</Typography>
-        <TextField required value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
-        <TextField required value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="artista" label="artista" variant="outlined" name="artista" margin="normal" fullWidth />
-        <TextField value={categoria.imagemCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tutorial" label="tutorial" variant="outlined" name="tutorial" margin="normal" fullWidth />
-        <Button type="submit" variant="contained" color="primary">
-          Finalizar
-        </Button>
-      </form>
-    </Container>
+    <>
+      <div className="box-form">
+        <Container maxWidth="sm" className="sticky-container">
+          <form onSubmit={onSubmit}>
+            <Typography variant="h4" color="textPrimary" component="h1" align="center">Cadastrar Categoria</Typography>
+            <TextField required value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="Nome da Categoria" variant="outlined" name="tipo" margin="normal" fullWidth />
+            <TextField required value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="Descrição" variant="outlined" name="descricao" margin="normal" fullWidth />
+            <TextField value={categoria.imagemCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="imagemCategoria" label="Imagem (link)" variant="outlined" name="imagemCategoria" margin="normal" fullWidth />
+            <Button className="button-cadcategoria" type="submit" variant="contained" color="primary" fullWidth>
+              Concluir
+            </Button>
+          </form>
+        </Container>
+      </div>
+    </>
   )
 }
 
