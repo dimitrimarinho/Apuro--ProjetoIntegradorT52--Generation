@@ -13,7 +13,6 @@
 }
 
 .flex1{
-    /* background-color: black; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -24,7 +23,6 @@
 }
 
 .flex2{
-    /* background-color: yellow; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,7 +33,6 @@
 }
 
 .flex3{
-    /* background-color: blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;

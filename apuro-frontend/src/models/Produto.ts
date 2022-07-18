@@ -10,8 +10,8 @@ interface Produto {
     foto?: string | undefined;
     sustentabilidade?: number | null;
     regiao: string;
-    categorias?: Categorias | null;
-    usuario?: User | null
+    categorias?: Categorias | undefined;
+    usuario?: User | undefined
 }
 
 export default Produto;
