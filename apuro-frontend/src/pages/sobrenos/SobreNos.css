@@ -10,18 +10,44 @@
     background-color: #9DA67C ;
     padding: 10px;
     border-radius: 16px;
+   
 }
 
-.imgcaixas {
-    width: 20vw;
-    height: 20vh;
-}
 
 .textoSobre {
     color: #192610!important;
 }
-.foto{
+
+.equipe{
+    
+    margin-top: 20px;
+    height: 330px;
+    width: 330px;
     border-radius: 50% !important;
     margin: 10px;
-    padding-right: 10px !important;
+    padding-right: 20px !important;
+    padding-left: 10px!important;
+}
+.titulo{
+    color:"#192610";
+    
+}
+.textoSobre2{
+    color:"#CFD4BC";
+    padding-bottom: 20px;
+}
+.titulo2{
+    color:"#192610";
+     text-align:"center"!important;
+}
+
+.legenda{
+    justify-content: center;
+}
+.text-decorator-none1{
+    text-decoration: none;
+}
+.icone {
+    font-size: 30px !important;
+    color: black;
 }

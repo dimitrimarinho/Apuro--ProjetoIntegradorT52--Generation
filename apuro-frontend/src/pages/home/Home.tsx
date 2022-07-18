@@ -71,7 +71,7 @@ function Home() {
                                 />
                                 <CardContent className='caixaDetextoCards'>
                                     <Typography className='textoCard' gutterBottom variant="h5" component="h2">
-                                        Novos Produtos
+                                        Novidades
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -91,7 +91,7 @@ function Home() {
                                 />
                                 <CardContent className='caixaDetextoCards'>
                                     <Typography className='textoCard' gutterBottom variant="h5" component="h2">
-                                        Produtos mais vendidos
+                                        Mais vendidos
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -111,7 +111,7 @@ function Home() {
                                 />
                                 <CardContent className='caixaDetextoCards'>
                                     <Typography className='textoCard' gutterBottom variant="h5" component="h2">
-                                        Categorias mais buscadas
+                                        Em alta
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -131,7 +131,7 @@ function Home() {
                                 />
                                 <CardContent className='caixaDetextoCards'>
                                     <Typography className='textoCard' gutterBottom variant="h5" component="h2">
-                                        Produtos em alta
+                                        Destaques sustentáveis
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
