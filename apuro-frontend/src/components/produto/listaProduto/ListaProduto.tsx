@@ -76,15 +76,22 @@ function ListaProduto() {
                   <CardMedia title="Imagem do produto" image={produto.foto} className={classes.media} />
                   <Box sx={{ display: "flex", flexDirection: 'column', alignItems: "left", justifyContent: "left" }}>
                     <CardContent className='cardProduto'>
-                      <Typography className='nomeProduto' variant="h4" component="h2">
+                      <Typography variant="h4" component="h2">
                         {produto.nome}
                       </Typography>
-                      <Typography variant="body2" component="p">
-                        {produto.preco}
-                      </Typography>
-                      <Typography variant="body2" component="p">
-                        {produto.foto}
-                      </Typography>
+
+                      <Box display="flex" flexDirection="column" alignItems="left" justifyContent="left" className='precoProduto' />
+
+                      <Box display="flex" flexDirection="row" alignItems="left" justifyContent="left" marginTop="5px" marginBottom="5px">
+                        <Typography variant="h5" color="initial" className='cifrao'>R$</Typography>
+                        <Typography variant="h5" component="p">
+                          {produto.preco}
+                        </Typography>
+                      </Box>
+
+
+
+
                       <Typography variant="body2" component="p">
                         {produto.sustentabilidade}
                       </Typography>
@@ -120,7 +127,7 @@ function ListaProduto() {
                         </Link>
                       </Box>
                     </CardActions>
-                    
+
                   </Box>
                 </Box>
               </CardActionArea>

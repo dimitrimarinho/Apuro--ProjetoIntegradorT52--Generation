@@ -1,7 +1,15 @@
-.nomeProduto{
-    text-decoration: bold !important;
+.precoProduto::before {
+    content: "";
+    left: 0;
+    bottom: 200px;
+    background-color: #b4b4b4;
+    padding-right: 100px;
+    height: 2px;
+    box-sizing: border-box;
+    width: 250px;
+    margin-bottom: 1px;
 }
 
-.cardProduto{
-    height: 255px;
+.cifrao {
+    padding-right: 5px;
 }
