@@ -1,3 +1,5 @@
+import Produto from "./Produto";
+
 interface User {
     id: number;
     nome: string;
@@ -8,7 +10,7 @@ interface User {
     cpf: string;
     endereco?: string | undefined;
     descricao?: string | undefined;
-    produtos?: undefined
+    produtos?: Produto | undefined
 }
 
 export default User;

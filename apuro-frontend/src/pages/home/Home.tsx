@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, makeStyles, Typography } from '@material-ui/core';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/material';
 import CarouselComponent from '../../components/carousel/CarouselComponent';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import Produto from '../../models/Produto';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
+import { busca } from '../../services/Service';
+import User from '../../models/User';
 
 const useStyles = makeStyles({
     root: {
@@ -19,6 +24,41 @@ const useStyles = makeStyles({
 function Home() {
 
     const classes = useStyles();
+
+    const [produtos, setProdutos] = useState<Produto[]>([])
+
+    const [usuarios, setUsuarios] = useState<User[]>([])
+
+    const token = useSelector<TokenState, TokenState["token"]>(
+        (state) => state.token
+    );
+
+    async function getProdutos() {
+        await busca(`/produtos`, setProdutos, {
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
+
+    useEffect(() => {
+        getProdutos()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [produtos.length])
+
+    async function getUsuarios() {
+        await busca(`/usuario`, setUsuarios, {
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
+
+    useEffect(() => {
+        getUsuarios()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [usuarios.length])
+
 
     return (
         <>
@@ -135,44 +175,49 @@ function Home() {
                             </CardActionArea>
                         </Card>
 
+                        <Box paddingX={40}>
+                            <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto'>Veja seus produtos</Typography>
+                        </Box>
+
                     </Box>
                 </Grid>
 
-                <Grid xs={12}>
-                    <Box paddingX={40}>
-                        <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto'>Veja seus produtos</Typography>
-                    </Box>
-
-                    <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
-                        <Card className={classes.root}>
-                            <CardActionArea>
-                                <CardMedia
-                                    className={classes.media}
-                                    image="/static/images/cards/contemplative-reptile.jpg"
-                                    title="Contemplative Reptile"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2">
-                                        Lizard
-                                    </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                        across all continents except Antarctica
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                            <CardActions>
-                                <Button size="small" color="primary">
-                                    Share
-                                </Button>
-                                <Button size="small" color="primary">
-                                    Learn More
-                                </Button>
-                            </CardActions>
-                        </Card>
-                    </Box>
-                </Grid>
-
+                {
+                    produtos.map(produto => (
+                        <Box m={2}>
+                            <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                                <Card className={classes.root}>
+                                    <CardActionArea>
+                                        <CardMedia
+                                            className={classes.media}
+                                            image={produto.foto}
+                                            title="Imagem do produto"
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="h2">
+                                                {produto.nome}
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary" component="p">
+                                                {produto.descricao}
+                                            </Typography>
+                                            <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "left", justifyContent: "left" }}>
+                                                <Typography variant="h5" color="initial" className='cifrao'>R$</Typography>
+                                                <Typography variant="h5" component="p" className='precoProduto'>
+                                                    {produto.preco}
+                                                </Typography>
+                                            </Box>
+                                        </CardContent>
+                                    </CardActionArea>
+                                    <CardActions>
+                                        <Button size="small" color="primary">
+                                            Veja mais ...
+                                        </Button>
+                                    </CardActions>
+                                </Card>
+                            </Box>
+                        </Box>
+                    ))
+                }
             </Grid>
         </>
     );
