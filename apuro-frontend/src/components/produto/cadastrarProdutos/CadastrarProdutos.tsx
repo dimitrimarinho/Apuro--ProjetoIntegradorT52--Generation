@@ -78,7 +78,8 @@ function CadastrarProdutos() {
     useEffect(() => {
         setProduto({
             ...produto,
-            categorias: categoria
+            categorias: categoria,
+            usuario: usuario
         })
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [categoria])
