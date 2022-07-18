@@ -66,7 +66,7 @@ function SobreNos() {
                     </Grid>
                     <Grid xs={3} alignContent="center" >
                         <img src="https://i.imgur.com/SjRjrBn.jpg" alt="Foto Paulo" className="equipe" />
-                        <Typography variant="inherit" gutterBottom  textAlign="center">Paulo Vitor</Typography>
+                        <Typography variant="inherit" gutterBottom  textAlign="center">Paulo Victor</Typography>
                         <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
                         <a href="https://www.linkedin.com/in/paulo-victor-damasceno-e-silva-0184ba183/" target="_blank" rel="noreferrer" className="text-decorator-none1">
                         <LinkedIn className="icone"/>
@@ -93,7 +93,7 @@ function SobreNos() {
                     
                     <Grid xs={3} >
                         <img src="https://i.imgur.com/SiPZIjl.jpg" alt="Foto Thayna" className="equipe" />
-                        <Typography variant="inherit" className='textoSobre2' textAlign="center" gutterBottom >Thayna Saraiva</Typography>
+                        <Typography variant="inherit"  textAlign="center" gutterBottom >Thayna Saraiva</Typography>
                         <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
                         <a href="https://www.linkedin.com/in/thayna-saraiva-2a6061215/" target="_blank" rel="noreferrer" className="text-decorator-none1">
                         <LinkedIn className="icone"/> 
