@@ -48,7 +48,7 @@ function SobreNos() {
                         </Box>
                 </Grid>
                 <Grid xs={12}>
-                    <Typography variant="h3" className="titulo2" align="center">Equipe de Desenvolvedores</Typography>
+                    <Typography variant="h3" className="titulo2" align="center">Time de Desenvolvedores</Typography>
                 </Grid>
                 <Grid container xs={12}>
                 <Grid xs={3}>
