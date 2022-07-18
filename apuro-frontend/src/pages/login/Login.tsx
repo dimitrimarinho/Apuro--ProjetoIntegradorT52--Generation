@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import UserLogin from "../../models/UserLogin";
 import { login } from "../../services/Service";
 import { useDispatch } from "react-redux";
-import { addId, addToken } from "../../store/tokens/actions";
+import { addToken } from "../../store/tokens/actions";
 import { toast } from "react-toastify";
 import logoApuro from '../../assets/logo/logo-apuro-verdeclaro.gif'
 import "./Login.css";
@@ -19,7 +19,7 @@ function Login() {
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
-            nome: '',
+            // nome: '',
             usuario: '',
             senha: '',
             foto: '',
@@ -27,14 +27,14 @@ function Login() {
         }
     )
 
-    const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
-        id: 0,
-        nome: '',
-        usuario: '',
-        senha: '',
-        token: '',
-        foto: '',
-      });
+    // const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+    //     id: 0,
+    //     nome: '',
+    //     usuario: '',
+    //     senha: '',
+    //     token: '',
+    //     foto: '',
+    //   });
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
         setUserLogin(
@@ -47,7 +47,7 @@ function Login() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login("/usuario/logar", userLogin, setRespUserLogin)
+            await login("/usuario/logar", userLogin, setToken/*, setRespUserLogin*/)
             toast.success("Usuário logado com sucesso!", {
                 position: "top-right",
                 autoClose: 2000,
@@ -81,15 +81,15 @@ function Login() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [token])
 
-    useEffect(() => {
-        if (respUserLogin.token !== '') {
+    // useEffect(() => {
+    //     if (respUserLogin.token !== '') {
     
-          dispatch(addToken(respUserLogin.token));
-          dispatch(addId(respUserLogin.id.toString())); // Faz uma conversão de Number para String
-          navigate('/home');
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-      }, [respUserLogin.token]);
+    //       dispatch(addToken(respUserLogin.token));
+    //       dispatch(addId(respUserLogin.id.toString())); // Faz uma conversão de Number para String
+    //       navigate('/home');
+    //     }
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    //   }, [respUserLogin.token]);
 
     return (
         <>

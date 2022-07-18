@@ -22,9 +22,9 @@ function CadastrarProdutos() {
         (state) => state.token
     );
 
-    const userId = useSelector<TokenState, TokenState['id']>(
-        (state) => state.id
-      )
+    // const userId = useSelector<TokenState, TokenState['id']>(
+    //     (state) => state.id
+    //   )
 
     useEffect(() => {
         if (token === "") {
@@ -60,26 +60,27 @@ function CadastrarProdutos() {
         foto: '',
         sustentabilidade: 5,
         regiao: '',
-        categorias: undefined
+        categorias: undefined,
+        // usuario:undefined
     })
 
-    const [usuario, setUsuario] = useState<User>({
-        id: +userId,    // Faz uma conversão de String para Number
-        nome: '',
-        usuario: '',
-        senha: '',
-        foto: '',
-        dataDeNascimento: '',
-        cpf: '',
-        endereco: '',
-        descricao: ''
-    })
+    // const [usuario, setUsuario] = useState<User>({
+    //     id: +userId,    // Faz uma conversão de String para Number
+    //     nome: '',
+    //     usuario: '',
+    //     senha: '',
+    //     foto: '',
+    //     dataDeNascimento: '',
+    //     cpf: '',
+    //     endereco: '',
+    //     descricao: ''
+    // })
 
     useEffect(() => {
         setProduto({
             ...produto,
             categorias: categoria,
-            usuario: usuario
+            // usuario: usuario
         })
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [categoria])
