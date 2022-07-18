@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import UserLogin from "../../models/UserLogin";
 import { login } from "../../services/Service";
 import { useDispatch } from "react-redux";
-import { addToken } from "../../store/tokens/actions";
+import { addId, addToken } from "../../store/tokens/actions";
 import { toast } from "react-toastify";
 import logoApuro from '../../assets/logo/logo-apuro-verdeclaro.gif'
 import "./Login.css";
@@ -11,17 +11,30 @@ import "./Login.css";
 function Login() {
 
     let navigate = useNavigate();
+
     const dispatch = useDispatch();
+    
     const [token, setToken] = useState('');
+    
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
+            nome: '',
             usuario: '',
             senha: '',
             foto: '',
             token: ''
         }
     )
+
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+        id: 0,
+        nome: '',
+        usuario: '',
+        senha: '',
+        token: '',
+        foto: '',
+      });
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
         setUserLogin(
@@ -34,7 +47,7 @@ function Login() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login("/usuario/logar", userLogin, setToken)
+            await login("/usuario/logar", userLogin, setRespUserLogin)
             toast.success("Usuário logado com sucesso!", {
                 position: "top-right",
                 autoClose: 2000,
@@ -67,6 +80,15 @@ function Login() {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [token])
+
+    useEffect(() => {
+        if (respUserLogin.token !== '') {
+    
+          dispatch(addToken(respUserLogin.token));
+          dispatch(addId(respUserLogin.id.toString())); // Faz uma conversão de Number para String
+          navigate('/home');
+        }
+      }, [respUserLogin.token]);
 
     return (
         <>
