@@ -13,9 +13,9 @@ function Login() {
     let navigate = useNavigate();
 
     const dispatch = useDispatch();
-    
+
     const [token, setToken] = useState('');
-    
+
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
@@ -83,7 +83,7 @@ function Login() {
 
     // useEffect(() => {
     //     if (respUserLogin.token !== '') {
-    
+
     //       dispatch(addToken(respUserLogin.token));
     //       dispatch(addId(respUserLogin.id.toString())); // Faz uma conversão de Number para String
     //       navigate('/home');
