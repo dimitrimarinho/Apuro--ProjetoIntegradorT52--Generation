@@ -27,12 +27,12 @@
 .equipe {
     display: flex;
     margin-top: 20px;
-    height: 330px;
-    width: 330px;
+    height: 280px;
+    width: 280px;
     border-radius: 50% !important;
     margin: 10px;
-    padding-right: 20px !important;
-    padding-left: 10px !important;
+    /* padding-right: 20px !important;
+    padding-left: 10px !important; */
 }
 
 .titulo {

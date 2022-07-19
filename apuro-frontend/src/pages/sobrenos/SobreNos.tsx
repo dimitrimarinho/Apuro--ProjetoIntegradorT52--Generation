@@ -8,15 +8,13 @@ import { GitHub, LinkedIn } from '@material-ui/icons';
 function SobreNos() {
     return (
         <>
-            <Grid className="all-page-about-us">
-                <Grid container className='caixa' >
+            <Grid className="all-page-about-us caixa1">
+
+                <div className='caixa2'>
                     <Grid xs={12}>
                         <Typography variant="h2" className='textoSobre' align='center'>O que é o Apuro?</Typography>
                         <Typography variant="h5" color="textPrimary" align="center">Saiba mais sobre nós</Typography>
                     </Grid>
-
-                </Grid>
-                <div className='caixa2'>
                     <Grid item>
                         <Grid item>
                             <Typography variant="h3" className='titulo'>
@@ -56,6 +54,7 @@ function SobreNos() {
                 <Grid xs={12}>
                     <Typography variant="h3" className="titulo2" align="center">Time de Desenvolvedores</Typography>
                 </Grid>
+
                 <Grid container xs={12}>
                     <Grid xs={3} className="justify-items-sobrenos">
                         <img src="https://i.imgur.com/arFPHug.jpg" alt="Foto Dimitri" className="equipe" />
@@ -71,7 +70,7 @@ function SobreNos() {
                         </Box>
                     </Grid>
                     <Grid xs={3} className="justify-items-sobrenos">
-                        <img src="https://i.imgur.com/SjRjrBn.jpg" alt="Foto Paulo" className="equipe" />
+                        <img src="1234.png" alt="Foto Paulo" className="equipe" />
                         <Typography variant="inherit" gutterBottom textAlign="center">Paulo Victor</Typography>
                         <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
                             <a href="https://www.linkedin.com/in/paulo-victor-damasceno-e-silva-0184ba183/" target="_blank" rel="noreferrer" className="text-decorator-none1">
@@ -85,7 +84,7 @@ function SobreNos() {
                     </Grid>
                     <Grid xs={3} className="justify-items-sobrenos">
                         <img src="https://i.imgur.com/7NTYzD7.jpg" alt="Foto Stefani" className="equipe" />
-                        <Typography variant="inherit" textAlign="center" gutterBottom >Stefany oliveira</Typography>
+                        <Typography variant="inherit" textAlign="center" gutterBottom >Stefany Oliveira</Typography>
                         <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
                             <a href="https://www.linkedin.com/in/stefani-machado-oliveira/" target="_blank" rel="noreferrer" className="text-decorator-none1">
                                 <LinkedIn className="icone" />

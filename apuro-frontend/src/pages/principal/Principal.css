@@ -2,7 +2,7 @@
     background-color: #F2F2F2  !important;
     height: 100%;
     padding-top: 10px;
-    padding-bottom: 0px;
+    padding-bottom: 70px;
 }
 
 .texto {
@@ -77,6 +77,8 @@
 
 .nomesSobreNos {
     text-align: center;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .caixa {
@@ -105,15 +107,13 @@
     max-width: 99vw;
 }
 
-.equipe {
+.equipe2 {
     display: flex;
     margin-top: 20px;
     height: 230px;
     width: 230px;
     border-radius: 50% !important;
     margin: 10px;
-    padding-right: 20px !important;
-    padding-left: 10px !important;
 }
 
 .titulo {
@@ -159,4 +159,6 @@
     margin-top: 7vh;
     display: flex;
     flex-direction: column;
+    background-color: #CFD4BC;
+    
 }
