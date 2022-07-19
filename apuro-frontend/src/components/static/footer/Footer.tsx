@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function Footer() {
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center">
+            <Grid className="flex" container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={4}>
                     <Box className="box1">
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="left">
@@ -21,7 +21,7 @@ function Footer() {
                                 <Typography variant="inherit" align="center" gutterBottom className="textos" >Home </Typography>
                             </Link>
                             <Link to="/sobre-nos" className='text-decorator-none1'>
-                                <Typography variant="inherit" align="center" gutterBottom className="textos">Sobre </Typography>
+                                <Typography variant="inherit" align="center" gutterBottom className="textos">Sobre nós </Typography>
                             </Link>
                             <Link to="/Listaproduto" className='text-decorator-none1' >
                                 <Typography variant="inherit" align="center" gutterBottom className="textos">Produtos</Typography>

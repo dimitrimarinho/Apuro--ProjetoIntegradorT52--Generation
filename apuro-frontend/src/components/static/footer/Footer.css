@@ -8,32 +8,32 @@
 
 .icones {
     font-size: 30px !important;
-    color: white;
+    color: #F2F2F2;
 }
 
 .icones:hover {
     background-color: #565902 !important;
-    color: white;
+    color: #F2F2F2;
 }
 
 .box2 {
-    background-image: linear-gradient(#192610, #BF573F);
+    background-image: linear-gradient(#192610, #192610f3);
     height: 40px;
 }
 
 .textos {
-    color: white;
+    color: #F2F2F2;
 }
 
 .textos-footer {
-    color: #CFD4BC;
+    color: #F2F2F2;
     margin-top: 5px ;
     
     
 }
 
 .textos-rodape {
-    color: white;
+    color: #F2F2F2;
 }
 
 .text-decorator-none1 {
@@ -44,12 +44,12 @@
     content: "";
     left: 0;
     bottom: 200px;
-    background-color: #BF573F;
+    background-color: #9DA67C;
     padding-right: 100px;
     height: 2px;
     box-sizing: border-box;
     width: 150px;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
    
     
 }
