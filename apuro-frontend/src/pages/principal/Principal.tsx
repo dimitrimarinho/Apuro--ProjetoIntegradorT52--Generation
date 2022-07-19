@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { Box } from '@mui/material';
 import CarouselComponent from '../../components/carousel/CarouselComponent';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import './Principal.css';
 import Produto from '../../models/Produto';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
@@ -19,13 +19,9 @@ const useStyles = makeStyles({
     media: {
         height: 150,
     },
-    produto: {
-        width: 300,
-        height: 350,
-    }
 });
 
-function Home() {
+function Principal() {
 
     const classes = useStyles();
 
@@ -189,45 +185,10 @@ function Home() {
                     </Box>
                 </Grid>
 
-                {
-                    produtos.map(produto => (
-                        <Box m={2}>
-                            <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
-                                <Card className={classes.produto}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={produto.foto}
-                                            title="Imagem do produto"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                {produto.nome}
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p" className='descricaoCard'>
-                                                {produto.descricao}
-                                            </Typography>
-                                            <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "left", justifyContent: "left" }}>
-                                                <Typography variant="h5" color="initial" className='cifrao'>R$</Typography>
-                                                <Typography variant="h5" component="p">
-                                                    {produto.preco}
-                                                </Typography>
-                                            </Box>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary" className='most'>
-                                            Veja mais ...
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Box>
-                        </Box>
-                    ))
-                }
+                
             </Grid>
         </>
     );
 }
 
-export default Home;
+export default Principal;

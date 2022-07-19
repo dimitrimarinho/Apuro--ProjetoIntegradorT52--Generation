@@ -6,7 +6,7 @@
     padding-right: 100px;
     height: 2px;
     box-sizing: border-box;
-    width: 250px;
+    width: 100%;
     margin-bottom: 1px;
 }
 
@@ -50,7 +50,6 @@
 
 .caixaLP {
     background-color: #F2F2F2  !important;
-    height: 200%;
     padding-top: 10px;
     padding-bottom: 10px;
 }

@@ -11,8 +11,9 @@ import "./ListaProduto.css";
 
 const useStyles = makeStyles({
   root: {
-    width: "70vw",
+    width: "1000px",
     margin: "20px",
+    paddingLeft: "10px"
   },
   media: {
     height: 345,
@@ -72,7 +73,7 @@ function ListaProduto() {
             <Box m={2}>
               <Card variant="outlined" className={classes.root}>
                 <CardActionArea>
-                  <Box marginTop="15px" sx={{ display: "flex", flexWrap: 'wrap', alignItems: "left", justifyContent: "left" }}>
+                  <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "left" }}>
                     <CardMedia title="Imagem do produto" image={produto.foto} className={classes.media} />
                     <Box sx={{ display: "flex", flexDirection: 'column', alignItems: "left", justifyContent: "left" }}>
                       <CardContent className='tamanhoCard'>
