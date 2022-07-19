@@ -179,7 +179,7 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position="static" className='background'>
         <Toolbar>
-          <Link to='/' className='text-decoration-none'>
+          <Link to='/home' className='text-decoration-none'>
             <div className={classes.sectionDesktop}>
               <img className="logoApuro" src={logoApuro} alt="Logo da Apuro" />
             </div>

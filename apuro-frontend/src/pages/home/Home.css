@@ -79,3 +79,20 @@
     height: 50px;
     padding-bottom: 10px;
 }
+
+.linhaHome::before {
+    content: "";
+    left: 0;
+    bottom: 200px;
+    background-color: #b4b4b4;
+    padding-right: 100px;
+    height: 2px;
+    box-sizing: border-box;
+    width: 95vw;
+    margin-bottom: 1px;
+}
+
+#texto {
+    font-weight: bold;
+    font-size: 50px;
+}

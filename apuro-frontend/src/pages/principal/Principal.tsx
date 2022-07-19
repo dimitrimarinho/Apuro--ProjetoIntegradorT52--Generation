@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { busca } from '../../services/Service';
 import User from '../../models/User';
+import { GitHub, LinkedIn } from '@material-ui/icons';
 
 const useStyles = makeStyles({
     root: {
@@ -177,15 +178,67 @@ function Principal() {
                                 </CardActions>
                             </CardActionArea>
                         </Card>
-
-                        <Box paddingX={40}>
-                            <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto'>Veja seus produtos</Typography>
-                        </Box>
-
                     </Box>
                 </Grid>
 
-                
+                <Grid xs={12}>
+                    <Typography variant="h3" className="titulo2" align="center">Time de Desenvolvedores</Typography>
+                </Grid>
+                <Grid container xs={12}>
+                    <Grid xs={3} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/arFPHug.jpg" alt="Foto Dimitri" className="equipe" />
+                        <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Dimitri Marinho </Typography>
+                        <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                            <a href="https://www.linkedin.com/in/dimitrimarinho/" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <LinkedIn className="icone" />
+                            </a>
+                            <a href="https://github.com/dimitrimarinho" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <GitHub className="icone" />
+                            </a>
+
+                        </Box>
+                    </Grid>
+                    <Grid xs={3} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/SjRjrBn.jpg" alt="Foto Paulo" className="equipe" />
+                        <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Paulo Victor</Typography>
+                        <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                            <a href="https://www.linkedin.com/in/paulo-victor-damasceno-e-silva-0184ba183/" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <LinkedIn className="icone" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/paulo-victor-damasceno-e-silva-0184ba183/" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <GitHub className="icone" />
+                            </a>
+
+                        </Box>
+                    </Grid>
+                    <Grid xs={3} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/7NTYzD7.jpg" alt="Foto Stefani" className="equipe" />
+                        <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Stefany oliveira</Typography>
+                        <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                            <a href="https://www.linkedin.com/in/stefani-machado-oliveira/" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <LinkedIn className="icone" />
+                            </a>
+                            <a href="https://github.com/stefanimoliveira" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <GitHub className="icone" />
+                            </a>
+
+                        </Box>
+                    </Grid>
+
+                    <Grid xs={3} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/SiPZIjl.jpg" alt="Foto Thayna" className="equipe" />
+                        <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Thayna Saraiva</Typography>
+                        <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                            <a href="https://www.linkedin.com/in/thayna-saraiva-2a6061215/" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <LinkedIn className="icone" />
+                            </a>
+                            <a href="https://github.com/thaynasaraiva" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <GitHub className="icone" />
+                            </a>
+
+                        </Box>
+                    </Grid>
+                </Grid>
             </Grid>
         </>
     );

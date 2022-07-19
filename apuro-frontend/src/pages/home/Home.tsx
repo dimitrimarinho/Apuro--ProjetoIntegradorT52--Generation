@@ -182,8 +182,9 @@ function Home() {
                             </CardActionArea>
                         </Card>
 
-                        <Box paddingX={40}>
-                            <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto'>Veja seus produtos</Typography>
+                        <Box paddingX={40} marginTop="20px" display="flex" flexDirection="column" alignItems="left" justifyContent="left">
+                            {/* <Box  display="flex" flexDirection="column" alignItems="left" justifyContent="left"  className='linhaHome' /> */}
+                            <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto' id="texto" >Veja seus produtos</Typography>
                         </Box>
 
                     </Box>
@@ -216,9 +217,11 @@ function Home() {
                                         </CardContent>
                                     </CardActionArea>
                                     <CardActions>
-                                        <Button size="small" color="primary" className='most'>
-                                            Veja mais ...
-                                        </Button>
+                                        <Link className='text-decorator-none' to='/listaProduto'>
+                                            <Button size="small" color="primary" className='most'>
+                                                Veja mais ...
+                                            </Button>
+                                        </Link>
                                     </CardActions>
                                 </Card>
                             </Box>

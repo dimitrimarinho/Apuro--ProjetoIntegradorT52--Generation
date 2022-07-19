@@ -17,6 +17,7 @@ import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
 import CadastrarProdutos from './components/produto/cadastrarProdutos/CadastrarProdutos';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Principal from './pages/principal/Principal';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Principal />} />
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<CadastroUsuario />} />
