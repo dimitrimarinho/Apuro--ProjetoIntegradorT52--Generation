@@ -92,7 +92,7 @@ function CadastroUsuario() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         if (confirmarSenha === user.senha && (user.senha).length >= 8 && validateEmail(user.usuario) === true && validateCPF(user.cpf) === true) {
-            cadastroUsuario("/usuario/cadastrar", user, setUserResult)
+            await cadastroUsuario("/usuario/cadastrar", user, setUserResult)
             toast.success("Usuario cadastrado com sucesso", {
                 position: "top-right",
                 autoClose: 2000,
@@ -187,7 +187,7 @@ function CadastroUsuario() {
                         <input value={user.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='descricao' name='descricao' placeholder="Breve descrição pessoal" className='input-cadastro' />
                     </div>
                     <div className='flex3'>
-                        <p> Usuário * </p>
+                        <p> Email * </p>
                         <input required value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' name='usuario' type="usuario" placeholder="Insira um e-mail válido" className='input-cadastro' />
                         <p> Senha * </p>
                         <input required value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' name='senha' type='password' placeholder="mínimo de 8 caracteres" className='input-cadastro' />
