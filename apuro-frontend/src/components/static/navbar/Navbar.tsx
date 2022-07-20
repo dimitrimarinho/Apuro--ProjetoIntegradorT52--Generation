@@ -19,6 +19,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
 import { Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
+import { toast } from 'react-toastify';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -127,7 +128,7 @@ export default function PrimarySearchAppBar() {
   if (token !== '') {
     botaoLogin = (
       <Box onClick={goLogout}>
-        <Typography>logout</Typography>
+        <Typography>Logout</Typography>
       </Box>
     );
   }
@@ -147,7 +148,9 @@ export default function PrimarySearchAppBar() {
       <MenuItem onClick={handleMenuClose}>
         {botaoLogin}
       </MenuItem>
-      <MenuItem onClick={handleMenuClose}>Minha conta</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        Minha conta
+      </MenuItem>
     </Menu>
   );
 
@@ -206,7 +209,16 @@ export default function PrimarySearchAppBar() {
 
   function goLogout() {
     dispatch(addToken(''));
-    alert('Usuário deslogado');
+    toast.info("Seu usuário foi deslogado", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      theme: "colored",
+      progress: undefined
+    })
     navigate('/login');
   }
 

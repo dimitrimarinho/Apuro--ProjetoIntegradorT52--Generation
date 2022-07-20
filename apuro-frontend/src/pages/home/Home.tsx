@@ -100,13 +100,13 @@ function Home() {
                                             </Box>
                                         </CardContent>
                                     </CardActionArea>
-                                    {/* <CardActions>
+                                    <CardActions>
                                         <Link className='text-decorator-none' to='/listaProduto'>
                                             <Button size="small" color="primary" className='most'>
-                                                Veja mais ...
+                                                Ver produto
                                             </Button>
                                         </Link>
-                                    </CardActions> */}
+                                    </CardActions>
                                 </Card>
                             </Box>
                         </Box>
