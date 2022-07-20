@@ -122,7 +122,9 @@ function Home() {
                 <Grid xs={12}>
                     <Typography variant="h3" className="titulo2" align="center">Time de Desenvolvedores</Typography>
                 </Grid>
+                
                 <Grid container xs={12}>
+
                     <Grid xs={2} className="justify-items-sobrenos">
                         <img src="https://i.imgur.com/es2WqrE.png" alt="Foto Dimitri" className="equipe2" />
                         <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Dimitri Marinho </Typography>
@@ -133,9 +135,9 @@ function Home() {
                             <a href="https://github.com/dimitrimarinho" target="_blank" rel="noreferrer" className="text-decorator-none1">
                                 <GitHub className="icone" />
                             </a>
-
                         </Box>
                     </Grid>
+
                     <Grid xs={2} className="justify-items-sobrenos">
                         <img src="https://i.imgur.com/OSQqDV4.png" alt="Foto Paulo" className="equipe2" />
                         <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Paulo Victor</Typography>
@@ -146,9 +148,9 @@ function Home() {
                             <a href="https://github.com/PvPaulinho" target="_blank" rel="noreferrer" className="text-decorator-none1">
                                 <GitHub className="icone" />
                             </a>
-
                         </Box>
                     </Grid>
+
                     <Grid xs={2} className="justify-items-sobrenos">
                         <img src="https://i.imgur.com/jH8XA5A.png" alt="Foto Stefani" className="equipe2" />
                         <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Stefany Oliveira</Typography>
@@ -159,7 +161,6 @@ function Home() {
                             <a href="https://github.com/stefanimoliveira" target="_blank" rel="noreferrer" className="text-decorator-none1">
                                 <GitHub className="icone" />
                             </a>
-
                         </Box>
                     </Grid>
 
@@ -173,9 +174,9 @@ function Home() {
                             <a href="https://github.com/thaynasaraiva" target="_blank" rel="noreferrer" className="text-decorator-none1">
                                 <GitHub className="icone" />
                             </a>
-
                         </Box>
                     </Grid>
+
                 </Grid>
             </>
 

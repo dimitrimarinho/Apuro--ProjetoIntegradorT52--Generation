@@ -31,8 +31,6 @@
     width: 280px;
     border-radius: 50% !important;
     margin: 10px;
-    /* padding-right: 20px !important;
-    padding-left: 10px !important; */
 }
 
 .titulo {
@@ -74,8 +72,29 @@
     align-items: center;
 }
 
-.justify-items-sobrenos {
-    margin-top: 7vh;
+.justify-items-aboutus {
+    height: 40%;
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
+    background-color: #cfd4bc8e;
+    padding: 15px;
+    margin-inline: 8px;
+    border-radius: 4px;
+}
+
+.equipe2_aboutus{
+    display: flex;
+    margin-top: 20px;
+    height: 230px;
+    width: 230px;
+    border-radius: 50% !important;
+    margin: 10px;
+}
+
+.nomesSobreNos_aboutus {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 500;
+    color:#192610 ;
 }
