@@ -8,7 +8,6 @@ import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import "./CadastrarProdutos.css";
-import User from '../../../models/User';
 
 function CadastrarProdutos() {
 
@@ -21,10 +20,6 @@ function CadastrarProdutos() {
     const token = useSelector<TokenState, TokenState["token"]>(
         (state) => state.token
     );
-
-    // const userId = useSelector<TokenState, TokenState['id']>(
-    //     (state) => state.id
-    //   )
 
     useEffect(() => {
         if (token === "") {
@@ -63,19 +58,7 @@ function CadastrarProdutos() {
         categorias: undefined,
         // usuario:undefined
     })
-
-    // const [usuario, setUsuario] = useState<User>({
-    //     id: +userId,    // Faz uma conversão de String para Number
-    //     nome: '',
-    //     usuario: '',
-    //     senha: '',
-    //     foto: '',
-    //     dataDeNascimento: '',
-    //     cpf: '',
-    //     endereco: '',
-    //     descricao: ''
-    // })
-
+  
     useEffect(() => {
         setProduto({
             ...produto,
@@ -120,7 +103,7 @@ function CadastrarProdutos() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
 
-        if (id !== undefined) {
+        if (id !== undefined && categoria !== undefined) {
             put(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
@@ -179,6 +162,7 @@ function CadastrarProdutos() {
                             <FormControl fullWidth>
                                 <InputLabel id="demo-simple-select-helper-label">Categoria</InputLabel>
                                 <Select
+                                    required
                                     labelId="demo-simple-select-helper-label"
                                     id="demo-simple-select-helper-label"
                                     onChange={(e) => buscaId(`/categorias/${e.target.value}`, setCategoria, {
