@@ -2,7 +2,11 @@
     background-color: #F2F2F2  !important;
     height: 100%;
     padding-top: 10px;
-    padding-bottom: 0px;
+    padding-bottom: 70px;
+}
+
+.caixaHFrase {
+    padding-top: 20px;
 }
 
 .texto {
@@ -71,10 +75,6 @@
     text-align: center;
 }
 
-.most{
-    color:#9DA67C !important
-}
-
 .descricaoCard {
     height: 50px;
     padding-bottom: 10px;
@@ -95,4 +95,55 @@
 #texto {
     font-weight: bold;
     font-size: 50px;
+}
+
+.most{
+    color:#9DA67C !important;
+}
+
+.nomesSobreNos {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    color:#192610 ;
+}
+
+.equipe2 {
+    display: flex;
+    margin-top: 20px;
+    height: 230px;
+    width: 230px;
+    border-radius: 50% !important;
+    margin: 10px;
+}
+
+.titulo2 {
+    color: #192610;
+}
+
+.text-decorator-none1 {
+    text-decoration: none;
+}
+
+.icone {
+    font-size: 30px !important;
+    color: #192610  ;
+    margin-top: 5px;
+    margin-right: 4px;
+}
+
+.MuiGrid-root {
+    justify-content: center !important;
+    align-items: center;
+}
+
+.justify-items-sobrenos {
+    height: 40%;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #cfd4bc8e;
+    padding: 15px;
+    margin-inline: 8px;
+    border-radius: 4px;
 }

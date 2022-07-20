@@ -70,7 +70,7 @@ function SobreNos() {
                         </Box>
                     </Grid>
                     <Grid xs={3} className="justify-items-sobrenos">
-                        <img src="1234.png" alt="Foto Paulo" className="equipe" />
+                        <img src="https://i.imgur.com/SjRjrBn.jpg" alt="Foto Paulo" className="equipe" />
                         <Typography variant="inherit" gutterBottom textAlign="center">Paulo Victor</Typography>
                         <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
                             <a href="https://www.linkedin.com/in/paulo-victor-damasceno-e-silva-0184ba183/" target="_blank" rel="noreferrer" className="text-decorator-none1">

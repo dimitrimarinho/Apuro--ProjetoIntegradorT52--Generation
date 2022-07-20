@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { busca } from '../../services/Service';
 import User from '../../models/User';
+import { GitHub, LinkedIn } from '@material-ui/icons';
 
 const useStyles = makeStyles({
     root: {
@@ -63,6 +64,123 @@ function Home() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [usuarios.length])
 
+    var homeComponent;
+
+    if (token !== '') {
+        homeComponent = (
+            <>
+                <Box paddingX={40} marginTop="20px" display="flex" flexDirection="column" alignItems="left" justifyContent="left">
+                {/* <Box  display="flex" flexDirection="column" alignItems="left" justifyContent="left"  className='linhaHome' /> */}
+                <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto' id="texto" >Veja seus produtos</Typography>
+                </Box>
+
+                {
+                    produtos.map(produto => (
+                        <Box m={2}>
+                            <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                                <Card className={classes.produto}>
+                                    <CardActionArea>
+                                        <CardMedia
+                                            className={classes.media}
+                                            image={produto.foto}
+                                            title="Imagem do produto"
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="h2">
+                                                {produto.nome}
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary" component="p" className='descricaoCard'>
+                                                {produto.descricao}
+                                            </Typography>
+                                            <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "left", justifyContent: "left" }}>
+                                                <Typography variant="h5" color="initial" className='cifrao'>R$</Typography>
+                                                <Typography variant="h5" component="p">
+                                                    {produto.preco}
+                                                </Typography>
+                                            </Box>
+                                        </CardContent>
+                                    </CardActionArea>
+                                    <CardActions>
+                                        <Link className='text-decorator-none' to='/listaProduto'>
+                                            <Button size="small" color="primary" className='most'>
+                                                Veja mais ...
+                                            </Button>
+                                        </Link>
+                                    </CardActions>
+                                </Card>
+                            </Box>
+                        </Box>
+                    ))
+                }
+
+            </>
+        );
+    } else {
+        homeComponent = (
+
+            <>
+                <Grid xs={12}>
+                    <Typography variant="h3" className="titulo2" align="center">Time de Desenvolvedores</Typography>
+                </Grid>
+                <Grid container xs={12}>
+                    <Grid xs={2} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/es2WqrE.png" alt="Foto Dimitri" className="equipe2" />
+                        <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Dimitri Marinho </Typography>
+                        <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                            <a href="https://www.linkedin.com/in/dimitrimarinho/" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <LinkedIn className="icone" />
+                            </a>
+                            <a href="https://github.com/dimitrimarinho" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <GitHub className="icone" />
+                            </a>
+
+                        </Box>
+                    </Grid>
+                    <Grid xs={2} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/OSQqDV4.png" alt="Foto Paulo" className="equipe2" />
+                        <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Paulo Victor</Typography>
+                        <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                            <a href="https://www.linkedin.com/in/paulo-victor-damasceno-e-silva-0184ba183/" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <LinkedIn className="icone" />
+                            </a>
+                            <a href="https://github.com/PvPaulinho" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <GitHub className="icone" />
+                            </a>
+
+                        </Box>
+                    </Grid>
+                    <Grid xs={2} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/jH8XA5A.png" alt="Foto Stefani" className="equipe2" />
+                        <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Stefany Oliveira</Typography>
+                        <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                            <a href="https://www.linkedin.com/in/stefani-machado-oliveira/" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <LinkedIn className="icone" />
+                            </a>
+                            <a href="https://github.com/stefanimoliveira" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <GitHub className="icone" />
+                            </a>
+
+                        </Box>
+                    </Grid>
+
+                    <Grid xs={2} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/vUa7IHF.png" alt="Foto Thayna" className="equipe2" />
+                        <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Thayna Saraiva</Typography>
+                        <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                            <a href="https://www.linkedin.com/in/thayna-saraiva-2a6061215/" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <LinkedIn className="icone" />
+                            </a>
+                            <a href="https://github.com/thaynasaraiva" target="_blank" rel="noreferrer" className="text-decorator-none1">
+                                <GitHub className="icone" />
+                            </a>
+
+                        </Box>
+                    </Grid>
+                </Grid>
+            </>
+                
+        );
+    }
 
     return (
         <>
@@ -72,7 +190,7 @@ function Home() {
                 </Grid>
 
                 <Grid alignItems="center" item xs={12}>
-                    <Box paddingX={20} className="caixa1">
+                    <Box paddingX={20} className="caixaHFrase">
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='texto'>Que bom te ver!</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='texto'>Aproveite  nossa plataforma!</Typography>
                     </Box>
@@ -182,52 +300,12 @@ function Home() {
                             </CardActionArea>
                         </Card>
 
-                        <Box paddingX={40} marginTop="20px" display="flex" flexDirection="column" alignItems="left" justifyContent="left">
-                            {/* <Box  display="flex" flexDirection="column" alignItems="left" justifyContent="left"  className='linhaHome' /> */}
-                            <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto' id="texto" >Veja seus produtos</Typography>
-                        </Box>
+                        {homeComponent}
 
                     </Box>
                 </Grid>
 
-                {
-                    produtos.map(produto => (
-                        <Box m={2}>
-                            <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
-                                <Card className={classes.produto}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={produto.foto}
-                                            title="Imagem do produto"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                {produto.nome}
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p" className='descricaoCard'>
-                                                {produto.descricao}
-                                            </Typography>
-                                            <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "left", justifyContent: "left" }}>
-                                                <Typography variant="h5" color="initial" className='cifrao'>R$</Typography>
-                                                <Typography variant="h5" component="p">
-                                                    {produto.preco}
-                                                </Typography>
-                                            </Box>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Link className='text-decorator-none' to='/listaProduto'>
-                                            <Button size="small" color="primary" className='most'>
-                                                Veja mais ...
-                                            </Button>
-                                        </Link>
-                                    </CardActions>
-                                </Card>
-                            </Box>
-                        </Box>
-                    ))
-                }
+                
             </Grid>
         </>
     );
