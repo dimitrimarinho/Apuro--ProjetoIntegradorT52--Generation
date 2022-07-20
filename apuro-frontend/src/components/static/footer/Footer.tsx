@@ -18,13 +18,13 @@ function Footer() {
                         </Box>
                         <Box display="flex" flexDirection="column" alignItems="left" justifyContent="left" className="boxFooter">
                             <Link to='/home' className='text-decorator-none1'>
-                                <Typography variant="inherit" align="center" gutterBottom className="textos" >Home </Typography>
+                                <Typography variant="inherit" align="center" gutterBottom className="textosFooter" >Home </Typography>
                             </Link>
                             <Link to="/sobre-nos" className='text-decorator-none1'>
-                                <Typography variant="inherit" align="center" gutterBottom className="textos">Sobre nós </Typography>
+                                <Typography variant="inherit" align="center" gutterBottom className="textosFooter">Sobre nós </Typography>
                             </Link>
                             <Link to="/Listaproduto" className='text-decorator-none1' >
-                                <Typography variant="inherit" align="center" gutterBottom className="textos">Produtos</Typography>
+                                <Typography variant="inherit" align="center" gutterBottom className="textosFooter">Produtos</Typography>
                             </Link>
                         </Box>
                     </Box>
@@ -32,20 +32,20 @@ function Footer() {
                 <Grid alignItems="center" item xs={4}>
                     <Box className="box1">
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="left" >
-                            <Typography variant="h5" align="center" gutterBottom className="textos">Linkedin</Typography>
+                            <Typography variant="h5" align="center" gutterBottom className="textos">LinkedIn</Typography>
                         </Box>
                         <Box display="flex" flexDirection="column" alignItems="left" justifyContent="center" className="boxFooter">
                             <a href="https://www.linkedin.com/in/stefani-machado-oliveira/" target="_blank" rel="noreferrer" className="text-decorator-none1">
-                                <Typography variant="inherit" align="left" gutterBottom className="textos-footer" >Stefani Oliveira</Typography>
+                                <Typography variant="inherit" align="left" gutterBottom className="textosFooter" >Stefani Oliveira</Typography>
                             </a>
                             <a href="https://www.linkedin.com/in/paulo-victor-damasceno-e-silva-0184ba183/" target="_blank" rel="noreferrer" className="text-decorator-none1">
-                                <Typography variant="inherit" align="left" gutterBottom className="textos-footer">Paulo Vitor</Typography>
+                                <Typography variant="inherit" align="left" gutterBottom className="textosFooter">Paulo Vitor</Typography>
                             </a>
                             <a href="https://www.linkedin.com/in/dimitrimarinho/" target="_blank" rel="noreferrer" className="text-decorator-none1">
-                                <Typography variant="inherit" align="left" gutterBottom className="textos-footer">Dimitri Marinho</Typography>
+                                <Typography variant="inherit" align="left" gutterBottom className="textosFooter">Dimitri Marinho</Typography>
                             </a>
                             <a href="https://www.linkedin.com/in/thayna-saraiva-2a6061215/" target="_blank" rel="noreferrer" className="text-decorator-none1">
-                                <Typography variant="inherit" align="left" gutterBottom className="textos-footer">Thayna Saraiva</Typography>
+                                <Typography variant="inherit" align="left" gutterBottom className="textosFooter">Thayna Saraiva</Typography>
                             </a>
                         </Box>
                     </Box>
@@ -68,7 +68,7 @@ function Footer() {
             <Grid alignItems="center" item xs={12}>
                 <Box className="box2">
                     <Box paddingTop={1}>
-                        <Typography variant="subtitle2" align="center" gutterBottom className="textos-rodape" >© 2020 Copyright: brasil.generation.org</Typography>
+                        <Typography variant="subtitle2" align="center" gutterBottom className="textos-rodape" >© 2022 Copyright: brasil.generation.org</Typography>
                     </Box>
                 </Box>
             </Grid>

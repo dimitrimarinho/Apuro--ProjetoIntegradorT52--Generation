@@ -2,16 +2,18 @@
     background-color: #192610;
     height: 200px;
     padding-left: 25px;
-  
-    
 }
 
 .icones {
-    font-size: 30px !important;
+    font-size: 35px !important;
+    margin-top: 8px;
+    margin-right: 5px;
     color: #F2F2F2;
 }
 
 .icones:hover {
+    border-radius: 10px;
+    cursor: pointer;
     background-color: #565902 !important;
     color: #F2F2F2;
 }
@@ -25,11 +27,11 @@
     color: #F2F2F2;
 }
 
-.textos-footer {
+.textosFooter {
+    display: flex;
     color: #F2F2F2;
-    margin-top: 5px ;
-    
-    
+    font-size: 16px;
+    margin-top: 3px !important;
 }
 
 .textos-rodape {
@@ -50,6 +52,4 @@
     box-sizing: border-box;
     width: 150px;
     margin-bottom: 4px;
-   
-    
 }

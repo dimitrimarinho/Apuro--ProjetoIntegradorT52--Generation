@@ -103,7 +103,7 @@
 
 .nomesSobreNos {
     text-align: center;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 500;
     color:#192610 ;
 }
@@ -118,6 +118,7 @@
 }
 
 .titulo2 {
+    margin-top: 50px;
     color: #192610;
 }
 

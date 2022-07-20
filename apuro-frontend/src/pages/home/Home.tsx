@@ -70,8 +70,8 @@ function Home() {
         homeComponent = (
             <>
                 <Box paddingX={40} marginTop="20px" display="flex" flexDirection="column" alignItems="left" justifyContent="left">
-                {/* <Box  display="flex" flexDirection="column" alignItems="left" justifyContent="left"  className='linhaHome' /> */}
-                <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto' id="texto" >Veja seus produtos</Typography>
+                    {/* <Box  display="flex" flexDirection="column" alignItems="left" justifyContent="left"  className='linhaHome' /> */}
+                    <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto' id="texto" >Veja seus produtos</Typography>
                 </Box>
 
                 {
@@ -100,13 +100,13 @@ function Home() {
                                             </Box>
                                         </CardContent>
                                     </CardActionArea>
-                                    <CardActions>
+                                    {/* <CardActions>
                                         <Link className='text-decorator-none' to='/listaProduto'>
                                             <Button size="small" color="primary" className='most'>
                                                 Veja mais ...
                                             </Button>
                                         </Link>
-                                    </CardActions>
+                                    </CardActions> */}
                                 </Card>
                             </Box>
                         </Box>
@@ -178,7 +178,7 @@ function Home() {
                     </Grid>
                 </Grid>
             </>
-                
+
         );
     }
 
@@ -204,7 +204,7 @@ function Home() {
                             <Button variant="outlined" className='botao'>Categorias</Button>
                         </Link>
                         {/* <Link className='text-decorator-none' to='/categorias'> */}
-                            <Button variant="outlined" className='botao'>Artistas</Button>
+                        <Button variant="outlined" className='botao'>Artistas</Button>
                         {/* </Link> */}
 
                         <Link to="/cadastrarProduto" className='text-decorator-none'>
@@ -232,11 +232,7 @@ function Home() {
                                         Novidades
                                     </Typography>
                                 </CardContent>
-                                <CardActions>
-                                    <Button className='most' size="small" color="primary">
-                                        Confira mais ...
-                                    </Button>
-                                </CardActions>
+                                <CardActions></CardActions>
                             </CardActionArea>
                         </Card>
 
@@ -252,11 +248,7 @@ function Home() {
                                         Mais vendidos
                                     </Typography>
                                 </CardContent>
-                                <CardActions>
-                                    <Button className='most' size="small" color="primary">
-                                        Confira mais ...
-                                    </Button>
-                                </CardActions>
+                                <CardActions></CardActions>
                             </CardActionArea>
                         </Card>
 
@@ -272,11 +264,7 @@ function Home() {
                                         Em alta
                                     </Typography>
                                 </CardContent>
-                                <CardActions>
-                                    <Button className='most' size="small" color="primary">
-                                        Confira mais ...
-                                    </Button>
-                                </CardActions>
+                                <CardActions></CardActions>
                             </CardActionArea>
                         </Card>
 
@@ -292,11 +280,7 @@ function Home() {
                                         Destaques sustentáveis
                                     </Typography>
                                 </CardContent>
-                                <CardActions>
-                                    <Button className='most' size="small" color="primary">
-                                        Confira mais ...
-                                    </Button>
-                                </CardActions>
+                                <CardActions></CardActions>
                             </CardActionArea>
                         </Card>
 
@@ -305,7 +289,7 @@ function Home() {
                     </Box>
                 </Grid>
 
-                
+
             </Grid>
         </>
     );
