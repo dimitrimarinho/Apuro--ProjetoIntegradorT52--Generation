@@ -20,7 +20,7 @@ function CadastroCategoria() {
     id: 0,
     tipo: "",
     descricao: "",
-    imagemCategoria: undefined
+    imagemCategoria: ""
   })
 
   useEffect(() => {
