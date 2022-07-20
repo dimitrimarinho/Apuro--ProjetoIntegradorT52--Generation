@@ -127,9 +127,9 @@ export default function PrimarySearchAppBar() {
   }
   if (token !== '') {
     botaoLogin = (
-      <Box onClick={goLogout}>
-        <Typography>Logout</Typography>
-      </Box>
+        <Box onClick={goLogout}>
+          Logout
+        </Box>
     );
   }
 
@@ -145,9 +145,11 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>
-        {botaoLogin}
-      </MenuItem>
+      <Link to='/login' className='text-decoration-none'>
+        <MenuItem onClick={handleMenuClose}>
+          {botaoLogin}
+        </MenuItem>
+      </Link>
       <MenuItem onClick={handleMenuClose}>
         Minha conta
       </MenuItem>
