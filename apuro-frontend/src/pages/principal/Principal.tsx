@@ -185,8 +185,8 @@ function Principal() {
                     <Typography variant="h3" className="titulo2" align="center">Time de Desenvolvedores</Typography>
                 </Grid>
                 <Grid container xs={12}>
-                    <Grid xs={3} className="justify-items-sobrenos">
-                        <img src="/dimitri (2).png" alt="Foto Dimitri" className="equipe2" />
+                    <Grid xs={2} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/es2WqrE.png" alt="Foto Dimitri" className="equipe2" />
                         <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Dimitri Marinho </Typography>
                         <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
                             <a href="https://www.linkedin.com/in/dimitrimarinho/" target="_blank" rel="noreferrer" className="text-decorator-none1">
@@ -198,8 +198,8 @@ function Principal() {
 
                         </Box>
                     </Grid>
-                    <Grid xs={3} className="justify-items-sobrenos">
-                        <img src="/1234.png" alt="Foto Paulo" className="equipe2" />
+                    <Grid xs={2} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/OSQqDV4.png" alt="Foto Paulo" className="equipe2" />
                         <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Paulo Victor</Typography>
                         <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
                             <a href="https://www.linkedin.com/in/paulo-victor-damasceno-e-silva-0184ba183/" target="_blank" rel="noreferrer" className="text-decorator-none1">
@@ -211,8 +211,8 @@ function Principal() {
 
                         </Box>
                     </Grid>
-                    <Grid xs={3} className="justify-items-sobrenos">
-                        <img src="/dimitri (1).png" alt="Foto Stefani" className="equipe2" />
+                    <Grid xs={2} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/jH8XA5A.png" alt="Foto Stefani" className="equipe2" />
                         <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Stefany Oliveira</Typography>
                         <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
                             <a href="https://www.linkedin.com/in/stefani-machado-oliveira/" target="_blank" rel="noreferrer" className="text-decorator-none1">
@@ -225,8 +225,8 @@ function Principal() {
                         </Box>
                     </Grid>
 
-                    <Grid xs={3} className="justify-items-sobrenos">
-                        <img src="/dimitri.png" alt="Foto Thayna" className="equipe2" />
+                    <Grid xs={2} className="justify-items-sobrenos">
+                        <img src="https://i.imgur.com/vUa7IHF.png" alt="Foto Thayna" className="equipe2" />
                         <Typography variant="inherit" gutterBottom className='nomesSobreNos'>Thayna Saraiva</Typography>
                         <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
                             <a href="https://www.linkedin.com/in/thayna-saraiva-2a6061215/" target="_blank" rel="noreferrer" className="text-decorator-none1">

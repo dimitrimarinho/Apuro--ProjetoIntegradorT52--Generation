@@ -72,13 +72,14 @@
 }
 
 .most{
-    color:#9DA67C !important
+    color:#9DA67C !important;
 }
 
 .nomesSobreNos {
     text-align: center;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 500;
+    color:#192610 ;
 }
 
 .caixa {
@@ -97,6 +98,7 @@
     margin:5vh;
     border-radius: 16px;
     padding: 20px;
+ 
 }
 
 .textoSobre {
@@ -138,7 +140,7 @@
 
 .icone {
     font-size: 30px !important;
-    color: black;
+    color: #192610  ;
     margin-top: 5px;
     margin-right: 4px;
 }
@@ -156,9 +158,16 @@
 }
 
 .justify-items-sobrenos {
-    margin-top: 7vh;
+    
+    height: 40%;
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
-    background-color: #CFD4BC;
+    background-color: #cfd4bc8e;
+    padding: 15px;
+    margin-inline: 8px;
+    border-radius: 4px;
+    
+   
     
 }
