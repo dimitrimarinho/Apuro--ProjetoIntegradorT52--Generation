@@ -203,9 +203,9 @@ function Home() {
                         <Link className='text-decorator-none' to='/categorias'>
                             <Button variant="outlined" className='botao'>Categorias</Button>
                         </Link>
-                        <Link className='text-decorator-none' to='/categorias'>
+                        {/* <Link className='text-decorator-none' to='/categorias'> */}
                             <Button variant="outlined" className='botao'>Artistas</Button>
-                        </Link>
+                        {/* </Link> */}
 
                         <Link to="/cadastrarProduto" className='text-decorator-none'>
                             <Button variant="outlined" className='botao'>Cadastrar produto</Button>
