@@ -49,9 +49,9 @@ function CadastrarProdutos() {
     const [produto, setProduto] = useState<Produto>({
         id: 0,
         nome: '',
-        descricao: '',
-        quantidade: 0,
-        preco: 0,
+        descricao: undefined,
+        quantidade: null,
+        preco: null,
         foto: '',
         sustentabilidade: 5,
         regiao: '',
@@ -150,11 +150,9 @@ function CadastrarProdutos() {
                     <form onSubmit={onSubmit} className="container-cadastroprodts">
                         <div className='flex1-prodts'>
                             <Typography variant="h4" color="textPrimary" component="h1" align="center" className='title-top' >Cadastrar produto</Typography>
-                            <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="nome" label="Nome" variant="outlined" name="nome" margin="normal" fullWidth required/>
-                            <TextField value={produto.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="descricao" label="Descrição" name="descricao" variant="outlined" margin="normal" fullWidth />
-                            <TextField value={produto.quantidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="quantidade" label="Quantidade" name="quantidade" variant="outlined" margin="normal" fullWidth required/>
-                            <TextField value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="preco" label="Preço" name="preco" variant="outlined" margin="normal" fullWidth required/>
-
+                            <TextField required value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="nome" label="Nome" variant="outlined" name="nome" margin="normal" fullWidth />                            <TextField value={produto.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="descricao" label="Descrição" name="descricao" variant="outlined" margin="normal" fullWidth />
+                            <TextField required value={produto.quantidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="quantidade" label="Quantidade" name="quantidade" variant="outlined" margin="normal" fullWidth />
+                            <TextField required value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="preco" label="Preço" name="preco" variant="outlined" margin="normal" fullWidth />
                         </div>
                         <div className='flex2-prodts'>
                             <TextField value={produto.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="foto" label="Imagem do Produto" name="foto" variant="outlined" margin="normal" fullWidth />
