@@ -14,7 +14,7 @@ import { GitHub, LinkedIn } from '@material-ui/icons';
 
 const useStyles = makeStyles({
     root: {
-        width: 250,
+        width: 247,
         margin: "20px",
     },
     media: {
@@ -69,10 +69,11 @@ function Home() {
     if (token !== '') {
         homeComponent = (
             <>
-                <Box paddingX={40} marginTop="20px" display="flex" flexDirection="column" alignItems="left" justifyContent="left">
-                    {/* <Box  display="flex" flexDirection="column" alignItems="left" justifyContent="left"  className='linhaHome' /> */}
-                    <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto' id="texto" >Veja seus produtos</Typography>
-                </Box>
+                <Grid xs={12}>
+                    <Box paddingX={40} marginTop="20px" display="flex" flexDirection="column" alignItems="left" justifyContent="left">
+                        <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='texto' id="texto" >Produtos disponíveis</Typography>
+                    </Box>
+                </Grid>
 
                 {
                     produtos.map(produto => (
@@ -122,7 +123,7 @@ function Home() {
                 <Grid xs={12}>
                     <Typography variant="h3" className="titulo2" align="center">Time de Desenvolvedores</Typography>
                 </Grid>
-                
+
                 <Grid container xs={12}>
 
                     <Grid xs={2} className="justify-items-sobrenos">
@@ -204,9 +205,8 @@ function Home() {
                         <Link className='text-decorator-none' to='/categorias'>
                             <Button variant="outlined" className='botao'>Categorias</Button>
                         </Link>
-                        {/* <Link className='text-decorator-none' to='/categorias'> */}
+
                         <Button variant="outlined" className='botao'>Artistas</Button>
-                        {/* </Link> */}
 
                         <Link to="/cadastrarProduto" className='text-decorator-none'>
                             <Button variant="outlined" className='botao'>Cadastrar produto</Button>
@@ -219,14 +219,13 @@ function Home() {
                     </Box>
                 </Grid>
 
-                <Grid xs={12}>
-                    <Box sx={{ display: "flex", flexWrap: 'wrap', alignItems: "center", justifyContent: "center" }}>
+                    <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
                         <Card className={classes.root}>
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
                                     image="https://i.imgur.com/jfZZ8h2.png"
-                                    title="Novos produtos"
+                                    title="Novidades"
                                 />
                                 <CardContent className='caixaDetextoCards'>
                                     <Typography className='textoCard' gutterBottom variant="h5" component="h2">
@@ -236,13 +235,13 @@ function Home() {
                                 <CardActions></CardActions>
                             </CardActionArea>
                         </Card>
-
+                       
                         <Card className={classes.root}>
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
                                     image="https://i.imgur.com/ufx4gNy.png"
-                                    title="Novos produtos"
+                                    title="Mais vendidos"
                                 />
                                 <CardContent className='caixaDetextoCards'>
                                     <Typography className='textoCard' gutterBottom variant="h5" component="h2">
@@ -258,7 +257,7 @@ function Home() {
                                 <CardMedia
                                     className={classes.media}
                                     image="https://i.imgur.com/FiQ18eb.png"
-                                    title="Novos produtos"
+                                    title="Em alta"
                                 />
                                 <CardContent className='caixaDetextoCards'>
                                     <Typography className='textoCard' gutterBottom variant="h5" component="h2">
@@ -274,7 +273,7 @@ function Home() {
                                 <CardMedia
                                     className={classes.media}
                                     image="https://i.imgur.com/poowZna.png"
-                                    title="Novos produtos"
+                                    title="Destaques sustentáveis"
                                 />
                                 <CardContent className='caixaDetextoCards'>
                                     <Typography className='textoCard' gutterBottom variant="h5" component="h2">
@@ -291,7 +290,6 @@ function Home() {
                 </Grid>
 
 
-            </Grid>
         </>
     );
 }
