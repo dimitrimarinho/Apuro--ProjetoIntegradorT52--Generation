@@ -1,1 +1,0 @@
-# Apuro--ProjetoIntegradorT52--Generation
