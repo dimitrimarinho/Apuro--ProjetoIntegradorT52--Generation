@@ -46,7 +46,7 @@ function ListaCategoria() {
         getCategoria()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [categorias.length])
-    
+
     return (
         <>
             <Box className='flexbox-categorias'>
@@ -56,8 +56,8 @@ function ListaCategoria() {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    style={{height:180}}
-                                    image="https://static8.depositphotos.com/1011590/911/i/450/depositphotos_9116833-stock-photo-iguana.jpg"
+                                    style={{ height: 180 }}
+                                    image={categorias.imagemCategoria}
                                     alt="green iguana"
                                 />
                                 <CardContent>
@@ -65,14 +65,16 @@ function ListaCategoria() {
                                         {categorias.tipo}
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        Artesanatos produzidos tendo a madeira como um dos elementos da confecção
+                                        {categorias.descricao}
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
                             <CardActions className='center-buttons'>
-                                <Button size="small" className='button-green'>
-                                    Ver produtos
-                                </Button>
+                                <Link to={`/listaProduto`} className="text-decorator-none">
+                                    <Button size="small" className='button-green'>
+                                        Ver produtos
+                                    </Button>
+                                </Link>
                                 <Link to={`/cadastrar-categoria/${categorias.id}`} className="text-decorator-none">
                                     <Button size="small" className='button-green'>
                                         Atualizar

@@ -11,9 +11,15 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import InfoIcon from '@mui/icons-material/Info';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logoApuro from '../../../assets/logo/logo-apuro.gif'
 import './Navbar.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { addToken } from '../../../store/tokens/actions';
+import { Typography } from '@material-ui/core';
+import { Box } from '@mui/material';
+import { toast } from 'react-toastify';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -87,6 +93,12 @@ export default function PrimarySearchAppBar() {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
+  let navigate = useNavigate();
+  let dispatch = useDispatch();
+  const token = useSelector<TokenState, TokenState['token']>(
+    (state) => state.token
+  );
+
   const handleProfileMenuOpen = (event: React.ChangeEvent<any>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -104,6 +116,24 @@ export default function PrimarySearchAppBar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
+  var botaoLogin;
+
+  if (token === '') {
+    botaoLogin = (
+      <Link to='/login' className='text-decoration-none'>
+        <Typography>Login</Typography>
+      </Link>
+    );
+  }
+  if (token !== '') {
+    botaoLogin = (
+        <Box onClick={goLogout}>
+          Logout
+        </Box>
+    );
+  }
+
+
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
@@ -116,9 +146,13 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       <Link to='/login' className='text-decoration-none'>
-        <MenuItem onClick={handleMenuClose}>Login</MenuItem>
+        <MenuItem onClick={handleMenuClose}>
+          {botaoLogin}
+        </MenuItem>
       </Link>
-      <MenuItem onClick={handleMenuClose}>Minha conta</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        Minha conta
+      </MenuItem>
     </Menu>
   );
 
@@ -175,11 +209,26 @@ export default function PrimarySearchAppBar() {
     </Menu>
   );
 
+  function goLogout() {
+    dispatch(addToken(''));
+    toast.info("Seu usuário foi deslogado", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      theme: "colored",
+      progress: undefined
+    })
+    navigate('/login');
+  }
+
   return (
     <div className={classes.grow}>
       <AppBar position="static" className='background'>
         <Toolbar>
-          <Link to='/' className='text-decoration-none'>
+          <Link to='/home' className='text-decoration-none'>
             <div className={classes.sectionDesktop}>
               <img className="logoApuro" src={logoApuro} alt="Logo da Apuro" />
             </div>

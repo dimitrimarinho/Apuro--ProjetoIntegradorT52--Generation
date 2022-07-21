@@ -1,3 +1,54 @@
-.topo{
-    margin-top: 20px;
+.background-prod {
+    background: url("https://i.imgur.com/CccuLJi.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title-top {
+    padding: 10px;
+}
+
+.button-cadproduto {
+    background-color: #192610 !important;
+    flex-direction: row;
+}
+
+.box-formprod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.prod-container {
+    padding-top: 5vh;
+}
+
+.flex1-prodts {
+    display: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.flex2-prodts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 40px;
+    margin-bottom: 60px;
+}
+
+.container-cadastroprodts {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 85%;
+}
+
+.MuiSelect-root .MuiSelect-select .MuiSelect-selectMenu .MuiInputBase-input .MuiInput-input .MuiInputBase-root .MuiInput-root .MuiInput-underline .MuiInputBase-formControl .MuiInput-formControl .MuiSelect-nativeInput{
+    border-color: #192610 !important;
 }

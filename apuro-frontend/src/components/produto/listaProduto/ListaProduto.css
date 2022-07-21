@@ -1,0 +1,55 @@
+.linhaCard::before {
+    content: "";
+    left: 0;
+    bottom: 200px;
+    background-color: #b4b4b4;
+    padding-right: 100px;
+    height: 2px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+.cifrao {
+    padding-right: 5px;
+}
+
+.atributosProdutos {
+    padding-right: 8px;
+    font-weight: bold;
+}
+
+.infoCard {
+    width: 150px;
+}
+
+.infoCard2 {
+    width: 350px;
+}
+
+.tamanhoCard {
+    height: 300px;
+}
+
+.button-cdto-produto {
+    cursor: pointer;
+    border-radius: 25px !important;
+    border: 1px solid #192610 !important;
+    color: #F2F2F2 !important;
+    background-color: #627327 !important;
+    min-width: 150px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    padding: 5px !important;
+    letter-spacing: 1px !important;
+}
+
+#button-deletar {
+    background-color: #BF573F !important;
+}
+
+.caixaLP {
+    background-color: #F2F2F2  !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

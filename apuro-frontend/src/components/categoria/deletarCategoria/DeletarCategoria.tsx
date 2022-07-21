@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import './DeletarCategoria.css';
 import { Box } from '@mui/material';
-import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { CardContent, Button, Typography } from '@material-ui/core';
 import Categorias from '../../../models/Categorias';
 import { buscaId, deleteId } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import './DeletarCategoria.css';
 
 function DeletarCategoria() {
 
@@ -77,34 +77,27 @@ function DeletarCategoria() {
 
     return (
         <>
-            <Box m={2}>
-                <Card variant="outlined">
+            <div className="centralized-box-del">
+                <div className="box-border-del" >
+                    <Typography className="title">
+                        Deseja deletar a categoria {categoria?.tipo} ?
+                    </Typography>
                     <CardContent>
-                        <Box justifyContent="center">
-                            <Typography color="textSecondary" gutterBottom>
-                                Deseja deletar a categoria:
-                            </Typography>
-                            <Typography color="textSecondary">
-                                {categoria?.tipo}
-                            </Typography>
-                        </Box>
                     </CardContent>
-                    <CardActions>
-                        <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
-                            <Box mx={2}>
-                                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
-                                    Sim
-                                </Button>
-                            </Box>
-                            <Box mx={2}>
-                                <Button onClick={nao} variant="contained" size='large' color="secondary">
-                                    Não
-                                </Button>
-                            </Box>
+                    <Box display="flex" justifyContent="center" mb={2} mr={2}>
+                        <Box mx={2}>
+                            <Button onClick={sim} variant="contained" size='large' color="primary" className="button-sim">
+                                Sim
+                            </Button>
                         </Box>
-                    </CardActions>
-                </Card>
-            </Box>
+                        <Box>
+                            <Button onClick={nao} variant="contained" size='large' color="secondary" className="button-nao">
+                                Não
+                            </Button>
+                        </Box>
+                    </Box>
+                </div>
+            </div>
         </>
     );
 }

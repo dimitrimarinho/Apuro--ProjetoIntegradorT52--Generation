@@ -1,0 +1,31 @@
+/* As mesmas classes CSS estão no arquivo DeletarProduto.css, isto é, mesmo se este arquivo .css estivesse vazio, as classes continuariam válidas */
+
+.centralized-box-del {
+    background: url("https://i.imgur.com/CccuLJi.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center !important;
+    justify-items: center !important;
+}
+
+.title {
+    font-size: 24px !important;
+}
+
+.box-border-del {
+    margin-bottom: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-sim {
+    background-color: #BF573F !important;
+}
+
+.button-nao {
+    background-color: #627327 !important;
+}

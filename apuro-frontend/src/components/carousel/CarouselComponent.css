@@ -8,35 +8,33 @@ img {
 	padding: 20px;
 }
 
-.eWjCzc {
+.sc-bczRLJ {
 	color: #F2F2F2 !important;
 	box-shadow: 0 0 2px 0px #F2F2F2 !important;
 }
 
-.eWjCzc:hover:enabled,
-.eWjCzc:focus:enabled {
+.sc-bczRLJ:hover:enabled,
+.sc-bczRLJ:focus:enabled {
 	color: #F2F2F2 !important;
 	background-color: #9DA67C !important;
 	box-shadow: 0 0 2px 0 #F2F2F2 !important;
 }
 
-.eAyARa {
-	color: #F2F2F2 !important;
-	box-shadow: 0 0 2px 0px #F2F2F2 !important;
-}
-
-.krmNah:hover,
-.krmNah:focus {
+.sc-gKXOVf:hover .sc-gKXOVf:focus .sc-gKXOVf:active {
 	cursor: pointer !important;
 	box-shadow: 0 0 1px 3px #9DA67C !important;
+	background-color: #9DA67C !important;
 }
 
-.krmNah {
+.rec-dot_active {
 	background-color: #9DA67C !important;
+}
+
+.sc-gKXOVf {
 	box-shadow: 0 0 1px 3px #9DA67C !important;
 }
 
-.jhmYzC:hover,
-.jhmYzC:focus {
+.sc-gKXOVf:hover,
+.sc-gKXOVf:focus {
 	box-shadow: 0 0 1px 3px #9DA67C !important;
 }

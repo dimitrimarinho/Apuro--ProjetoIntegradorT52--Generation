@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
+import { Button, CardContent, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -75,35 +75,33 @@ function DeletarProduto() {
 
   return (
     <>
-      <Box m={2}>
-        <Card variant="outlined" >
+      <div className="centralized-box-del">
+        <div className="box-border-del" >
+          <Typography className="title">
+            Deseja deletar o produto ?
+          </Typography>
           <CardContent>
             <Box justifyContent="center">
-              <Typography color="textSecondary" gutterBottom>
-                Deseja deletar o produto:
-              </Typography>
               <Typography color="textSecondary" >
                 {produto?.nome}
               </Typography>
             </Box>
 
           </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
-              <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
-                  Sim
-                </Button>
-              </Box>
-              <Box>
-                <Button onClick={nao} variant="contained" size='large' color="secondary">
-                  Não
-                </Button>
-              </Box>
+          <Box display="flex" justifyContent="center" mb={2} mr={2}>
+            <Box mx={2}>
+              <Button onClick={sim} variant="contained" size='large' color="primary" className="button-sim">
+                Sim
+              </Button>
             </Box>
-          </CardActions>
-        </Card>
-      </Box>
+            <Box>
+              <Button onClick={nao} variant="contained" size='large' color="secondary" className="button-nao">
+                Não
+              </Button>
+            </Box>
+          </Box>
+        </div>
+      </div>
     </>
   );
 }

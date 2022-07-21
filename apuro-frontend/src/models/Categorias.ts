@@ -1,8 +1,8 @@
 interface Categorias {
     id: number;
     tipo: string;
-    artista: string;
-    tutorial?: string | undefined
+    descricao: string;
+    imagemCategoria?: string;
 }
 
 export default Categorias;

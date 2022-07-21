@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
-import './CadastroUsuario.css';
 import User from "../../models/User";
 import { cadastroUsuario } from "../../services/Service";
 import { toast } from "react-toastify";
+import './CadastroUsuario.css';
 
 function CadastroUsuario() {
 
@@ -92,7 +92,7 @@ function CadastroUsuario() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         if (confirmarSenha === user.senha && (user.senha).length >= 8 && validateEmail(user.usuario) === true && validateCPF(user.cpf) === true) {
-            cadastroUsuario("/usuario/cadastrar", user, setUserResult)
+            await cadastroUsuario("/usuario/cadastrar", user, setUserResult)
             toast.success("Usuario cadastrado com sucesso", {
                 position: "top-right",
                 autoClose: 2000,
@@ -168,26 +168,34 @@ function CadastroUsuario() {
     return (
         <>
             <div className="background-login">
+                <h2 className='criar-conta-cadastro'>Crie sua conta</h2>
                 <form onSubmit={onSubmit} className="container-cadastro">
+
                     <div className='flex1'>
-                        <h2 className='criar-conta'>Criar Conta</h2>
-                        <p> Seu nome * </p>
-                        <input required value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' name='nome' placeholder="Nome e Sobrenome" className='input-cadastro' />
-                        <p> Seu CPF * </p>
-                        <input required value={user.cpf} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='cpf' name='cpf' placeholder="CPF (somente números)" className='input-cadastro' />
-                        <p> Insira um foto </p>
-                        <input value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' name='foto' placeholder="Link da foto hospedada em outro site" className='input-cadastro' />
+                        <div className="input-container">
+                            <p> Seu nome * </p>
+                            <input required value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' name='nome' placeholder="Nome e Sobrenome" className='input-cadastro' />
+                            <p> Seu CPF * </p>
+                            <input required value={user.cpf} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='cpf' name='cpf' placeholder="CPF (somente números)" className='input-cadastro' />
+                            <p> Insira um foto </p>
+                            <input value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' name='foto' placeholder="Link da foto hospedada em outro site" className='input-cadastro' />
+                        </div>
                     </div>
+
                     <div className='flex2'>
-                        <p> Data de nascimento </p>
-                        <input value={user.dataDeNascimento} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='dataDeNascimento' name='dataDeNascimento' placeholder="Data de Nascimento" className='input-cadastro' />
-                        <p> Seu endereço </p>
-                        <input value={user.endereco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='endereco' name='endereco' placeholder="Endereço" className='input-cadastro' />
-                        <p>Se desejar, apresente-se abaixo</p>
-                        <input value={user.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='descricao' name='descricao' placeholder="Breve descrição pessoal" className='input-cadastro' />
+                        <div className="input-container">
+                            <p> Data de nascimento </p>
+                            <input value={user.dataDeNascimento} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='dataDeNascimento' name='dataDeNascimento' placeholder="Data de Nascimento" className='input-cadastro' />
+                            <p> Seu endereço </p>
+                            <input value={user.endereco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='endereco' name='endereco' placeholder="Endereço" className='input-cadastro' />
+                            <p> Apresente-se </p>
+                            <input value={user.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='descricao' name='descricao' placeholder="Breve descrição pessoal (opcional)" className='input-cadastro' />
+                        </div>
                     </div>
+
                     <div className='flex3'>
-                        <p> Usuário * </p>
+
+                        <p> Email * </p>
                         <input required value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' name='usuario' type="usuario" placeholder="Insira um e-mail válido" className='input-cadastro' />
                         <p> Senha * </p>
                         <input required value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' name='senha' type='password' placeholder="mínimo de 8 caracteres" className='input-cadastro' />
@@ -199,6 +207,7 @@ function CadastroUsuario() {
                             </Link>
                             <button type="submit" className='button-cdto'> Cadastrar </button>
                         </div>
+
                     </div>
                 </form>
             </div>
