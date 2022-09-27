@@ -1,27 +1,26 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import { Provider } from 'react-redux';
+import CadastroCategoria from './components/categoria/cadastroCategoria/CadastroCategoria';
+import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
+import CadastrarProdutos from './components/produto/cadastrarProdutos/CadastrarProdutos';
+import ListaCategoria from './components/categoria/listarCategoria/ListaCategoria';
+import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
+import ListaProduto from './components/produto/listaProduto/ListaProduto';
+import CadastroUsuario from './pages/cadastroUsuario/cadastroUsuario';
 import Navbar from './components/static/navbar/Navbar';
 import Footer from './components/static/footer/Footer';
-import Home from './pages/home/Home';
-import Login from './pages/login/Login';
-import CadastroUsuario from './pages/cadastroUsuario/cadastroUsuario';
 import SobreNos from './pages/sobrenos/SobreNos';
-import CadastroCategoria from './components/categoria/cadastroCategoria/CadastroCategoria';
-import { Provider } from 'react-redux';
+import Login from './pages/login/Login';
+import Home from './pages/home/Home';
 import store from './store/store';
-import './App.css';
-import ListaCategoria from './components/categoria/listarCategoria/ListaCategoria';
-import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
-import ListaProduto from './components/produto/listaProduto/ListaProduto';
-import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
-import CadastrarProdutos from './components/produto/cadastrarProdutos/CadastrarProdutos';
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
 
 function App() {
   return (
     <Provider store={store}>
-       <ToastContainer />
+      <ToastContainer />
       <Router>
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
@@ -40,6 +39,10 @@ function App() {
             <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
             <Route path="/cadastrarProduto" element={<CadastrarProdutos />} />
             <Route path="/cadastrarProduto/:id" element={<CadastrarProdutos />} />
+            <Route
+              path="/*"
+              element={<Navigate to="/" replace />}
+            />
           </Routes>
         </div>
         <Footer />
